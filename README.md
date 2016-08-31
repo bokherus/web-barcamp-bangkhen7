@@ -1,5 +1,8 @@
 # README
 
+### Build
+![](https://travis-ci.org/bokherus/web-barcamp-bangkhen7.svg?branch=development)
+
 ### Requirements
 1. Ruby 2.3.0
 2. Rails 5.0 
