@@ -2,7 +2,7 @@ var HelloReact = React.createClass({
   render: function() {
     return (
       <div>
-        Hello React
+        <p>Hello React</p>
       </div>
     );
   }
