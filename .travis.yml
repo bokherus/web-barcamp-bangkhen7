@@ -3,5 +3,4 @@ language: ruby
 rvm:
   - 2.3.0
 
-gemfile:
-  - gemfiles/rails5.gemfile
+
