@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'browserify-rails' # browserify-rails for allow rails to use npm
 gem 'react-rails'
-
+gem 'uikit2-rails'
 gem 'rake', :group => :test
 
 group :development, :test do
@@ -52,3 +52,7 @@ group :development do
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+source 'https://rails-assets.org' do
+  # gem 'rails-assets-uikit'
+end
