@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.19.0.pre20160820113039'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -30,7 +30,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'browserify-rails' # browserify-rails for allow rails to use npm
+# Use devise for authentication
+gem 'devise'
+# browserify-rails for allow rails to use npm
+gem "browserify-rails"
 gem 'react-rails'
 gem 'uikit2-rails'
 gem 'rake', :group => :test
@@ -39,6 +42,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'
+  gem "awesome_print", require:"ap"
 end
 
 group :development do
