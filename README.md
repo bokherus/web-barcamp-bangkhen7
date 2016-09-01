@@ -3,6 +3,21 @@
 ### Build
 ![](https://travis-ci.org/bokherus/web-barcamp-bangkhen7.svg?branch=development)
 
+### Making changes (**Do not push directly to development**)
+1. Create a new branch
+<br/> `git checkout -b feature/feature_name`
+  
+2. Work on the new branch, don't forget to commit regularly
+<br/> `git commit -m 'commit message'`
+
+3. Pass Rpsec test
+<br/> `rspec`
+  
+4. Push to remote server
+<br/> `git push origin feature/feature_name`
+  
+5. Create a pull request to merge into development
+
 ### Requirements
 1. Ruby 2.3.0
 2. Rails 5.0 
@@ -38,22 +53,6 @@
 4. Create database in postgres
 <br/>`rake db:create`
      `rake db:migrate`
-
-
-### Adding new features
-1. Create a new branch
-<br/> `git checkout -b feature/feature_name`
-  
-2. Work on the new branch, don't forget to commit regularly
-<br/> `git commit -m 'commit message'`
-
-3. Pass Rpsec test
-<br/> `rspec`
-  
-4. Push to remote server
-<br/> `git push origin feature/feature_name`
-  
-5. Create a pull request to merge into development
 
 ### Useful websites
 1. [Official Rails guide](http://guides.rubyonrails.org/)
