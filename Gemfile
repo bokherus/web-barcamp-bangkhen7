@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem "browserify-rails" # browserify-rails for allow rails to use npm
+gem 'browserify-rails' # browserify-rails for allow rails to use npm
 gem 'react-rails'
 
 gem 'rake', :group => :test
