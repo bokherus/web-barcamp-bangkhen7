@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem "browserify-rails" # browserify-rails for allow rails to use npm
+gem 'browserify-rails' # browserify-rails for allow rails to use npm
 gem 'react-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
