@@ -1,29 +1,4 @@
 language: ruby
 
-script: bundle exec rake spec
-
 rvm:
-  - 2.0.0
-  - 2.1
-  - 2.2.4
   - 2.3.0
-  - ruby-head
-gemfile:
-  - gemfiles/Gemfile-rails.3.2.x
-  - gemfiles/Gemfile-rails.4.0.x
-  - gemfiles/Gemfile-rails.4.1.x
-  - gemfiles/Gemfile-rails.4.2.x
-  - gemfiles/Gemfile-rails.5.0.0.beta1
-
-sudo: false
-
-matrix:
-  exclude:
-    - rvm: ruby-head
-      gemfile: gemfiles/Gemfile-rails.3.2.x
-    - rvm: 2.0.0
-      gemfile: gemfiles/Gemfile-rails.5.0.0.beta1
-    - rvm: 2.1
-      gemfile: gemfiles/Gemfile-rails.5.0.0.beta1
-  allow_failures:
-    - rvm: ruby-head

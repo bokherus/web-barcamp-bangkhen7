@@ -32,6 +32,9 @@ gem 'jbuilder', '~> 2.5'
 
 gem "browserify-rails" # browserify-rails for allow rails to use npm
 gem 'react-rails'
+
+gem 'rake', :group => :test
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
