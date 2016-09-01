@@ -1,3 +1,5 @@
-//= require_self
-//= require ./components
+/*node modules*/
 cookie = require('js-cookie');
+
+/*React Components for rendering*/
+HelloReact = require('./components/component.jsx');
