@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem "awesome_print", require:"ap"
+
 # Use devise for authentication
 gem 'devise'
 # browserify-rails for allow rails to use npm
