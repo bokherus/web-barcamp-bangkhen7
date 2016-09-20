@@ -17,4 +17,8 @@
 //= require react
 //= require react_ujs
 //= require components
-//= require_tree ./libs
+
+/* load js after the page has been loaded by turbolinks */
+$( document ).on('turbolinks:load', function() {
+  require('./libs/anchor.js');
+});
