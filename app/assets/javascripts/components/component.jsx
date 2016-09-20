@@ -1,5 +1,4 @@
-var Header = require('./header.jsx');
-
+import Header from './header.jsx';
 class HelloReacts extends React.Component {
 	render() {
 		return (
@@ -19,4 +18,4 @@ class HelloReacts extends React.Component {
 		);
 	}
 }
-module.exports = HelloReacts;
+export default HelloReacts;
