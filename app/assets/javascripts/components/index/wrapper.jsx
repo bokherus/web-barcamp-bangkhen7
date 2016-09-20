@@ -1,7 +1,5 @@
-// import Section from './section.jsx';
-// import Menu from './menu.jsx';
-var Section = require('./section.jsx');
-var Menu = require('./menu.jsx');
+import Section from './section.jsx';
+import Menu from './menu.jsx';
 class Wrapper extends React.Component {
 	render() {
 		return (
@@ -17,4 +15,4 @@ class Wrapper extends React.Component {
 	}
 }
 
-module.exports = Wrapper;
+export default Wrapper;

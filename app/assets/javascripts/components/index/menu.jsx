@@ -1,5 +1,4 @@
-// import Menu from 'react-burger-menu';
-var Menu = require('react-burger-menu');
+import Menu from 'react-burger-menu';
 var Slide = Menu.push;
 class Menus extends React.Component {
 	constructor(props) {
@@ -32,4 +31,4 @@ class Menus extends React.Component {
 	}
 }
 
-module.exports = Menus;
+export default Menus;
