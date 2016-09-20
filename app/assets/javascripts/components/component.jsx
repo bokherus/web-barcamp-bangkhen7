@@ -1,5 +1,4 @@
 var Header = require('./header.jsx');
-
 class HelloReacts extends React.Component {
 	render() {
 		return (
