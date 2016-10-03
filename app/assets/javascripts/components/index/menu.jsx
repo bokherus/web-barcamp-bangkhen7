@@ -1,32 +1,70 @@
 import Menu from 'react-burger-menu';
 var Slide = Menu.push;
 class Menus extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			isOpen: false
-		};
-	}
-	__stateChanged(state) {
-    this.setState({
-      isOpen: state.isOpen
-    });
-		return state.isOpen;
-	}
-	__changeState() {
-		this.setState({
-			isOpen: !this.state.isOpen
-		});
-	}
 	render() {
 		return (
-			<Slide isOpen={this.state.isOpen} onStateChange={ this.__stateChanged.bind(this) } pageWrapId={this.props.pageWrapId} outerContainerId={this.props.outerContainerId}>
-				<div className="menu-links-wrapper">
-					<a onClick={this.__changeState.bind(this)} className="scroll" href="#section1">Section1</a>
-					<a onClick={this.__changeState.bind(this)} className="scroll" href="#section2">Section2</a>
-					<a onClick={this.__changeState.bind(this)} className="scroll" href="#section3">Section3</a>
+			<div>
+				<nav className="uk-navbar flex flex-center-x" data-uk-sticky>
+					<ul className="uk-navbar-nav uk-hidden-small">
+						<li>
+							<a className="scroll" href="#index-section">bcbk</a>
+						</li>
+						<li>
+							<a className="scroll" href="#register-section">Register</a>
+						</li>
+						<li>
+							<a className="scroll" href="#schedule-section">Schedule</a>
+						</li>
+						<li>
+							<a className="scroll" href="#location-section">Location</a>
+						</li>
+						<li>
+							<a className="scroll" href="#sponsors-section">Sponsors</a>
+						</li>
+						<li>
+							<a href="">Resend Email</a>
+						</li>
+						<li>
+							<a href="">Who's Coming</a>
+						</li>
+						<li>
+							<a href="">Sessions</a>
+						</li>
+					</ul>
+					<a href="#offcanvas-1" className="uk-navbar-toggle uk-visible-small" data-uk-offcanvas=""></a>
+				</nav>
+				<div id="offcanvas-1" className="uk-offcanvas" aria-hidden="true">
+					<div className="uk-offcanvas-bar" mode="push">
+						<div className="uk-panel">
+							<li>
+								<a className="scroll" href="#index-section">bcbk</a>
+							</li>
+							<li>
+								<a className="scroll" href="#register-section">Register</a>
+							</li>
+							<li>
+								<a className="scroll" href="#schedule-section">Schedule</a>
+							</li>
+							<li>
+								<a className="scroll" href="#location-section">Location</a>
+							</li>
+							<li>
+								<a className="scroll" href="#sponsors-section">Sponsors</a>
+							</li>
+							<li>
+								<a href="">Resend Email</a>
+							</li>
+							<li>
+								<a href="">Who's Coming</a>
+							</li>
+							<li>
+								<a href="">Sessions</a>
+							</li>
+						</div>
+					</div>
 				</div>
-			</Slide>
+			</div>
+
 		);
 	}
 }

@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+  .uk-navbar {
+    display: initial !important;
+  }
+}
+
+.uk-navbar {
+  background: black !important;
+  border-radius: 0px !important;
+}
+
+.uk-navbar-nav{
+  li{
+    a{
+      color: white !important;
+      text-shadow: initial !important;
+    }
+    a:focus{
+      background-color: white !important;
+      color: black !important;
+    }
+  }
+  li:hover {
+    a{
+      background-color: white !important;
+      color: black !important;
+    }
+  }
+}
+
+.uk-navbar-toggle {
+  color: white !important;
+}

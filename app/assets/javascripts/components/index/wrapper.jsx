@@ -1,18 +1,22 @@
-import Section from './section.jsx';
+import Index from './sections/index.jsx';
+import Location from './sections/location.jsx';
+import Register from './sections/register.jsx';
+import Schedule from './sections/schedule.jsx';
+import Sponsors from './sections/sponsors.jsx';
 import Menu from './menu.jsx';
-class Wrapper extends React.Component {
+export default class Wrapper extends React.Component {
 	render() {
 		return (
-			<div id="outer-container">
-				<Menu pageWrapId="page-wrap" outerContainerId="outer-container"/>
-				<main id="page-wrap">
-					<Section sectionId="section1" color="#bdc3c7" text="Section1"/>
-					<Section sectionId="section2" color="#ecf0f1" text="Section2"/>
-					<Section sectionId="section3" color="#bdc3c7" text="Section3"/>
-				</main>
+			<div>
+				<Menu />
+				<div>
+          <Index color="#bdc3c7"/>
+          <Register color="#ecf0f1" />
+          <Schedule color="#bdc3c7"/>
+          <Location color="#ecf0f1"/>
+          <Sponsors color="#bdc3c7"/>
+				</div>
 			</div>
 		);
 	}
 }
-
-export default Wrapper;
