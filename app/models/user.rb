@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :interests
   has_many :topics, through: :interests
+
 end
