@@ -35,7 +35,6 @@ gem 'devise'
 # browserify-rails for allow rails to use npm
 gem "browserify-rails"
 gem 'react-rails'
-gem 'uikit2-rails'
 gem 'rake', :group => :test
 
 group :development, :test do

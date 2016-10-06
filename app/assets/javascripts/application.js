@@ -11,14 +11,15 @@
 // about supported directives.
 //
 //= require jquery
-//= require uikit
 //= require jquery_ujs
 //= require turbolinks
 //= require react
 //= require react_ujs
 //= require components
 
+require('./libs/uikit/js/uikit.min.js');
 /* load js after the page has been loaded by turbolinks */
 $( document ).on('turbolinks:load', function() {
+  require('./libs/uikit/js/components/sticky.js');
   require('./libs/anchor.js');
 });
