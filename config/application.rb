@@ -11,6 +11,7 @@ module WebBarcampBangkhen7
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-    config.browserify_rails.commandline_options = "-t [ babelify --presets [ es2015 react ] ] --extension='.jsx' --extension='.js.jsx'"
+    config.browserify_rails.use_browserifyinc = true
+    config.browserify_rails.commandline_options = "-t [ babelify --presets [ es2015 react ] ] --extension='.jsx' --extension='.js.jsx' --c"
   end
 end

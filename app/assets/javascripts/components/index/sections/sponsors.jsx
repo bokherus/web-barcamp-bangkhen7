@@ -1,15 +1,15 @@
+import Footer from './footer.jsx';
 class Section extends React.Component {
 	render() {
-		console.log(this.props.logo);
 		return (
 			<div id="sponsors-section">
 				<div className="uk-width-1-1 uk-flex uk-flex-center uk-flex-middle uk-flex-column">
-					<h1>Sponsors</h1>
+					<h1 className="header">SPONSORS</h1>
 					<img style={{
-						width: 250,
-						height: 250
+						width: 150,
+						height: 150
 					}} className="img-responsive" src={this.props.logo}/>
-					<h2>Department of Computer Engineering</h2>
+					<h2 className="text-center" style={{color: "#e0ffb7"}}>Department of Computer Engineering</h2>
 					<div className="flex flex-center uk-grid uk-width-1-1">
 						<div className="flex flex-center uk-width-medium-1-4 uk-width-large-1-4 uk-width-small-1-1">
 							<img src={this.props.platinum1}/>
@@ -53,6 +53,7 @@ class Section extends React.Component {
               <img src={this.props.silver6}/>
             </div>
           </div>
+          <Footer {...this.props} />
 				</div>
 			</div>
 		);

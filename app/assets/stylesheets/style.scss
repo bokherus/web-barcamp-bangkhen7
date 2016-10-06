@@ -33,3 +33,20 @@ html, body {
 .text {
   font-size: 40px;
 }
+
+.header {
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.uk-grid {
+  margin: 0px !important;
+  padding: 0px !important;
+  * {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+}
