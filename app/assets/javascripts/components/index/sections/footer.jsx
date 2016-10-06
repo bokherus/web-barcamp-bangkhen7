@@ -1,7 +1,7 @@
 class Footer extends React.Component {
   render() {
     return (
-      <div id="footer" className="uk-grid uk-width-1-1 uk-flex uk-flex-center">
+      <div id="footer" className="uk-grid uk-width-1-1 uk-flex uk-flex-center uk-margin-top">
         <div id="footer-bcbk-name" className="uk-text-left uk-width-medium-1-4 uk-width-large-1-4 uk-width-small-1-1 uk-margin-top uk-margin-bottom">
           <p className="uk-text-uppercase">barcamp bangkhen 2016</p>
         </div>
