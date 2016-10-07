@@ -1,12 +1,8 @@
-import PageHeader from '../../page-header.jsx';
 import Row from './schedule-row.jsx';
 class Desktop extends React.Component {
 	render() {
 		return (
-			<div>
-				<PageHeader header="SCHEDULE">
-					13 November 2016
-				</PageHeader>
+			<div className="uk-hidden-small">
 				<Row time="09.00 - 09.45" head="Registration and Setting up">
 					<p className="no-margin thin">Participant register and get some BarCamp stuffs including BARCAMP SHIRT! Then move to 2md floor. Bring up your session on the vote board or vote any sessions you want to join</p>
 				</Row>

@@ -6,7 +6,7 @@ class Section extends React.Component {
 		return (
 			<div className="section flex" id="location-section">
 				<div className="uk-width-8-10 uk-container-center">
-					<PageHeader header="LOCATION">
+					<PageHeader header="location">
 						IUP International Building 17
 						<br/>
 						Kasetsart University

@@ -18,3 +18,25 @@
     margin-right: 50px;
     top: 0px;
 }
+
+.schedule-line {
+  width: 3px !important;
+  background-color: white;
+}
+
+.schedule-circle {
+  width: 13px !important;
+  height: 13px;
+  margin-top: 4px;
+  border-radius: 99999px;
+  background-color: white;
+}
+
+.schedule-line-parent {
+  position: relative;
+}
+
+.schedule-line-1 {
+  position: absolute;
+  height: 100%;
+}
