@@ -7,13 +7,13 @@ class Wrapper extends React.Component {
     return (
       <div className="uk-hiddem-medium uk-hidden-large uk-width-1-1">
         <div className="uk-width-1-1">
-          <ParkingCard cardName="paid parking">
-            <PaidParking />
+          <ParkingCard cardName="free parking">
+            <FreeParking />
           </ParkingCard>
         </div>
         <div className="uk-width-1-1 uk-margin-top">
-          <ParkingCard cardName="free parking">
-            <FreeParking />
+          <ParkingCard cardName="paid parking">
+            <PaidParking />
           </ParkingCard>
         </div>
         <div className="uk-width-1-1 uk-margin-top">
