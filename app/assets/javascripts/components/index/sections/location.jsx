@@ -19,7 +19,7 @@ class Section extends React.Component {
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB3BYkLjKKhvcbiwxKYlY3huEHW0qcOnH4&q=ภาควิชาวิศวกรรมคอมพิวเตอร์+คณะวิศวกรรมศาสตร์+มหาวิทยาลัยเกษตรศาสตร์+(วิทยาเขตบางเขน)">
         </iframe>
         </div>
-        <div id="location-body">
+        <div className="uk-width-8-10 uk-container-center" id="location-body">
             <div className="location-item" >
                 <div className="location-innerhead"><p>PAID PARKING</p></div>
                 <div className="location-inneritem">
@@ -56,7 +56,6 @@ class Section extends React.Component {
                             <li>Location: Behing KU Golden Jubilee entrance</li>
                             <li>Capacity: 300</li>
                         </ul>
-
                     </div>
                 </div>
             </div>
