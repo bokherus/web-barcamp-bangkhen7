@@ -3,7 +3,7 @@ class PageHeader extends React.Component {
     return (
       <div>
         <h1 style={{marginBottom: "0px"}} className="header">{this.props.header}</h1>
-        <h2 style={{marginTop: "0px"}}>
+        <h2 style={{marginTop: "0px", fontWeight: 200}}>
           {this.props.children}
         </h2>
       </div>

@@ -5,7 +5,7 @@ class Transportation extends React.Component {
 				<div className="uk-width-medium-1-2 uk-width-large-1-2 uk-width-small-1-1">
 					<h3>Bus</h3>
 					<div>
-						<p>
+						<p className="uk-margin-right">
 							24 26 29 39 51 52 59 63 104 107 114 126 129 177 185 186 522 524 528 545
 						</p>
 					</div>
