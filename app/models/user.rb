@@ -7,4 +7,7 @@ class User < ApplicationRecord
   has_many :interests
   has_many :topics, through: :interests
 
+  def send_after_signup_email
+    Email::User::AfterSignupJob.perform_later(self)
+  end
 end
