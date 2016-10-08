@@ -23,31 +23,9 @@
     border: solid 3px white;
 }
 
-#location-head{
-    // margin-left: 15px;
-    // margin-top: 30px;
-}
-
 #location-body{
     margin-top: 50px;
     margin-bottom: 50px;
-    // display: flex;
-    // flex-direction: row;
-    // margin-top: 20px;
-    // margin-left: 20px;
-    // margin-right: 20px;
-    // > div{
-    //     flex-grow: 1;
-    // }
-}
-
-.location-item{
-    // display: flex;
-    // flex-direction: column;
-    // .location-innerhead + .location-inneritem{
-    //     margin-top: -15px;
-    //     flex-grow: 1;
-    // }
 }
 
 .location-inneritem{
@@ -61,89 +39,10 @@
     li,p {
       font-weight: 300;
     }
-
-    // display: flex;
-    // flex-direction: row;
-    //
-    // > div{
-    //     width: 0;
-    //     flex-grow: 1;
-    //     p + ul {
-    //         margin-top: -12px;
-    //         margin-bottom: -12px;
-    //     }
-    //     p + p {
-    //         margin-top: -12px;
-    //         margin-bottom: -12px;
-    //     }
-    //     p + div {
-    //         margin-top: -20px;
-    //         margin-bottom: -12px;
-    //     }
-    //     ul {
-    //         list-style: none;
-    //         margin-left: 0;
-    //         padding-left: 2em;
-    //     }
-    //     li {
-    //         padding-left: 1em;
-    //         text-indent: -1em;
-    //     }
-    //     li:before {
-    //           content: "-";
-    //           padding-right: 5px;
-    //     }
-    // }
-    // #location-bus{
-    //     flex-grow: 2;
-    // }
 }
 
-// #location-transport{
-//     margin-bottom: 10px;
-// }
-//
 @media(min-width: 768px) {
   .location-inneritem {
     display: flex;
   }
 }
-// @media (max-width: 768px) {
-//     #location-section{
-//
-//     }
-//     #location-body{
-//         margin-left: 8%;
-//         margin-right: 8%;
-//         flex-direction: column;
-//         flex-shrink: 0;
-//         div + div {
-//             margin-top: 12px;
-//         }
-//     }
-//     .location-innerhead{
-//         margin-top: 10px;
-//         margin-bottom: -20px;
-//     }
-//     .location-inneritem{
-//         flex-direction: column;
-//         > div{
-//             flex-grow: 0;
-//             width: 100%;
-//
-//         }
-//     }
-//     #location-bus{
-//         flex-grow: 1;
-//     }
-//     #location-transport{
-//         p{
-//             text-align: center;
-//         }
-//         margin-top: 40px !important;
-//         margin-bottom: 10px !important;
-//     }
-//     .location-transport-topic{
-//         text-align: center;
-//     }
-// }

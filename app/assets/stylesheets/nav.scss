@@ -1,29 +1,34 @@
 @media (max-width: 768px) {
   .uk-navbar {
     display: initial !important;
+    background: rgba(0,0,0,0) !important;
+  }
+}
+@media (min-width: 768px) {
+  .uk-navbar {
+    background: rgba(0,0,0,0.3) !important;
+    transition: 0.3s;
+    border-radius: 0px !important;
   }
 }
 
-.uk-navbar {
-  background: black !important;
-  border-radius: 0px !important;
-}
 
 .uk-navbar-nav{
   li{
     a{
       color: white !important;
       text-shadow: initial !important;
+      transition: 0.3s;
     }
     a:focus{
-      background-color: white !important;
-      color: black !important;
+      background: rgba(0,0,0,0) !important;
+      color: white !important;
     }
   }
   li:hover {
     a{
-      background-color: white !important;
-      color: black !important;
+      background-color: rgba(0,0,0,0.6) !important;
+      color: white !important;
     }
   }
 }

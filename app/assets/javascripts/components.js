@@ -7,5 +7,5 @@ global.Menu = require('./components/index/menu.jsx');
 global.Index = require('./components/index/sections/index.jsx');
 global.Location = require('./components/index/sections/location.jsx');
 global.Register = require('./components/index/sections/register.jsx');
-global.Schedule = require('./components/index/sections/schedule.jsx');
+global.Schedule = require('./components/index/sections/schedule/wrapper.jsx');
 global.Sponsors = require('./components/index/sections/sponsors.jsx');

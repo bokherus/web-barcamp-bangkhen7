@@ -6,13 +6,11 @@ class Section extends React.Component {
 		return (
 			<div className="section flex" id="location-section">
 				<div className="uk-width-8-10 uk-container-center">
-					<div id="location-head">
-            <PageHeader header="LOCATION">
-              IUP International Building 17
-              <br/>
-              Kasetsart University
-            </PageHeader>
-					</div>
+					<PageHeader header="location">
+						IUP International Building 17
+						<br/>
+						Kasetsart University
+					</PageHeader>
 				</div>
 				<div>
 					<iframe width="100%" height="300" frameBorder="0" style={{
@@ -20,8 +18,8 @@ class Section extends React.Component {
 					}} src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB3BYkLjKKhvcbiwxKYlY3huEHW0qcOnH4&q=ภาควิชาวิศวกรรมคอมพิวเตอร์+คณะวิศวกรรมศาสตร์+มหาวิทยาลัยเกษตรศาสตร์+(วิทยาเขตบางเขน)"></iframe>
 				</div>
 				<div className="uk-width-8-10 uk-container-center uk-flex" id="location-body">
-          <Mobile />
-					<Desktop />
+					<Mobile/>
+					<Desktop/>
 				</div>
 			</div>
 		);
