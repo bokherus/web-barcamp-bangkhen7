@@ -5,7 +5,7 @@ class Section extends React.Component {
 			<div className="uk-flex uk-flex-center uk-flex-column" id="index-section">
 				<div style={{
 					marginTop: 100
-				}} className="uk-width-3-10 uk-container-center">
+				}} className="uk-width-4-10 uk-width-medium-3-10 uk-width-large-3-10 uk-container-center">
 					<img src={this.props.logo}/>
 				</div>
         <Desktop {...this.props}/>

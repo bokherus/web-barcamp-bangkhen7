@@ -15,3 +15,22 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
+
+.icon {
+  height: 44px;
+}
+
+@media(min-width: 768px) {
+  .event-info {
+    padding-top: 25%;
+    padding-bottom: 25%;
+  }
+}
+
+@media(max-width: 768px) {
+  .event-info {
+    background-image: url(asset-path('polygon-mobile.png'));
+    padding-top: 60%;
+    height: 600px;
+  }
+}
