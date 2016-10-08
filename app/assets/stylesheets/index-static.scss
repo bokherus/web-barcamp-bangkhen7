@@ -27,15 +27,15 @@
   }
 }
 
-@media(max-width: 768px) and (orientation:portrait) {
+@media(max-width: 768px){
   #index-section {
     margin-top: 0px;
-    height: 100vh;
   }
   .event-info {
     background-image: url(asset-path('polygon-mobile.png'));
-    padding-top: 23vh;
-    height: 100vh;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
+    margin-bottom: 13vh;
   }
   .logo-wrapper {
     margin-top: 15vh;
@@ -43,33 +43,40 @@
   h3,h2,h1 {
     font-weight: 400 !important;
   }
-}
-
-@media(max-width: 768px) and (orientation:landscape) {
-  .event-info {
-    background-image: url(asset-path('polygon-mobile.png'));
-    padding-top: 40vh;
-  }
-  .logo-wrapper {
-    margin-top: 15vh;
-  }
-  h3,h2,h1 {
-    font-weight: 400 !important;
+  .event-info-wrapper {
+    flex-direction: column;
   }
 }
 
-@media(max-height: 568px) and (orientation:portrait) {
-  #index-section {
-    height: 120vh;
-  }
-}
-
+// @media(max-width: 768px) and (orientation:landscape) {
+//   .event-info {
+//     background-image: url(asset-path('polygon-mobile.png'));
+//   }
+//   .logo-wrapper {
+//     margin-top: 15vh;
+//   }
+//   h3,h2,h1 {
+//     font-weight: 400 !important;
+//   }
+// }
+//
+// @media(max-height: 568px) and (orientation:portrait) {
+//   #index-section {
+//     height: 120vh;
+//   }
+// }
+//
 @media(max-width: 414px) {
   .index-info-text {
     width: 45% !important;
   }
 }
-
+@media(max-width: 320px) {
+  .index-info-text {
+    width: 55% !important;
+  }
+}
+//
 
 #what-is-barcamp-wrapper {
   h1{
