@@ -10,7 +10,7 @@ class Menus extends React.Component {
 							<a className="scroll" href="#index-section">bcbk</a>
 						</li>
 						<li>
-							<a className="scroll" href="#register-section">Register</a>
+							<a className="scroll" href="#description-section">Register</a>
 						</li>
 						<li>
 							<a className="scroll" href="#schedule-section">Schedule</a>
@@ -40,7 +40,7 @@ class Menus extends React.Component {
 								<a className="scroll" href="#index-section">bcbk</a>
 							</li>
 							<li>
-								<a className="scroll" href="#register-section">Register</a>
+								<a className="scroll" href="#description-section">Register</a>
 							</li>
 							<li>
 								<a className="scroll" href="#schedule-section">Schedule</a>
