@@ -59,13 +59,13 @@ class Menus extends React.Component {
 								<a className="scroll" href="#sponsors-section">Sponsors</a>
 							</li>
 							<li>
-								<a className="scroll" href="/resend">Resend Email</a>
+								<a href="/resend">Resend Email</a>
 							</li>
 							<li>
-								<a className="scroll" href="/participants">Participants</a>
+								<a href="/participants">Participants</a>
 							</li>
 							<li>
-								<a className="scroll" href="/sessions">Sessions</a>
+								<a href="/sessions">Sessions</a>
 							</li>
 						</div>
 					</div>
