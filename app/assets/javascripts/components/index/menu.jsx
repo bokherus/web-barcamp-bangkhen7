@@ -22,16 +22,16 @@ class Menus extends React.Component {
 							<a className="scroll uk-text-uppercase" href="#sponsors-section">Sponsors</a>
 						</li>
 						<li>
-							<a className="uk-text-uppercase" href="">Resend Email</a>
+							<a className="uk-text-uppercase" href="/resend">Resend Email</a>
 						</li>
 						<li>
-							<a className="uk-text-uppercase" href="">Participants</a>
+							<a className="uk-text-uppercase" href="/participants">Participants</a>
 						</li>
 						<li>
-							<a className="uk-text-uppercase" href="">Sessions</a>
+							<a className="uk-text-uppercase" href="/sessions">Sessions</a>
 						</li>
             <li>
-							<a className="uk-text-uppercase" href="">Login</a>
+							<a className="uk-text-uppercase" href="/login">Login</a>
 						</li>
 					</ul>
 					<a href="#offcanvas-1" className="uk-navbar-toggle uk-visible-small" data-uk-offcanvas="{mode:'slide'}"></a>
