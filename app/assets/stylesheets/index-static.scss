@@ -1,5 +1,5 @@
 #index-section {
-  // background-image: url(asset-path('BG1.jpg'));
+  background-image: url(asset-path('BG1.jpg'));
   background-size: 100% 100%;
   background-repeat: no-repeat;
   margin-top: -50px;
@@ -11,7 +11,7 @@
 }
 
 .event-info {
-  // background-image: url(asset-path('polygon.svg'));
+  background-image: url(asset-path('polygon.svg'));
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -32,7 +32,7 @@
     margin-top: 0px;
   }
   .event-info {
-    // background-image: url(asset-path('polygon-mobile.png'));
+    background-image: url(asset-path('polygon-mobile.png'));
     background-size: 100% 100%;
     padding-top: 15vh;
     padding-bottom: 10vh;
@@ -58,7 +58,6 @@
     width: 55% !important;
   }
 }
-//
 
 #what-is-barcamp-wrapper {
   h1{
