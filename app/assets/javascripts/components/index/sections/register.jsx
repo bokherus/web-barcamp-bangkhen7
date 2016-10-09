@@ -6,7 +6,7 @@ class Section extends React.Component {
             <article className = "uk-article" id = "register-text">
               <div id="what-is-barcamp-wrapper">
                 <div className="uk-width-1-1 uk-margin-bottom">
-                  <h1 className="uk-text-uppercase thin no-margin">what is&nbsp;</h1><h1 className="uk-text-uppercase no-margin">barcamp?</h1>
+                  <h1 className="uk-text-uppercase thin no-margin">what is&nbsp;</h1><h1 className="uk-text-uppercase no-margin barcamp">barcamp?</h1>
                 </div>
                 <h3 className="thin no-margin">BarCamp is a participant-generated conference primarily focused on exchanging knowledge, experience and stories.</h3>
                 <h3 className="thin no-margin uk-margin-bottom">The participants will have a chance to come into contact with new ideas as well as propose some of their own.</h3>
