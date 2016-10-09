@@ -44,7 +44,7 @@ class Menus extends React.Component {
 							</li>
               <li className="menu-divider"></li>
 							<li>
-								<a className="scroll" href="">Login</a>
+								<a className="scroll" href="/login">Login</a>
 							</li>
 							<li>
 								<a className="scroll" href="#register-section">Register</a>
@@ -59,13 +59,13 @@ class Menus extends React.Component {
 								<a className="scroll" href="#sponsors-section">Sponsors</a>
 							</li>
 							<li>
-								<a className="scroll" href="">Resend Email</a>
+								<a className="scroll" href="/resend">Resend Email</a>
 							</li>
 							<li>
-								<a className="scroll" href="">Participants</a>
+								<a className="scroll" href="/participants">Participants</a>
 							</li>
 							<li>
-								<a className="scroll" href="">Sessions</a>
+								<a className="scroll" href="/sessions">Sessions</a>
 							</li>
 						</div>
 					</div>
