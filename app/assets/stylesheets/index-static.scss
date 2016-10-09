@@ -11,8 +11,8 @@
 }
 
 .event-info {
-  background-image: url(asset-path('polygon.png'));
-  background-size: 100% 100%;
+  background-image: url(asset-path('polygon.svg'));
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
@@ -33,6 +33,7 @@
   }
   .event-info {
     background-image: url(asset-path('polygon-mobile.png'));
+    background-size: 100% 100%;
     padding-top: 15vh;
     padding-bottom: 10vh;
     margin-bottom: 13vh;
