@@ -3,7 +3,7 @@ class Section extends React.Component {
 	render() {
 		return (
 			<div id="sponsors-section">
-				<div className="uk-width-1-1 uk-flex uk-flex-center uk-flex-middle uk-flex-column">
+				<div className="uk-width-8-10 uk-container-center uk-flex uk-flex-center uk-flex-middle uk-flex-column">
 					<h1 className="header">SPONSORS</h1>
 					<img style={{
 						width: 150,
@@ -53,8 +53,9 @@ class Section extends React.Component {
               <img src={this.props.silver6}/>
             </div>
           </div>
-          <Footer {...this.props} />
 				</div>
+        <Footer {...this.props} />
+        <p className="credit uk-text-uppercase uk-text-center no-margin thin">created by cpsk nisit :)</p>
 			</div>
 		);
 	}

@@ -11,3 +11,9 @@
     margin: 0px;
   }
 }
+
+@media (max-width: 768px) {
+  #description-section {
+    text-align: center;
+  }
+}
