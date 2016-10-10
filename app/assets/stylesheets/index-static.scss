@@ -3,10 +3,15 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   margin-top: -50px;
-
+  padding-bottom: 50px;
   h3,h2,h1 {
     color: white;
     font-weight: 500;
+  }
+  .description-section {
+    h1,h2,h3 {
+      color: #444;
+    }
   }
 }
 
