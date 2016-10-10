@@ -6,4 +6,8 @@ class HomeController < ApplicationController
   def dummy
     redirect_to '/comingsoon'
   end
+
+  def participants
+    
+  end
 end
