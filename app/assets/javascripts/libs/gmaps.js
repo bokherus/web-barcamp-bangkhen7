@@ -2405,6 +2405,6 @@ if (!Array.prototype.indexOf) {
   }
 }
 
-global.GMaps = GMaps;
+window.GMaps = GMaps;
 return GMaps;
 }));
