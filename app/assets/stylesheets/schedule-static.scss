@@ -6,10 +6,12 @@
 }
 
 #schedule-section{
-    background-image: url(asset-path('BG3.png'));
+    background-image : url(asset-path('BG5.jpeg'));
+    background-size: 100% !important;
+    background-repeat: repeat !important;
     padding-top: 50px;
     padding-bottom: 50px;
-    h2, p, h3{
+    h2, p, h3,h4{
       color: white;
     }
 }

@@ -3,7 +3,7 @@ class Section extends React.Component {
 	render() {
 		return (
 			<div id="sponsors-section">
-				<div className="uk-width-1-1 uk-flex uk-flex-center uk-flex-middle uk-flex-column">
+				<div className="uk-width-8-10 uk-container-center uk-flex uk-flex-center uk-flex-middle uk-flex-column">
 					<h1 className="header">SPONSORS</h1>
 					<img style={{
 						width: 150,
@@ -27,34 +27,35 @@ class Section extends React.Component {
 						</div>
 					</div>
 					<div className="flex flex-center uk-grid uk-width-1-1">
-            <div className="flex flex-center uk-width-small-1-2 uk-width-medium-1-5 uk-width-large-1-5">
+            <div className="flex flex-center uk-width-7-10 uk-width-medium-1-5 uk-width-large-1-5">
               <img src={this.props.gold1}/>
             </div>
 					</div>
           <div className="flex flex-center uk-grid uk-width-1-1">
-            <div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-small-1-1">
+            <div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-3-5">
               <img src={this.props.silver1}/>
             </div>
-            <div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-small-1-1">
+            <div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-3-5">
               <img src={this.props.silver2}/>
             </div>
-            <div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-small-1-1">
+            <div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-3-5">
               <img src={this.props.silver3}/>
             </div>
           </div>
           <div className="flex flex-center uk-grid uk-width-1-1">
-            <div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-small-1-1">
+            <div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-3-5">
               <img src={this.props.silver4}/>
             </div>
-            <div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-small-1-1">
+            <div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-3-5">
               <img src={this.props.silver5}/>
             </div>
-            <div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-small-1-1">
+            <div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-3-5">
               <img src={this.props.silver6}/>
             </div>
           </div>
-          <Footer {...this.props} />
 				</div>
+        <Footer {...this.props} />
+        <p className="credit uk-text-uppercase uk-text-center no-margin thin">created by cpsk nisit :)</p>
 			</div>
 		);
 	}

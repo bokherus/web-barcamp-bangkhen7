@@ -5,7 +5,7 @@ import Transportation from '../../parking/transportation.jsx';
 class Wrapper extends React.Component {
   render() {
     return (
-      <div className="uk-hiddem-medium uk-hidden-large uk-width-1-1">
+      <div className="uk-hidden-medium uk-hidden-large uk-width-1-1">
         <div className="uk-width-1-1">
           <ParkingCard cardName="free parking">
             <FreeParking />

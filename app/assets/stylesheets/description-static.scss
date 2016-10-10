@@ -1,0 +1,37 @@
+#description-section{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url(asset-path('BG2.jpg'));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  h1,h3 {
+    color: #444;
+    font-weight: 300;
+    margin: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  #description-section {
+    text-align: center;
+    background-image: url(asset-path('BG4.jpg')) !important;
+    background-size: 100% !important;
+    background-repeat:repeat;
+    h1,h3 {
+      color: white;
+      font-weight: 300;
+      margin: 0px;
+    }
+  }
+}
+
+
+#what-is-barcamp-wrapper {
+  h1{
+    display: inline;
+  }
+  .barcamp {
+    font-weight: 400;
+  }
+}
