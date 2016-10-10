@@ -2,7 +2,7 @@ import Menu from 'react-burger-menu';
 var Slide = Menu.push;
 class Menus extends React.Component {
   componentDidMount() {
-    $('.scroll').click(function(event) {
+    $('.scroll-d').click(function(event) {
       event.preventDefault();
       $('html,body').animate({
         scrollTop: $(this.hash).position().top
@@ -16,19 +16,19 @@ class Menus extends React.Component {
 				<nav className="uk-navbar flex flex-center-x">
 					<ul className="uk-navbar-nav uk-hidden-small uk-flex uk-flex-center uk-flex-middle navbar uk-hidden-small">
 						<li>
-							<a className="scroll uk-text-uppercase bcbk" href="#index-section">BCBK</a>
+							<a className="scroll-d uk-text-uppercase bcbk" href="#index-section">BCBK</a>
 						</li>
 						<li>
-							<a className="scroll uk-text-uppercase" href="#register-section">Register</a>
+							<a className="scroll-d uk-text-uppercase" href="#register-section">Register</a>
 						</li>
 						<li>
-							<a className="scroll uk-text-uppercase" href="#schedule-section">Schedule</a>
+							<a className="scroll-d uk-text-uppercase" href="#schedule-section">Schedule</a>
 						</li>
 						<li>
-							<a className="scroll uk-text-uppercase" href="#location-section">Location</a>
+							<a className="scroll-d uk-text-uppercase" href="#location-section">Location</a>
 						</li>
 						<li>
-							<a className="scroll uk-text-uppercase" href="#sponsors-section">Sponsors</a>
+							<a className="scroll-d uk-text-uppercase" href="#sponsors-section">Sponsors</a>
 						</li>
 						<li>
 							<a className="uk-text-uppercase" href="/resend">Resend Email</a>
