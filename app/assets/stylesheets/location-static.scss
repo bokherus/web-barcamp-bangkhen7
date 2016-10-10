@@ -3,8 +3,12 @@
     flex-direction: column;
     padding-top: 50px;
     height: auto;
-    background-image: url(asset-path('BG4.jpg')) !important;
-    background-size: 100%;
+    // background-image: url(asset-path('BG4.jpg')) !important;
+    // background-size: 100%;
+
+    background-image : url(asset-path('gray.svg'));
+    background-color: rgba(75,163,171,1);
+    background-repeat: repeat;
     div{
         height: auto;
     }
