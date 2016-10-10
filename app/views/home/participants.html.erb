@@ -1,4 +1,18 @@
 <div>
   <%= react_component('Menu', redirect: true) %>
-  <%= react_component('Participants') %>
+  <%= react_component('Participants',
+      participants: [{
+        no: 1,
+        name: "Taweerat Chaiman",
+        twitter: "@taweesoft",
+        interest: ["Programming", "Orange", "Movies"],
+        website: "taweesoft.xyz"
+      },
+      {
+        no: 2,
+        name: "Image Processing",
+        twitter: "@imagep",
+        interest: ["Image Processing", "Drinking water", "Signing", "Swimming"],
+        website: "image-p.com"
+      }]) %>
 </div>
