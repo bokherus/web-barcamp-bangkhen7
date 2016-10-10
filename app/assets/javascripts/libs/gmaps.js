@@ -1,5 +1,4 @@
 "use strict";
-console.log("gmaps");
 (function(root, factory) {
   if(typeof exports === 'object') {
     module.exports = factory();
