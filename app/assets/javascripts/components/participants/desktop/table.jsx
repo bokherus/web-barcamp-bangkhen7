@@ -14,13 +14,10 @@ class Table extends React.Component {
         </thead>
         <tbody>
           {
-            this.props.participants.map(function(object, i ) {
-              var interest ="";
-              object.interest.map(function(item) {
-                interest += item + " ";
-              });
+            this.props.items.map(function(object, i ) {
+              var interest = getInterestPlaceHolder(object.interest);
               return (
-                <tr className="table-body-row">
+                <tr className="table-body-row" key={i}>
                   <td>{object.no}</td>
                   <td>{object.name}</td>
                   <td>{object.twitter}</td>
@@ -36,4 +33,11 @@ class Table extends React.Component {
   }
 }
 
+var getInterestPlaceHolder = function(interest) {
+  var firstTwo = _.chunk(interest, 2)[0];
+  if (firstTwo.length === 1){ return firstTwo[0]; }
+  else {
+    return firstTwo[0] + ", " + firstTwo[1] + ",...";
+  }
+};
 export default connect()(Table);

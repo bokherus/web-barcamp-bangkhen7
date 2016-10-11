@@ -1,5 +1,6 @@
 var types = {
-  FILTERING: "filtering"
+  INIT: 'init',
+  FILTERING: 'filtering'
 };
 
 export default types;
