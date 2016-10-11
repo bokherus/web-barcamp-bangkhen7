@@ -1,6 +1,14 @@
 import Menu from 'react-burger-menu';
 var Slide = Menu.push;
+import LoginDesktop from './login/desktop/wrapper.jsx';
 class Menus extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loginToggle: false
+    };
+    this.showLogin = this.showLogin.bind(this);
+  }
   componentDidMount() {
     var self = this;
     if(this.props.redirect === false) {
@@ -21,9 +29,14 @@ class Menus extends React.Component {
       scrollTop: $(element).position().top
     }, 500);
   }
+  showLogin() {
+    this.setState({
+      loginToggle: !this.state.loginToggle
+    });
+  }
 	render() {
 		return (
-			<div>
+			<div style={{position: "relative"}}>
 				<nav className="uk-navbar flex flex-center-x">
 					<ul className="uk-navbar-nav uk-hidden-small uk-flex uk-flex-center uk-flex-middle navbar uk-hidden-small">
 						<li>
@@ -51,7 +64,7 @@ class Menus extends React.Component {
 							<a className="uk-text-uppercase" href="/sessions">Sessions</a>
 						</li>
             <li>
-							<a className="uk-text-uppercase" href="/login">Login</a>
+							<a className="uk-text-uppercase" onClick={this.showLogin}>Login</a>
 						</li>
 					</ul>
 					<a href="#offcanvas-1" className="uk-navbar-toggle uk-visible-small" style={{position: "fixed"}} data-uk-offcanvas="{mode:'slide'}"></a>
@@ -90,6 +103,7 @@ class Menus extends React.Component {
 						</div>
 					</div>
 				</div>
+        <LoginDesktop toggle={this.state.loginToggle}/>
 			</div>
 
 		);

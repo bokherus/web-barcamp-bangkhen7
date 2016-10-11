@@ -99,3 +99,21 @@ html, body {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+.bb-button {
+  font-size: 15px;
+  color: white;
+  border: solid 2px white;
+  background: rgba(0,0,0,0);
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.bb-button:hover {
+  cursor: pointer;
+  color: #444;
+  background: white;
+  h6 {
+    color: #444 !important;
+  }
+}
