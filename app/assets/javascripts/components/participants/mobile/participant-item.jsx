@@ -10,7 +10,7 @@ class ParticipantItem extends React.Component {
           <h3>{participant.name}</h3>
           <h5 className="thin">{participant.education}</h5>
           <h6 className="thin">{participant.twitter + " / " + participant.website}</h6>
-          <h6 className="thin">{_.replace(participant.interest.toString(), /,/g, " ")}</h6>
+          <h6 className="thin interest-text">{_.replace(participant.interest.toString(), /,/g, " ")}</h6>
         </div>
       </div>
     );
