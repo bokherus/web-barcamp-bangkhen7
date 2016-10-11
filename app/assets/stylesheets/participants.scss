@@ -6,6 +6,9 @@
 }
 
 #participants {
+  p,h2,h3,h4,h5,h6 {
+    color: white;
+  }
   color: white;
   .uk-table {
     border: solid;
@@ -26,5 +29,9 @@
   }
   .table-body-row:hover {
     background-color: rgba(255,255,255,0.1);
+  }
+  .mobile-body-row {
+    padding-top : 10px !important;
+    padding-bottom: 10px !important;
   }
 }

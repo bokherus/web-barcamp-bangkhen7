@@ -1,4 +1,5 @@
 import Desktop from './desktop/wrapper.jsx';
+import Mobile from './mobile/wrapper.jsx';
 import {Provider, connect} from 'react-redux';
 import {createStore, combineReducers, bindActionCreators} from 'redux';
 import reducer from './reducer';
@@ -43,7 +44,8 @@ class A extends React.Component {
 				<div className="uk-width-1-1 body-wrapper">
 					<div className="uk-width-8-10 uk-container-center">
 						<input ref="filter-form" onChange={this.onFiltering} className="bb-input uk-width-1-1 uk-text-center uk-margin-top uk-margin-bottom" placeholder="Filter by interest"/>
-						<Desktop {...this.props}/>
+						<Desktop />
+            <Mobile />
 					</div>
 				</div>
 			</div>
