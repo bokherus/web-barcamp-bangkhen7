@@ -8,6 +8,6 @@ class HomeController < ApplicationController
   end
 
   def participants
-    
+      @participants = User.all.as_json
   end
 end
