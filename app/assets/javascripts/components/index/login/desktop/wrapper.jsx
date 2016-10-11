@@ -2,7 +2,8 @@ class Wrapper extends React.Component {
 	render() {
 		return (
 			<div id="login-section" style={{display: this.props.toggle ? "" : "none"}}>
-				<form action="http://localhost:9999/user/signin" method="post" className="uk-width-8-10 uk-container-center">
+				<form action="/users/sign_in" method="post" className="uk-width-8-10 uk-container-center">
+          <input name="authenticity_token" type="hidden" value={this.props.token}/>
 					<div className="uk-width-1-1">
 						<h5 className="no-margin uk-text-uppercase">Email</h5>
 						<input className="bb-input uk-width-1-1" name="email" />

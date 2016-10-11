@@ -37,16 +37,6 @@ ActiveRecord::Schema.define(version: 20161010082706) do
     t.index ["user_id"], name: "index_interests_on_user_id", using: :btree
   end
 
-  create_table "sessions", force: :cascade do |t|
-    t.string   "name"
-    t.string   "speaker"
-    t.datetime "start_time"
-    t.datetime "end_time"
-    t.string   "location"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "topics", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -68,8 +58,6 @@ ActiveRecord::Schema.define(version: 20161010082706) do
     t.datetime "updated_at",                          null: false
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "provider"
-    t.string   "uid"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

@@ -103,7 +103,7 @@ class Menus extends React.Component {
 						</div>
 					</div>
 				</div>
-        <LoginDesktop toggle={this.state.loginToggle}/>
+        <LoginDesktop toggle={this.state.loginToggle} token={this.props.token}/>
 			</div>
 
 		);
