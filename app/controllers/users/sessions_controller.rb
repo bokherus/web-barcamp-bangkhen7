@@ -2,9 +2,9 @@ class Users::SessionsController < Devise::SessionsController
     # before_action :configure_sign_in_params, only: [:create]
 
     # GET /resource/sign_in
-    # def new
-    #   super
-    # end
+    def new
+      redirect_to root_path
+    end
 
     # POST /resource/sign_in
     def create
@@ -13,7 +13,7 @@ class Users::SessionsController < Devise::SessionsController
 
         if resource.valid_password?(params[:password])
             sign_in :user, resource
-            respond_with resource, location: after_sign_in_path_for(resource)
+            return render :json => {:success => true}
         end
 
         invalid_login_attempt
