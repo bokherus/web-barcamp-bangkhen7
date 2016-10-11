@@ -2,13 +2,24 @@ import Menu from 'react-burger-menu';
 var Slide = Menu.push;
 class Menus extends React.Component {
   componentDidMount() {
-    $('.scroll-d').click(function(event) {
-      event.preventDefault();
-      $('html,body').animate({
-        scrollTop: $(this.hash).position().top
-      }, 500);
-      return false;
-    });
+    var self = this;
+    if(this.props.redirect === false) {
+      $('.scroll-d').click(function(event) {
+        event.preventDefault();
+        self.scroll(this.hash);
+        return false;
+      });
+    }
+    // var path = $(location).attr('href');
+    // if(path.indexOf("#") >= 0) {
+    //   var elementName = path.substring(path.indexOf("#"));
+    //   this.scroll(elementName);
+    // }
+  }
+  scroll(element) {
+    $('html,body').animate({
+      scrollTop: $(element).position().top
+    }, 500);
   }
 	render() {
 		return (
@@ -16,19 +27,19 @@ class Menus extends React.Component {
 				<nav className="uk-navbar flex flex-center-x">
 					<ul className="uk-navbar-nav uk-hidden-small uk-flex uk-flex-center uk-flex-middle navbar uk-hidden-small">
 						<li>
-							<a className="scroll-d uk-text-uppercase bcbk" href="#index-section">BCBK</a>
+							<a className="scroll-d uk-text-uppercase bcbk" href={this.props.redirect ? "/#index-section" : "#index-section"}>BCBK</a>
 						</li>
 						<li>
-							<a className="scroll-d uk-text-uppercase" href="#register-section">Register</a>
+							<a className="scroll-d uk-text-uppercase" href={this.props.redirect ? "/#register-section" : "#register-section"}>Register</a>
 						</li>
 						<li>
-							<a className="scroll-d uk-text-uppercase" href="#schedule-section">Schedule</a>
+							<a className="scroll-d uk-text-uppercase" href={this.props.redirect ? "/#schedule-section" : "#schedule-section"}>Schedule</a>
 						</li>
 						<li>
-							<a className="scroll-d uk-text-uppercase" href="#location-section">Location</a>
+							<a className="scroll-d uk-text-uppercase" href={this.props.redirect ? "/#location-section" : "#location-section"}>Location</a>
 						</li>
 						<li>
-							<a className="scroll-d uk-text-uppercase" href="#sponsors-section">Sponsors</a>
+							<a className="scroll-d uk-text-uppercase" href={this.props.redirect ? "/" : "#sponsors-section"}>Sponsors</a>
 						</li>
 						<li>
 							<a className="uk-text-uppercase" href="/resend">Resend Email</a>
