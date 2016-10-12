@@ -9,14 +9,14 @@ class Users::SessionsController < Devise::SessionsController
     # POST /resource/sign_in
     def create
         resource = User.find_for_database_authentication(email: params[:email])
-        return invalid_login_attempt unless resource
+        return redirect_to root_path unless resource
 
-        if resource.valid_password?(params[:password])
+        if resource&.valid_password?(params[:password])
             sign_in :user, resource
-            return render :json => {:success => true}
+            return respond_with resource, location: after_sign_in_path_for(resource)
         end
 
-        invalid_login_attempt
+        redirect_to root_path
     end
 
     # DELETE /resource/sign_out
