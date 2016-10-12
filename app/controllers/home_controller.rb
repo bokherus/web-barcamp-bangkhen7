@@ -16,6 +16,5 @@ class HomeController < ApplicationController
 
   def users
     @user = current_user
-    # return render :json => {:user => current_user}
   end
 end
