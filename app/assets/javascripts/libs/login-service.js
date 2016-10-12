@@ -1,5 +1,5 @@
 var Service = {
-  login: function(data) {
+  login: function(data, callback) {
     var user = {};
     user.remember_me = 0;
     _.forEach(data, function(object) {
@@ -11,6 +11,7 @@ var Service = {
       data: user
     }).success(function(success) {
       console.log("success");
+      if(typeof callback === "function") { callback(success); }
       console.log(success);
     }).fail(function(err) {
       console.log("error");
