@@ -1,13 +1,17 @@
 import Menu from 'react-burger-menu';
 var Slide = Menu.push;
 import LoginDesktop from './login/desktop/wrapper.jsx';
+import vm from './viewmodel';
 class Menus extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      loginToggle: false
-    };
+    this.state = vm({}, { type: 'init' });
     this.showLogin = this.showLogin.bind(this);
+    this.dispatcher = this.dispatcher.bind(this);
+
+  }
+  dispatcher(action) {
+    this.setState(vm(this.state, action));
   }
   componentDidMount() {
     var self = this;
@@ -35,6 +39,10 @@ class Menus extends React.Component {
     });
   }
 	render() {
+    var loginView = <a className="uk-text-uppercase" onClick={this.showLogin}>Login</a>;
+    if(this.props.user !== null) {
+      loginView = <a className="uk-text-uppercase">{this.props.user.email}</a>;
+    }
 		return (
 			<div style={{position: "relative"}}>
 				<nav className="uk-navbar flex flex-center-x">
@@ -64,7 +72,7 @@ class Menus extends React.Component {
 							<a className="uk-text-uppercase" href="/sessions">Sessions</a>
 						</li>
             <li>
-							<a className="uk-text-uppercase" onClick={this.showLogin}>Login</a>
+							{loginView}
 						</li>
 					</ul>
 					<a href="#offcanvas-1" className="uk-navbar-toggle uk-visible-small" style={{position: "fixed"}} data-uk-offcanvas="{mode:'slide'}"></a>

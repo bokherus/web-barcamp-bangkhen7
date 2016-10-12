@@ -1,4 +1,7 @@
 class HomeController < ApplicationController
+  before_action :users
+
+
   def index
     @header = "welcome"
   end
@@ -9,5 +12,10 @@ class HomeController < ApplicationController
 
   def participants
       @participants = User.all.as_json
+  end
+
+  def users
+    @user = current_user
+    # return render :json => {:user => current_user}
   end
 end

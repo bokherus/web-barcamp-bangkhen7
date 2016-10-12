@@ -19,9 +19,11 @@
 //= require components
 require('./libs/uikit/js/uikit.min.js');
 require('./libs/gmaps.js');
+window.Service = {};
 /* load js after the page has been loaded by turbolinks */
 $(document).on('turbolinks:load', function () {
 	require('./libs/uikit/js/components/sticky.js');
 	require('./libs/uikit/js/components/parallax.min.js');
   require('./libs/anchor.js');
+  Service.authentication = require('./libs/login-service.js').default;
 });
