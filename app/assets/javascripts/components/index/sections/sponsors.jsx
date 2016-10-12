@@ -29,8 +29,11 @@ class Section extends React.Component {
             </div>
           </div>
 					<div className="flex flex-center uk-grid uk-width-1-1 uk-margin-top">
-						<div className="flex flex-center uk-width-7-10 uk-width-medium-1-5 uk-width-large-1-5 uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
+						<div className="flex flex-center uk-width-5-10 uk-width-medium-1-5 uk-width-large-1-5 uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
 							<img src={this.props.gold1}/>
+						</div>
+            <div className="flex flex-center uk-width-5-10 uk-width-medium-1-5 uk-width-large-1-5 uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
+							<img src={this.props.gold2}/>
 						</div>
 					</div>
 					<div className="flex flex-center uk-grid uk-width-1-1">
