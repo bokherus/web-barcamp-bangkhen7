@@ -61,8 +61,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   protected
 
   def generate_passcode
-    code = SecureRandom.hex(3).upcase
-    code = SecureRandom.hex(3).upcase if User.pluck(:code).include? code
+    code = rand.to_s[2..7]
+    code = rand.to_s[2..7] if User.pluck(:code).include? code
     return code
   end
 
