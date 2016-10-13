@@ -10,7 +10,9 @@
     "react": "^15.3.0",
     "react-burger-menu": "^1.10.4",
     "react-dom": "^15.3.0",
-    "reactify": "^1.1.1"
+    "react-redux": "^4.4.5",
+    "reactify": "^1.1.1",
+    "redux": "^3.6.0"
   },
   "license": "MIT",
   "engines": {

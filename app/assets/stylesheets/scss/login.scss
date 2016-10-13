@@ -1,0 +1,50 @@
+#login-section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 300px;
+  position: fixed;
+  top: 40px;
+  right: 0;
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  h3, h4, h5, h6 {
+    color: white;
+  }
+  .bb-input {
+    padding-left: 5px;
+    padding-right: 5px;
+    background: rgba(255,255,255,0.3);
+    border: solid 2px white;
+    font-size: 15px;
+  }
+  a {
+    color: white;
+  }
+}
+.error-form {
+  border-color: #d85030 !important;
+}
+#login-mobile-wrapper {
+  background: rgba(0,0,0,0.9) !important;
+  position: fixed;
+  z-index: 9999;
+  bottom: -9999px;
+  .bb-input {
+    border: 0px;
+    border: solid 1px white;
+    background-color: rgba(255,255,255,0.5);
+  }
+  h1,h2,h3,h4,h5 {
+    color: white;
+  }
+}
+
+.close-icon {
+  color:white;
+  z-index: 9999;
+  position: absolute;
+  right:0;
+  top:0;
+  margin-right: 10px;
+  margin-top: 10px;
+}

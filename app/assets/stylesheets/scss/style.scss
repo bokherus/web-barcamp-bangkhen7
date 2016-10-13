@@ -90,3 +90,82 @@ html, body {
 .square-button:hover {
   cursor: pointer;
 }
+
+.bb-input {
+  font-size: 20px;
+  color: white;
+  border: solid 3px white;
+  background: #797e7e;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.bb-button {
+  font-size: 15px;
+  color: white;
+  border: solid 2px white;
+  background: rgba(0,0,0,0);
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.bb-button:hover {
+  cursor: pointer;
+  color: #444;
+  background: white;
+  h6 {
+    color: #444 !important;
+  }
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+}
+
+.push-up {
+  transition: 0.5s;
+  bottom: 0 !important;
+}
+
+.push-down {
+  transition: 0.5s;
+  bottom: -9999px !important;
+}
+
+.pull-top {
+  position: absolute;
+  top: 0;
+}
+
+.pull-left {
+  position: absolute;
+  left:0;
+}
+
+.pull-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.flat-white-icon {
+  background-color: white;
+  color: #444;
+}
+
+.flat-button-big {
+  font-size: 24px;
+  padding: 5px;
+}

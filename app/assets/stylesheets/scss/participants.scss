@@ -1,0 +1,42 @@
+.participants-banner {
+  background-image: url(asset-path('participants/head.png'));
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 240px;
+}
+
+#participants {
+  p,h2,h3,h4,h5,h6 {
+    color: white;
+  }
+  color: white;
+  .uk-table {
+    border: solid;
+  }
+  .body-wrapper {
+    background-color: rgba(0,0,0,0.4);
+    height: 100vh;
+  }
+  .table-header-row {
+    border: solid 3px white;
+    background-color: #797e7e;
+  }
+  .table-body-row {
+    cursor: pointer;
+    border-bottom: solid 1px white;
+    transition: 0.3s;
+    background-color: rgba(121, 126, 126, 0.5);
+  }
+  .table-body-row:hover {
+    background-color: rgba(255,255,255,0.1);
+  }
+  .mobile-body-row {
+    padding-top : 10px !important;
+    padding-bottom: 10px !important;
+  }
+  // .interest-text {
+  //   line-height: 2.5ex;
+  //   height: 5ex;
+  //   overflow: hidden;
+  // }
+}
