@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
   before_action :users
 
-
   def index
     @header = "welcome"
   end

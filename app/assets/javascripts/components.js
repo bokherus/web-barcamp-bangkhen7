@@ -10,3 +10,4 @@ global.Schedule = require('./components/index/sections/schedule/wrapper.jsx');
 global.Sponsors = require('./components/index/sections/sponsors.jsx');
 global.ComingSoon = require('./components/comingsoon/wrapper.jsx');
 global.Participants = require('./components/participants/wrapper.jsx');
+global.Profile = require('./components/profile/wrapper.jsx');

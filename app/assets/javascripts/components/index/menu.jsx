@@ -41,7 +41,7 @@ class Menus extends React.Component {
 	render() {
     var loginView = <a className="uk-text-uppercase" onClick={this.showLogin}>Login</a>;
     if(this.props.user !== null) {
-      loginView = <a className="uk-text-uppercase">{this.props.user.email}</a>;
+      loginView = <a className="uk-text-uppercase" href="/profile">{this.props.user.email}</a>;
     }
 		return (
 			<div style={{position: "relative"}}>
