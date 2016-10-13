@@ -29,33 +29,40 @@ class Section extends React.Component {
             </div>
           </div>
 					<div className="flex flex-center uk-grid uk-width-1-1 uk-margin-top">
-						<div className="flex flex-center uk-width-5-10 uk-width-medium-1-5 uk-width-large-1-5 uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
+						<div className="flex flex-center uk-width-6-10 uk-width-medium-1-5 uk-width-large-1-5 uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
 							<img src={this.props.gold1}/>
 						</div>
-            <div className="flex flex-center uk-width-5-10 uk-width-medium-1-5 uk-width-large-1-5 uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
+            <div className="flex flex-center uk-width-6-10 uk-width-medium-1-5 uk-width-large-1-5 uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
 							<img src={this.props.gold2}/>
 						</div>
 					</div>
 					<div className="flex flex-center uk-grid uk-width-1-1">
-						<div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-3-5 uk-margin-top uk-margin-left uk-margin-right">
+						<div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-2-5 uk-margin-top uk-margin-left uk-margin-right">
 							<img src={this.props.silver1}/>
 						</div>
-						<div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-3-5 uk-margin-top uk-margin-left uk-margin-right">
+						<div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-2-5 uk-margin-top uk-margin-left uk-margin-right">
 							<img src={this.props.silver2}/>
 						</div>
-						<div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-3-5 uk-margin-top uk-margin-left uk-margin-right">
-							<img src={this.props.silver3}/>
-						</div>
 					</div>
-					<div className="flex flex-center uk-grid uk-width-1-1">
-						<div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-3-5 uk-margin-top uk-margin-left uk-margin-right">
+          <div className="flex flex-center uk-grid uk-width-1-1">
+            <div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-2-5 uk-margin-top uk-margin-left uk-margin-right">
+              <img src={this.props.silver3}/>
+            </div>
+            <div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-2-5 uk-margin-top uk-margin-left uk-margin-right">
 							<img src={this.props.silver4}/>
 						</div>
-						<div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-3-5 uk-margin-top uk-margin-left uk-margin-right">
+          </div>
+					<div className="flex flex-center uk-grid uk-width-1-1">
+						<div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-2-5 uk-margin-top uk-margin-left uk-margin-right">
 							<img src={this.props.silver5}/>
 						</div>
-						<div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-3-5 uk-margin-top uk-margin-left uk-margin-right">
+						<div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-2-5 uk-margin-top uk-margin-left uk-margin-right">
 							<img src={this.props.silver6}/>
+						</div>
+					</div>
+          <div className="flex flex-center uk-grid uk-width-1-1">
+						<div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-2-5 uk-margin-top uk-margin-left uk-margin-right">
+							<img src={this.props.silver7}/>
 						</div>
 					</div>
 				</div>
