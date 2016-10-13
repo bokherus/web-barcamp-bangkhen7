@@ -91,16 +91,16 @@ class Menus extends React.Component {
 								{loginViewMobile}
 							</li>
 							<li>
-								<a className="scroll" href="#register-section">Register</a>
+								<a className="scroll" href={this.props.redirect ? "/#register-section" : "#register-section"}>Register</a>
 							</li>
 							<li>
-								<a className="scroll" href="#schedule-section">Schedule</a>
+								<a className="scroll" href={this.props.redirect ? "/#schedule-section" : "#schedule-section"}>Schedule</a>
 							</li>
 							<li>
-								<a className="scroll" href="#location-section">Location</a>
+								<a className="scroll" href={this.props.redirect ? "/#location-section" : "#location-section"}>Location</a>
 							</li>
 							<li>
-								<a className="scroll" href="#sponsors-section">Sponsors</a>
+								<a className="scroll" href={this.props.redirect ? "/" : "#sponsors-section"}>Sponsors</a>
 							</li>
 							<li>
 								<a href="/resend">Resend Email</a>
