@@ -1,4 +1,4 @@
-import vm from './viewmodel';
+import vm from '../viewmodel';
 class Wrapper extends React.Component {
   constructor(props) {
     super(props);
