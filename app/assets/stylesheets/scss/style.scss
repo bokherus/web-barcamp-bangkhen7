@@ -134,3 +134,38 @@ label:focus,
     outline:0px !important;
     -webkit-appearance:none;
 }
+
+.push-up {
+  transition: 0.5s;
+  bottom: 0 !important;
+}
+
+.push-down {
+  transition: 0.5s;
+  bottom: -9999px !important;
+}
+
+.pull-top {
+  position: absolute;
+  top: 0;
+}
+
+.pull-left {
+  position: absolute;
+  left:0;
+}
+
+.pull-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.flat-white-icon {
+  background-color: white;
+  color: #444;
+}
+
+.flat-button-big {
+  font-size: 24px;
+  padding: 5px;
+}

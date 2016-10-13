@@ -1,6 +1,7 @@
 import Menu from 'react-burger-menu';
 var Slide = Menu.push;
 import LoginDesktop from './login/desktop/wrapper.jsx';
+import LoginMobile from './login/mobile/wrapper.jsx';
 import vm from './viewmodel';
 class Menus extends React.Component {
   constructor(props) {
@@ -39,9 +40,11 @@ class Menus extends React.Component {
     });
   }
 	render() {
-    var loginView = <a className="uk-text-uppercase" onClick={this.showLogin}>Login</a>;
+    var loginViewDesktop = <a className="uk-text-uppercase" onClick={this.showLogin}>Login</a>;
+    var loginViewMobile = <a onClick={this.showLogin}>Login</a>;
     if(this.props.user !== null) {
-      loginView = <a className="uk-text-uppercase" href="/profile">{this.props.user.email}</a>;
+      loginViewDesktop = <a className="uk-text-uppercase" href="/profile">{this.props.user.email}</a>;
+      loginViewMobile = <a href="/profile">{this.props.user.email}</a>;
     }
 		return (
 			<div style={{position: "relative"}}>
@@ -51,7 +54,7 @@ class Menus extends React.Component {
 							<a className="scroll-d uk-text-uppercase bcbk" href={this.props.redirect ? "/#index-section" : "#index-section"}>BCBK</a>
 						</li>
 						<li>
-							<a className="scroll-d uk-text-uppercase" href={this.props.redirect ? "/#register-section" : "#register-section"}>Register</a>
+							<a className="uk-text-uppercase" href="/registration">Register</a>
 						</li>
 						<li>
 							<a className="scroll-d uk-text-uppercase" href={this.props.redirect ? "/#schedule-section" : "#schedule-section"}>Schedule</a>
@@ -72,7 +75,7 @@ class Menus extends React.Component {
 							<a className="uk-text-uppercase" href="/sessions">Sessions</a>
 						</li>
             <li>
-							{loginView}
+							{loginViewDesktop}
 						</li>
 					</ul>
 					<a href="#offcanvas-1" className="uk-navbar-toggle uk-visible-small" style={{position: "fixed"}} data-uk-offcanvas="{mode:'slide'}"></a>
@@ -85,19 +88,19 @@ class Menus extends React.Component {
 							</li>
               <li className="menu-divider"></li>
 							<li>
-								<a className="scroll" href="/login">Login</a>
+								{loginViewMobile}
 							</li>
 							<li>
-								<a className="scroll" href="#register-section">Register</a>
+								<a href="/registration">Register</a>
 							</li>
 							<li>
-								<a className="scroll" href="#schedule-section">Schedule</a>
+								<a className="scroll" href={this.props.redirect ? "/#schedule-section" : "#schedule-section"}>Schedule</a>
 							</li>
 							<li>
-								<a className="scroll" href="#location-section">Location</a>
+								<a className="scroll" href={this.props.redirect ? "/#location-section" : "#location-section"}>Location</a>
 							</li>
 							<li>
-								<a className="scroll" href="#sponsors-section">Sponsors</a>
+								<a className="scroll" href={this.props.redirect ? "/" : "#sponsors-section"}>Sponsors</a>
 							</li>
 							<li>
 								<a href="/resend">Resend Email</a>
@@ -111,7 +114,8 @@ class Menus extends React.Component {
 						</div>
 					</div>
 				</div>
-        <LoginDesktop toggle={this.state.loginToggle} token={this.props.token}/>
+        <LoginDesktop toggle={this.state.loginToggle} token={this.props.token} />
+        <LoginMobile {...this.props} toggle={true} token={this.props.token} />
 			</div>
 
 		);

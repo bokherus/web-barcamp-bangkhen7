@@ -20,7 +20,31 @@
   a {
     color: white;
   }
-  .error-form {
-    border-color: #d85030 !important;
+}
+.error-form {
+  border-color: #d85030 !important;
+}
+#login-mobile-wrapper {
+  background: rgba(0,0,0,0.9) !important;
+  position: fixed;
+  z-index: 9999;
+  bottom: -9999px;
+  .bb-input {
+    border: 0px;
+    border: solid 1px white;
+    background-color: rgba(255,255,255,0.5);
   }
+  h1,h2,h3,h4,h5 {
+    color: white;
+  }
+}
+
+.close-icon {
+  color:white;
+  z-index: 9999;
+  position: absolute;
+  right:0;
+  top:0;
+  margin-right: 10px;
+  margin-top: 10px;
 }
