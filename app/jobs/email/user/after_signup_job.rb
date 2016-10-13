@@ -1,7 +1,10 @@
 class Email::User::AfterSignupJob < Email::BaseJob
   def template_model(user)
-    template_id = 985781 # TODO: Add a valid template id
-    template_model = { password: user.encrypted_password }
+    template_id = 985781
+    template_model = {
+      name: user.full_name,
+      code: user.code
+    }
     {
       from: 'sponsor@barcampbangkhen.org',
       to: user.email,

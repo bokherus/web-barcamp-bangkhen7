@@ -9,13 +9,13 @@ class Wrapper extends React.Component {
       <div id="registration_form">
         <form onSubmit={this.onSubmit} className="uk-form">
           <input name="authenticity_token" type="hidden" value={this.props.token}/>
-          <input name="firstname" placeholder="Firstname" />
-          <input name="lastname" placeholder="Lastname" />
+          <input name="first_name" placeholder="Firstname" />
+          <input name="last_name" placeholder="Lastname" />
           <input name="email" placeholder="Email"/>
-          <input name="shirt-size" placeholder="S,M,L,XL" />
+          <input name="shirt_size" placeholder="S,M,L,XL" />
           <input name="twitter" placeholder="@twitter" />
-          <input name="work-place" placeholder="Work place (Glazziq,..)" />
-          <input name="phone" placeholder="Phone number" />
+          <input name="workplace" placeholder="Work place (Glazziq,..)" />
+          <input name="website" placeholder="Personal website" />
           <button className="uk-button">Update Profile</button>
         </form>
       </div>
