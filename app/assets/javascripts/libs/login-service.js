@@ -28,6 +28,25 @@ var Service = {
       console.log(err);
       callback(err);
     });
+  },
+  signup: function(data, callback) {
+    var user = {};
+    _.forEach(data, function(object) {
+      user[object.name] = object.value;
+    });
+    user.interest = ["Javascript", "Swift", "Running"];
+    $.ajax({
+      type: 'POST',
+      url: '/users/sing_up?authenticity_token=' + user.authenticity_token,
+      data: user
+    }).success(function(success) {
+      console.log("success");
+      if(typeof callback === "function") { callback(success); }
+      console.log(success);
+    }).fail(function(err) {
+      console.log("error");
+      console.log(err);
+    });
   }
 };
 

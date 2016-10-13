@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root to: "home#index"
   get 'participants', to: "home#participants"
   get 'profile', to: 'profile#index'
+  get 'registration', to: 'home#registration'
   match ":url" => "home#comingsoon", :via => [:get], :constraints => { :url => /.*/ }, to: redirect('/comingsoon')
 end

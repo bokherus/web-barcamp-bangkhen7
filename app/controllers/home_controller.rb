@@ -16,4 +16,8 @@ class HomeController < ApplicationController
   def users
     @user = current_user
   end
+
+  def registration
+
+  end
 end
