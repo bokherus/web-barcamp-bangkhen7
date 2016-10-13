@@ -134,3 +134,13 @@ label:focus,
     outline:0px !important;
     -webkit-appearance:none;
 }
+
+.push-up {
+  transition: 0.5s;
+  bottom: 0 !important;
+}
+
+.push-down {
+  transition: 0.5s;
+  bottom: -9999px !important;
+}

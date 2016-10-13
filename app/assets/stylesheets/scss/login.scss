@@ -24,3 +24,19 @@
     border-color: #d85030 !important;
   }
 }
+
+#login-mobile-wrapper {
+  background: rgba(0,0,0,0.9) !important;
+  position: fixed;
+  z-index: 9999;
+  bottom: -9999px;
+}
+
+.close-icon {
+  color:white;
+  position: absolute;
+  right:0;
+  top:0;
+  margin-right: 10px;
+  margin-top: 10px;
+}

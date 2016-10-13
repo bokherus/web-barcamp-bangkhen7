@@ -26,7 +26,7 @@ class Wrapper extends React.Component {
 	render() {
     var errorClass = this.state.success ? "" : " error-form";
 		return (
-			<div id="login-section" style={{display: this.props.toggle ? "" : "none"}}>
+			<div className="uk-hidden-small" id="login-section" style={{display: this.props.toggle ? "" : "none"}}>
 				<form onSubmit={this.onSubmit} action="/users/sign_in" method="post" className="uk-width-8-10 uk-container-center">
           <input name="authenticity_token" type="hidden" value={this.props.token}/>
 					<div className="uk-width-1-1">
