@@ -30,14 +30,16 @@ var Service = {
     });
   },
   signup: function(data, callback) {
-    var user = {};
+    var user = {
+      user: {}
+    };
     _.forEach(data, function(object) {
-      user[object.name] = object.value;
+      user.user[object.name] = object.value;
     });
     user.interest = ["Javascript", "Swift", "Running"];
     $.ajax({
       type: 'POST',
-      url: '/users/sing_up?authenticity_token=' + user.authenticity_token,
+      url: '/users?authenticity_token=' + user.authenticity_token,
       data: user
     }).success(function(success) {
       console.log("success");

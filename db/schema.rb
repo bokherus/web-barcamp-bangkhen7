@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20161013031155) do
     t.string   "twitter"
     t.string   "website"
     t.string   "workplace"
+    t.string   "code"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
