@@ -38,7 +38,7 @@ class Wrapper extends React.Component {
   }
   onSubmit(e) {
     e.preventDefault();
-    var data = $('form').serializeArray();
+    var data = $('#login-form-mobile').serializeArray();
     Service.authentication.login(data, this.callback);
     return false;
   }
@@ -54,7 +54,7 @@ class Wrapper extends React.Component {
 						<img src={this.props.logo}/>
 					</div>
 				</div>
-				<form onSubmit={this.onSubmit} >
+				<form id="login-form-mobile" onSubmit={this.onSubmit} >
 					<div className="uk-width-8-10 uk-container-center uk-flex uk-flex-center uk-flex-column">
 						<h2 className="uk-text-center">E-mail</h2>
 						<input name="email" className={"bb-input uk-text-center" + errorClass}/>
