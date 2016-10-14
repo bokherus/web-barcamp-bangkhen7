@@ -43,8 +43,8 @@ class Menus extends React.Component {
     var loginViewDesktop = <a className="uk-text-uppercase" onClick={this.showLogin}>Login</a>;
     var loginViewMobile = <a onClick={this.showLogin}>Login</a>;
     if(this.props.user !== null) {
-      loginViewDesktop = <a className="uk-text-uppercase" href="/profile">{this.props.user.email}</a>;
-      loginViewMobile = <a href="/profile">{this.props.user.email}</a>;
+      loginViewDesktop = <a>{this.props.user.email}</a>;
+      loginViewMobile = <a>{this.props.user.email}</a>;
     }
 		return (
 			<div style={{position: "relative"}}>
@@ -74,9 +74,9 @@ class Menus extends React.Component {
 						<li>
 							<a className="uk-text-uppercase" href="/registration">Register</a>
 						</li>
-            <li>
+            {/* <li>
 							{loginViewDesktop}
-						</li>
+						</li> */}
 					</ul>
 					<a href="#offcanvas-1" className="uk-navbar-toggle uk-visible-small" style={{position: "fixed"}} data-uk-offcanvas="{mode:'slide'}"></a>
 				</nav>
@@ -87,9 +87,9 @@ class Menus extends React.Component {
 								<a className="scroll uk-text-uppercase bcbk" href="#index-section">bcbk</a>
 							</li>
               <li className="menu-divider"></li>
-							<li>
+							{/* <li>
 								{loginViewMobile}
-							</li>
+							</li> */}
 							<li>
 								<a href="/registration">Register</a>
 							</li>
