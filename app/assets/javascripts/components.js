@@ -12,4 +12,5 @@ global.ComingSoon = require('./components/comingsoon/wrapper.jsx');
 global.Participants = require('./components/participants/wrapper.jsx');
 global.Profile = require('./components/profile/wrapper.jsx');
 global.Registration = require('./components/registration/wrapper.jsx');
+global.Resend = require('./components/resend/wrapper.jsx');
 global.Input = require('./components/input.jsx');

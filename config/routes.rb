@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'participants', to: "home#participants"
   get 'profile', to: 'profile#index'
   get 'registration', to: 'home#registration'
+  get 'resend', to: 'home#resend'
+  post 'resend', to: 'home#resend'
   get 'dev', to: 'dev#index'
   get 'sessions', to: 'home#sessions'
   match ":url" => "home#comingsoon", :via => [:get], :constraints => { :url => /.*/ }, to: redirect('/comingsoon')

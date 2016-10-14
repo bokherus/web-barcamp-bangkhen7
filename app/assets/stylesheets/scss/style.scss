@@ -1,5 +1,5 @@
 html, body {
-  font-family: 'Roboto' !important;
+  // font-family: 'Roboto' !important;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -174,6 +174,19 @@ label:focus,
   padding: 5px;
 }
 
+.input-form {
+  color: white;
+  border: solid 1px white !important;
+  background: rgba(255,255,255,0.3) !important;
+}
+
+.full-width-flex {
+  flex-grow: 100;
+}
+
+.pointer {
+  cursor: pointer;
+}
 .input-label{
   label {
     color: white;
