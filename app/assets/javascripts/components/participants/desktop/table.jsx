@@ -5,21 +5,19 @@ class Table extends React.Component {
       <table className="uk-table uk-text-center">
         <thead>
           <tr className="table-header-row">
-            <th className="uk-text-center table-header">No</th>
-            <th className="uk-text-center">Name</th>
-            <th className="uk-text-center">Twitter</th>
+            <th style={{width: "20%"}} className="uk-text-center">Name</th>
+            <th style={{width: "13%"}} className="uk-text-center">Twitter</th>
             <th className="uk-text-center">Interest</th>
-            <th className="uk-text-center">Website</th>
+            <th style={{width: "17%"}} className="uk-text-center">Website</th>
           </tr>
         </thead>
         <tbody>
           {
             this.props.items.map(function(object, i ) {
-              var interest = getInterestPlaceHolder(object.interest);
+              var interest = getInterestPlaceHolder(_.map(object.topics,'name'));
               return (
                 <tr className="table-body-row" key={i}>
-                  <td>{object.no}</td>
-                  <td>{object.name}</td>
+                  <td>{object.first_name + " " + object.last_name}</td>
                   <td>{object.twitter}</td>
                   <td>{interest}</td>
                   <td>{object.website}</td>
@@ -34,10 +32,12 @@ class Table extends React.Component {
 }
 
 var getInterestPlaceHolder = function(interest) {
-  var firstTwo = _.chunk(interest, 2)[0];
-  if (firstTwo.length === 1){ return firstTwo[0]; }
-  else {
-    return firstTwo[0] + ", " + firstTwo[1] + ",...";
-  }
+  // var firstTwo = _.chunk(interest, 2)[0];
+  // if (typeof firstTwo === 'undefined') { return ""; }
+  // if (firstTwo.length === 1){ return firstTwo[0]; }
+  // else {
+  //   return firstTwo[0] + ", " + firstTwo[1] + ",...";
+  // }
+  return interest.toString();
 };
 export default connect()(Table);
