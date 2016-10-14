@@ -53,14 +53,6 @@ class Wrapper extends React.Component {
 									        <CustomChip>{item}</CustomChip>
 									      )}
                         onChange={this.change}
-										// 	renderSuggestion={(item, { query }) => (
-								    //   <div key={item.name}>{item.name}</div>
-								    // )}
-								    // suggestionsFilter={(opt, val) => (
-								    //   opt.name.toLowerCase().indexOf(val.toLowerCase()) !== -1
-								    // )}
-								    // getSuggestionValue={suggestion => suggestion.name}
-
 											/>
 									</div>
 
