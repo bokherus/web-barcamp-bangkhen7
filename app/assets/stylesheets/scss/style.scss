@@ -160,12 +160,38 @@ label:focus,
   bottom: 0;
 }
 
-.flat-white-icon {
+.flat-white-button {
+  font-size: 1.1em;
+  border-radius: 5px;
+  border: solid 0px white;
   background-color: white;
+  padding: 10px;
   color: #444;
 }
 
 .flat-button-big {
   font-size: 24px;
   padding: 5px;
+}
+
+.input-label{
+  label {
+    color: white;
+  }
+  .error-label {
+    color: #D45968;
+  }
+  .error-form {
+    border-color: #D45968;
+  }
+  
+  input {
+    display: block;
+    border: solid 2px white;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(255,255,255,0.3)
+  }
 }

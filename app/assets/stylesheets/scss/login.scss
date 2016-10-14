@@ -25,7 +25,9 @@
   border-color: #d85030 !important;
 }
 #login-mobile-wrapper {
-  background: rgba(0,0,0,0.9) !important;
+  background-image : url(asset-path('gray.svg'));
+  background-color: rgba(22,132,142,1);
+  background-repeat: repeat;
   position: fixed;
   z-index: 9999;
   bottom: -9999px;
@@ -36,6 +38,10 @@
   }
   h1,h2,h3,h4,h5 {
     color: white;
+  }
+  a {
+    color: white;
+    text-decoration: none;
   }
 }
 
