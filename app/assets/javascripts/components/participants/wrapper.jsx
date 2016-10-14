@@ -28,7 +28,7 @@ class Wrapper extends React.Component {
 class A extends React.Component {
   constructor(props) {
     super(props);
-    this.props.init({ participants: this.props.participants });
+    this.props.init({ participants: _.reverse(this.props.participants) });
     this.onFiltering = this.onFiltering.bind(this);
   }
   onFiltering() {

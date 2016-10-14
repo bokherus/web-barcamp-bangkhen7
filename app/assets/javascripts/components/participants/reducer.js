@@ -26,7 +26,7 @@ var reducer = function(state, action) {
 var filterParticipants = function(filter, participants) {
   filter = _.lowerCase(filter);
   return _.filter(participants, function(object) {
-    var interestStr = _.lowerCase(object.interest.toString());
+    var interestStr = _.lowerCase(_.map(object.topics, 'name').toString());
     if (interestStr.indexOf(filter) >= 0) {
       return object;
     }
