@@ -41,7 +41,7 @@ class A extends React.Component {
 				<div className="participants-banner uk-width-1-1 uk-flex uk-flex-center uk-flex-middle">
 					<h1 className="uk-text-uppercase">participants</h1>
 				</div>
-				<div className="uk-width-1-1 body-wrapper">
+				<div className="uk-width-1-1 black-wrapper">
 					<div className="uk-width-8-10 uk-container-center">
 						<input ref="filter-form" onChange={this.onFiltering} className="bb-input uk-width-1-1 uk-text-center uk-margin-top uk-margin-bottom" placeholder="Filter by interest"/>
 						<Desktop />

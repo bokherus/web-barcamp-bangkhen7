@@ -1,0 +1,38 @@
+.resend-header-wrapper {
+  padding: 30px;
+  font-size: 30px;
+  color: white;
+  background: rgba(0,0,0,0);
+  display: table !important;
+  border: solid 2px white;
+}
+
+#resend-wrapper {
+  h3, h2{
+    color: white;
+  }
+  background-image : url(asset-path('gray.svg'));
+  background-color: rgba(75,163,171,1);
+  background-repeat: repeat;
+  input {
+    border: solid 0px white;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+  }
+  .email-input-wrapper {
+    display: flex;
+    float: left;
+    padding: 30px;
+    background-color: rgba(255,255,255,0.2);
+  }
+  .submit-button {
+    background-color: rgba(255,255,255,0.5);
+  }
+}
+
+@media (max-width: 768px) {
+  .resend-text {
+    margin-top: 3vh !important;
+  }
+}
