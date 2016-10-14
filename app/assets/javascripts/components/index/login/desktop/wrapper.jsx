@@ -1,4 +1,5 @@
 import vm from '../viewmodel';
+import Input from '../../../input.jsx';
 class Wrapper extends React.Component {
   constructor(props) {
     super(props);
@@ -26,20 +27,14 @@ class Wrapper extends React.Component {
 	render() {
     var errorClass = this.state.success ? "" : " error-form";
 		return (
-			<div className="uk-hidden-small" id="login-section" style={{display: this.props.toggle ? "" : "none"}}>
+			<div className="uk-hidden-small" id="login-section" style={{display: this.props.toggle ? "" : "none" , paddingTop: 30, paddingBottom: 30}}>
 				<form id="login-form-desktop" onSubmit={this.onSubmit} action="/users/sign_in" method="post" className="uk-width-8-10 uk-container-center">
           <input name="authenticity_token" type="hidden" value={this.props.token}/>
-					<div className="uk-width-1-1">
-						<h5 className={"no-margin uk-text-uppercase"}>Email</h5>
-						<input className={"bb-input uk-width-1-1" + errorClass} name="email" />
-					</div>
-          <div className="uk-width-1-1 uk-margin-top">
-						<h5 className={"no-margin uk-text-uppercase"}>Password</h5>
-						<input className={"bb-input uk-width-1-1" + errorClass} type="password" name="password"/>
-					</div>
-          <input className="bb-button uk-width-1-1 uk-text-uppercase uk-margin-top" value="LOGIN" type="submit"/>
-          <div className="uk-width-1-1 uk-flex uk-flex-center uk-margin-top">
-            <a>forget password?</a>
+					<div className="uk-width-1-1 uk-flex uk-flex-column">
+            <Input success={this.state.success} thin label="E-Mail" name="email" center/>
+            <Input success={this.state.success} thin className="uk-margin-top" label="Password" name="password" center type="password" />
+            <button className="flat-white-button uk-width-6-10 uk-container-center" style={{marginTop: 25}}>Login</button>
+            <a href="/resend" className="uk-margin-top uk-text-center thin">forget password?</a>
           </div>
 				</form>
 			</div>
