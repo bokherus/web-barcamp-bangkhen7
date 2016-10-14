@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get 'profile', to: 'profile#index'
   get 'registration', to: 'home#registration'
   get 'resend', to: 'home#resend'
+  post 'resend', to: 'home#resend'
   match ":url" => "home#comingsoon", :via => [:get], :constraints => { :url => /.*/ }, to: redirect('/comingsoon')
 end

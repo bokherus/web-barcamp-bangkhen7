@@ -18,10 +18,12 @@ class HomeController < ApplicationController
   end
 
   def registration
-
+    @interests = Topic.pluck(:name)
   end
 
   def resend
-
+    return render :resend if request.get?
+    user = User.find_by(email: params['email'])
+    user&.send_after_signup_email
   end
 end
