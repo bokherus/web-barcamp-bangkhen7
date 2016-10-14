@@ -60,7 +60,7 @@ class Menus extends React.Component {
 							<a className="scroll-d uk-text-uppercase" href={this.props.redirect ? "/#location-section" : "#location-section"}>Location</a>
 						</li>
 						<li>
-							<a className="scroll-d uk-text-uppercase" href={this.props.redirect ? "/" : "#sponsors-section"}>Sponsors</a>
+							<a className="scroll-d uk-text-uppercase" href={this.props.redirect ? "/#sponsors-section" : "#sponsors-section"}>Sponsors</a>
 						</li>
 						<li>
 							<a className="uk-text-uppercase" href="/resend">Resend Email</a>
@@ -100,7 +100,7 @@ class Menus extends React.Component {
 								<a className="scroll" href={this.props.redirect ? "/#location-section" : "#location-section"}>Location</a>
 							</li>
 							<li>
-								<a className="scroll" href={this.props.redirect ? "/" : "#sponsors-section"}>Sponsors</a>
+								<a className="scroll" href={this.props.redirect ? "/#location-section" : "#sponsors-section"}>Sponsors</a>
 							</li>
 							<li>
 								<a href="/resend">Resend Email</a>
