@@ -8,9 +8,11 @@ class Wrapper extends React.Component {
     };
   }
   resend() {
+    var email = this.refs.email.value || this.refs['email-mobile'].value;
     this.setState({
-      email: this.refs.email.value || this.refs['email-mobile'].value
+      email: email
     });
+    Service.email.resend(email,this.props.token);
   }
   render() {
     return (
