@@ -20,4 +20,8 @@ class HomeController < ApplicationController
   def registration
 
   end
+
+  def resend
+
+  end
 end
