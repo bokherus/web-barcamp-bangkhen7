@@ -28,6 +28,9 @@ class HomeController < ApplicationController
   end
 
   def registration
+  end
 
+  def sessions
+    @sessions = Session.all.as_json(except: [:id, :created_at, :updated_at])
   end
 end
