@@ -14,7 +14,7 @@ class CustomChip extends Component {
 
 let styles = {
   selected: {
-    background: "red",
+    background: "#ccc",
   },
   container: {
     display: "flex",
