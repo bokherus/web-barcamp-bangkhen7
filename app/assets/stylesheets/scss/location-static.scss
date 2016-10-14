@@ -1,0 +1,57 @@
+
+#location-section {
+    flex-direction: column;
+    padding-top: 50px;
+    height: auto;
+    // background-image: url(asset-path('BG4.jpg')) !important;
+    // background-size: 100%;
+
+    background-image : url(asset-path('gray.svg'));
+    background-color: rgba(75,163,171,1);
+    background-repeat: repeat;
+    div{
+        height: auto;
+    }
+    p{
+        color: #FFFFFF;
+        display: block;
+    }
+    li,h2,h3,h1{
+        color: #FFFFFF ;
+    }
+}
+
+.parking-card {
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5);
+    border: solid 3px white;
+}
+
+#location-body{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.location-inneritem{
+    h3 {
+      margin-top: 0px !important;
+      margin-bottom: 0px !important;
+    }
+    ul {
+      margin-top: 0px !important;
+    }
+    li,p {
+      font-weight: 300;
+    }
+}
+
+@media(min-width: 768px) {
+  .location-inneritem {
+    display: flex;
+  }
+}
+
+#gmaps {
+  width: 100%;
+  height: 300px !important;
+}

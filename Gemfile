@@ -15,6 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'delayed_job_active_record'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -29,13 +30,12 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'postmark', '~> 1.7', '>= 1.7.1'
 # Use devise for authentication
 gem 'devise'
 # browserify-rails for allow rails to use npm
 gem "browserify-rails"
 gem 'react-rails'
-gem 'uikit2-rails'
 gem 'rake', :group => :test
 
 group :development, :test do
@@ -58,5 +58,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 source 'https://rails-assets.org' do
-  # gem 'rails-assets-uikit'
+  gem 'rails-assets-lodash'
 end

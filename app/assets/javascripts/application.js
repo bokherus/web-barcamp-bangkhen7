@@ -10,10 +10,20 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require lodash
 //= require jquery
-//= require uikit
 //= require jquery_ujs
 //= require turbolinks
 //= require react
 //= require react_ujs
 //= require components
+require('./libs/uikit/js/uikit.min.js');
+require('./libs/gmaps.js');
+window.Service = {};
+Service.authentication = require('./libs/login-service.js').default;
+/* load js after the page has been loaded by turbolinks */
+$(document).on('turbolinks:load', function () {
+	require('./libs/uikit/js/components/sticky.js');
+	require('./libs/uikit/js/components/parallax.min.js');
+  require('./libs/anchor.js');
+});

@@ -1,0 +1,14 @@
+#sponsors-section {
+  // background-image : url(asset-path('BG5.jpeg'));
+  // background-size: 100%;
+  background-image : url(asset-path('gray.svg'));
+  background-color: rgba(22,132,142,1);
+  background-repeat: repeat;
+  padding-top: 50px;
+
+  .credit{
+    color:white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
