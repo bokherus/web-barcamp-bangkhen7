@@ -30,7 +30,12 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# send transactional emails
 gem 'postmark', '~> 1.7', '>= 1.7.1'
+# create pretty URL’s and work with human-friendly strings
+gem 'friendly_id', '~> 5.1.0'
+
 # Use devise for authentication
 gem 'devise'
 # browserify-rails for allow rails to use npm
