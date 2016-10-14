@@ -14,17 +14,16 @@ class CustomChip extends Component {
 
 let styles = {
   selected: {
-    background: "#ccc",
+    background: "red",
   },
   container: {
     display: "flex",
     alignItems: "center",
-    height: 32,
     boxSizing: 'border-box',
     color: "#222",
     background: "#FFC107",
     margin: "2.5px",
-    borderRadius: 16,
+    borderRadius: 5,
     cursor: 'default',
   },
   image: {

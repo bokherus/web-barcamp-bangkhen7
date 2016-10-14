@@ -1,13 +1,11 @@
 import Chips, {Chip} from 'react-chips';
 import Input from '../input.jsx';
-import CustomChip from './CustomChip'
+import CustomChip from './CustomChip';
 
 const data = [
-  {name: 'JavaScript'},
-  {name: 'Ruby'},
-  {name: 'Python'},
-  {name: 'Java'},
-  {name: 'Swift'},
+  "Javascript",
+  "Swift",
+  "Programming"
 ];
 
 class Wrapper extends React.Component {
@@ -18,50 +16,51 @@ class Wrapper extends React.Component {
 	}
 
 	change(chips) {
-		console.log(chips)
+		console.log(chips);
 	}
 
 	render() {
 		return (
-			<div id="registration_form">
+			<div id="registration_form" className="full-height">
 				{/* <div className="participants-banner uk-width-1-1 uk-flex uk-flex-center uk-flex-middle">
 					<h1 className="uk-text-uppercase">Registration</h1>
 				</div> */}
-				<div className="black-wrapper uk-flex uk-flex-center uk-flex-middle">
-					<div className="uk-container-center parking-card uk-width-5-10">
+				<div className="uk-flex uk-flex-center uk-flex-middle full-height">
+					<div className="uk-container-center parking-card uk-width-9-10 uk-width-medium-5-10 uk-width-large-5-10">
 						<form onSubmit={this.onSubmit} className="uk-form">
 							<fieldset data-uk-margin>
 								<input name="authenticity_token" type="hidden" value={this.props.token}/>
-									<div className="uk-form-row">
+									<div className="uk-form-row input-label uk-width-1-1">
 										<Input className="uk-width-medium-4-10" thin label="Firstname" name="first_name" center/>
 										<Input className="uk-width-medium-4-10 uk-push-2-10" thin label="Lastname" name="last_name" center/>
 									</div>
 
-									<div className="uk-form-row">
+									<div className="uk-form-row input-label uk-width-1-1">
 										<Input className="uk-width-medium-4-10" thin label="E-mail" name="email" center/>
 										<Input className="uk-width-medium-4-10 uk-push-2-10" thin label="Twitter" name="twitter" center/>
 									</div>
 
-									<div className="uk-form-row">
+									<div className="uk-form-row input-label uk-width-1-1">
 										<Input className="uk-width-medium-4-10" thin label="Workplace" name="workplace" center/>
 										<Input className="uk-width-medium-4-10 uk-push-2-10" thin label="Personal Website" name="website" center/>
 									</div>
 
 									<div className="uk-form-row">
 											<label>Interests</label>
-											<Chips onChange={this.getChipValue} suggestions={data}
-											renderChip={(item) => (
-									      <CustomChip>{item.name}</CustomChip>
-									    )}
-											fromSuggestionOnly={true}
-											renderSuggestion={(item, { query }) => (
-								      <div key={item.name}>{item.name}</div>
-								    )}
-								    suggestionsFilter={(opt, val) => (
-								      opt.name.toLowerCase().indexOf(val.toLowerCase()) !== -1
-								    )}
-								    getSuggestionValue={suggestion => suggestion.name}
-										onChange={this.change}
+											<Chips
+                        suggestions={data}
+											  renderChip={(item) => (
+									        <CustomChip>{item}</CustomChip>
+									      )}
+                        onChange={this.change}
+										// 	renderSuggestion={(item, { query }) => (
+								    //   <div key={item.name}>{item.name}</div>
+								    // )}
+								    // suggestionsFilter={(opt, val) => (
+								    //   opt.name.toLowerCase().indexOf(val.toLowerCase()) !== -1
+								    // )}
+								    // getSuggestionValue={suggestion => suggestion.name}
+
 											/>
 									</div>
 
