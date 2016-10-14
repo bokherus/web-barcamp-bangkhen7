@@ -1,20 +1,4 @@
 <div>
   <%= react_component('Menu', redirect: true, token: form_authenticity_token, user: @user, logo: image_url('logo_white.svg')) %>
-  <%= react_component('Participants',
-      participants: [{
-        no: 1,
-        name: "Taweerat Chaiman",
-        twitter: "@taweesoft",
-        interest: ["Programming", "Orange", "Movies"],
-        website: "taweesoft.xyz",
-        education: "นักศึกษา, มหาวิทยาลัยเกษตรศาสตร์"
-      },
-      {
-        no: 2,
-        name: "Image Processing",
-        twitter: "@imagep",
-        interest: ["Image Processing", "Drinking water", "Signing", "Swimming", "Shopping", "Working", "Typing", "Running","Jumping"],
-        website: "image-p.com",
-        education: "นักศึกษา, มหาวิทยาลัยเกษตรศาสตร์"
-      }]) %>
+  <%= react_component('Participants', participants: @participants ) %>
 </div>

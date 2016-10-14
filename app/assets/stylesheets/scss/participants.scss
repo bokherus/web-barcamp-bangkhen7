@@ -6,6 +6,12 @@
 }
 
 #participants {
+  table {
+    table-layout: fixed;
+  }
+  td {
+    overflow-wrap: break-word;
+  }
   background-image: url(asset-path('diamond-head.svg'));
   p,h1,h2,h3,h4,h5,h6 {
     color: white;
