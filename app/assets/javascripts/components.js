@@ -14,3 +14,4 @@ global.Profile = require('./components/profile/wrapper.jsx');
 global.Registration = require('./components/registration/wrapper.jsx');
 global.Resend = require('./components/resend/wrapper.jsx');
 global.Input = require('./components/input.jsx');
+global.Thankyou = require('./components/thankyou/wrapper.jsx');
