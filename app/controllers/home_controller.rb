@@ -10,7 +10,17 @@ class HomeController < ApplicationController
   end
 
   def participants
-      @participants = User.all.as_json
+      @participants = User.all.as_json(
+      include: {
+         topics: { only: :name }
+      },
+      except: [
+        :created_at,
+        :updated_at,
+        :shirt_size,
+        :code
+        ]
+      )
   end
 
   def users

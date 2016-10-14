@@ -11,9 +11,17 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     build_resource(sign_up_params)
 
+    # Assign passcode
     passcode = generate_passcode
     resource.code = passcode
     resource.password = passcode
+
+    # Create or assign interests
+    interested_topics = []
+    params['interest'].each do |topic|
+      interested_topics << Topic.find_or_initialize_by(name: topic.humanize)
+    end
+    resource.topics << interested_topics
 
     resource.save
     yield resource if block_given?

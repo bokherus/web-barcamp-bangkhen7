@@ -1,4 +1,5 @@
 import vm from '../viewmodel';
+import Input from '../../../input.jsx';
 class Wrapper extends React.Component {
 	constructor(props) {
 		super(props);
@@ -43,29 +44,15 @@ class Wrapper extends React.Component {
     return false;
   }
 	render() {
-    var errorClass = this.state.success ? "" : " error-form";
 		return (
 			<div id="login-mobile-wrapper" className="full-height full-width uk-hidden-large uk-hidden-medium uk-flex uk-flex-center uk-flex-column">
 				<i onClick={this.close} className="uk-icon-close close-icon uk-icon-small"></i>
-				<div className="pull-top uk-width-1-1 uk-flex uk-flex-center" style={{
-					marginTop: "5%"
-				}}>
-					<div className="uk-width-3-10 uk-container-center">
-						<img src={this.props.logo}/>
-					</div>
-				</div>
 				<form id="login-form-mobile" onSubmit={this.onSubmit} >
-					<div className="uk-width-8-10 uk-container-center uk-flex uk-flex-center uk-flex-column">
-						<h2 className="uk-text-center">E-mail</h2>
-						<input name="email" className={"bb-input uk-text-center" + errorClass}/>
-						<h2 className="uk-text-center">Password</h2>
-						<input name="password" className={"bb-input uk-text-center" + errorClass} type="password"/>
-						<div className="pull-bottom pull-left uk-width-1-1 uk-flex uk-flex-center uk-flex-column" style={{marginBottom: "5%"}}>
-							<button className="uk-width-3-10 uk-container-center uk-text-uppercase flat-white-button flat-button-big uk-button" style={{
-								marginTop: 30
-							}}>Login</button>
-              <a className="uk-margin-top uk-text-center">forget password?</a>
-						</div>
+					<div className="uk-width-8-10 uk-container-center uk-flex uk-flex-center uk-flex-column parking-card" style={{paddingTop: "10vh", paddingBottom:"10vh"}}>
+            <Input success={this.state.success} thin label="E-Mail" name="email" center/>
+            <Input success={this.state.success} thin className="uk-margin-top" label="Password" name="password" center type="password" />
+            <button className="flat-white-button uk-width-6-10 uk-container-center" style={{marginTop: 25}}>Login</button>
+            <a href="/resend" className="uk-margin-top uk-text-center thin">forget password?</a>
 					</div>
 				</form>
 			</div>
