@@ -56,7 +56,8 @@ class Wrapper extends React.Component {
 
   onDropdownSelected(item) {
     this.setState({
-      dropDownText: item
+      dropDownText: item,
+      shirtSize: item
     });
   }
 	render() {
