@@ -37,13 +37,20 @@ class Wrapper extends React.Component {
 		this.state = {
 			chips: [],
 			dropDownText: "ไซส์ รอบอก(นิ้ว) ความยาว(นิ้ว)",
-      shirtSize: ""
+      shirtSize: "",
+      shirtError: ""
 		};
 		this.change = this.change.bind(this);
 		this.onSubmit = this.onSubmit.bind(this);
 	}
 	onSubmit(e) {
 		e.preventDefault();
+    if(this.state.shirtSize === "") {
+      this.setState({
+        shirtError: " (required)"
+      });
+      return false;
+    }
 		var data = $('#registration-form').serializeArray();
 		data.push({name: "interest", value: this.state.chips});
     data.push({name: "shirt_size", value: this.state.shirtSize});
@@ -108,8 +115,8 @@ class Wrapper extends React.Component {
 											<CustomChip>{item}</CustomChip>
 										)} onChange={this.change}/>
 									</div>
-									<div className="uk-form-row">
-										<label>Shirt size</label>
+									<div className="uk-form-row input-label shirt-size-dropdown-wrapper">
+										<label className={this.state.shirtError === "" ? "" : "error-label"}>{"Shirt size" + this.state.shirtError}</label>
 										<br></br>
 										<div className="uk-button-dropdown uk-width-1-1- uk-width-medium-5-10 uk-width-large-5-10" data-uk-dropdown="{mode : 'click'}" aria-haspopup="true" aria-expanded="false">
 											<div type="button" className="uk-text-center dropdown-button uk-button uk-width-1-1">{this.state.dropDownText}
