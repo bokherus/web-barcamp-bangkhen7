@@ -1,8 +1,6 @@
 module PostmarkHelper
   def deliver_with_postmark_template(**options)
     #Email will be sent only on production or staging
-    puts "Hello"
-    puts Rails.env
     if Rails.env.production? || Rails.env.staging? || Rails.env.development?
       status = postmark_client.deliver_with_template(options)
       Rails.logger.error "Postmark Error##{status[:error_code]}: #{status[:message]}" unless status[:message].downcase == 'ok'
