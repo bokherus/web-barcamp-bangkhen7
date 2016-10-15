@@ -18,8 +18,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
     # Create or assign interests
     interested_topics = []
-    params['interest'].each do |topic|
-      interested_topics << Topic.find_or_initialize_by(name: topic.humanize)
+    if params['interest'].present?
+      params['interest'].each do |topic|
+        interested_topics << Topic.find_or_initialize_by(name: topic.humanize)
+      end
     end
     resource.topics << interested_topics
 
@@ -29,6 +31,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       if resource.active_for_authentication?
         set_flash_message! :notice, :signed_up
         # sign_up(resource_name, resource)
+        resource.send_after_signup_email
         respond_with resource, location: after_sign_up_path_for(resource)
       else
         set_flash_message! :notice, :signed_up_but_#{resource.inactive_message}"
