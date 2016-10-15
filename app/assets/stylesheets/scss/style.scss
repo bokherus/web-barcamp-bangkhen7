@@ -52,7 +52,7 @@ html, body {
 }
 
 .no-margin {
-  margin: 0px;
+  margin: 0px !important;
 }
 
 .thin {
@@ -160,13 +160,28 @@ label:focus,
   bottom: 0;
 }
 
+.pull-right {
+  position: absolute;
+  right: 0;
+}
+
+.pull-left {
+  position: absolute;
+  left: 0;
+}
+
 .flat-white-button {
   font-size: 1.1em;
   border-radius: 5px;
   border: solid 0px white;
   background-color: white;
   padding: 10px;
-  color: #444;
+  color: #444 !important;
+  text-decoration: none !important;
+  :hover {
+    text-decoration: none !important;
+    color: #444 !important;
+  }
 }
 
 .flat-button-big {
@@ -189,22 +204,29 @@ label:focus,
 }
 .input-label{
   label {
-    color: white;
+    color: white !important;
   }
   .error-label {
-    color: #D45968;
+    color: #D45968 !important;
   }
   .error-form {
-    border-color: #D45968;
+    border-color: #D45968 !important;
   }
 
   input {
-    display: block;
-    border: solid 2px white;
-    border-radius: 5px;
-    padding: 7px;
-    font-size: 1.1em;
-    color: white;
-    background-color: rgba(255,255,255,0.3)
+    display: block !important;
+    border: solid 2px white !important;
+    border-radius: 5px !important;
+    padding: 7px !important;
+    font-size: 1.1em !important;
+    color: white !important;
+    background-color: rgba(255,255,255,0.3) !important;
   }
+}
+
+.dropdown-button {
+  border-radius: 5px !important;
+  border: solid 2px white !important;
+  background-color: rgba(255,255,255,0.3) !important;
+  color: white !important;
 }

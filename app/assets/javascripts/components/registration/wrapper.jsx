@@ -1,88 +1,134 @@
 import Chips, {Chip} from 'react-chips';
 import Input from '../input.jsx';
-import CustomChip from './CustomChip'
+import CustomChip from './CustomChip';
 
-const data = [
-  {name: 'JavaScript'},
-  {name: 'Ruby'},
-  {name: 'Python'},
-  {name: 'Java'},
-  {name: 'Swift'},
+const data = ["Javascript", "Swift", "Programming"];
+const shirtSize = [
+	{
+		letter: "S",
+		number: "34 26"
+	}, {
+		letter: "M",
+		number: "36 27"
+	}, {
+		letter: "L",
+		number: "38 28"
+	}, {
+		letter: "XL",
+		number: "40 29"
+	}, {
+		letter: "2XL",
+		number: "42 30"
+	}, {
+		letter: "3XL",
+		number: "44 31"
+	}, {
+		letter: "4XL",
+		number: "46 32"
+	}, {
+		letter: "5XL",
+		number: "48 32"
+	}, {
+		letter: "6XL",
+		number: "50 33"
+	}
 ];
-
 class Wrapper extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			chips: [],
+			dropDownText: "ไซส์ รอบอก(นิ้ว) ความยาว(นิ้ว)",
+      shirtSize: ""
+		};
+		this.change = this.change.bind(this);
+		this.onSubmit = this.onSubmit.bind(this);
+	}
 	onSubmit(e) {
 		e.preventDefault();
-		var data = $('form').serializeArray();
+		var data = $('#registration-form').serializeArray();
+		data.push({name: "interest", value: this.state.chips});
+    data.push({name: "shirtSize", value: this.state.shirtSize});
 		Service.authentication.signup(data);
 	}
 
 	change(chips) {
-		console.log(chips)
+		this.setState({chips: chips});
 	}
 
+  onDropdownSelected(item) {
+    this.setState({
+      dropDownText: item
+    });
+  }
 	render() {
+    var self = this;
+		var dropDownText = "ไซส์ รอบอก(นิ้ว) ความยาว(นิ้ว)";
+    var dropDownItems = _.map(shirtSize, function(shirt,i) {
+      return (<li key={i} className="uk-dropdown-close" onClick={self.onDropdownSelected.bind(self, shirt.letter)}>
+                <a>
+                  <span>{shirt.letter}</span>
+                  <span className="pull-right" style={{paddingRight: 15}}>{shirt.number}</span>
+                </a>
+              </li>);
+    });
 		return (
-			<div id="registration_form">
+			<div id="registration_form" className="uk-flex uk-flex-middle">
 				{/* <div className="participants-banner uk-width-1-1 uk-flex uk-flex-center uk-flex-middle">
 					<h1 className="uk-text-uppercase">Registration</h1>
 				</div> */}
-				<div className="black-wrapper uk-flex uk-flex-center uk-flex-middle">
-					<div className="uk-container-center parking-card uk-width-5-10">
-						<form onSubmit={this.onSubmit} className="uk-form">
-							<fieldset data-uk-margin>
+				<div className="registration-form uk-container-center">
+					<div className="uk-container-center parking-card uk-width-9-10 uk-width-medium-5-10 uk-width-large-5-10">
+            <h3 className="uk-text-center">Registration</h3>
+            <div className="uk-width-4-10 uk-container-center uk-flex uk-margin-bottom">
+              <img className="uk-container-center" src={this.props.dash} />
+            </div>
+						<form id="registration-form" onSubmit={this.onSubmit} className="uk-form">
+							<fieldset>
 								<input name="authenticity_token" type="hidden" value={this.props.token}/>
-									<div className="uk-form-row">
-										<Input className="uk-width-medium-4-10" thin label="Firstname" name="first_name" center/>
-										<Input className="uk-width-medium-4-10 uk-push-2-10" thin label="Lastname" name="last_name" center/>
+								<div className="uk-form-row input-label uk-width-1-1 no-margin">
+									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Firstname" name="first_name" center/>
+									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Lastname" name="last_name" center/>
+								</div>
+
+								<div className="uk-form-row input-label uk-width-1-1 no-margin">
+									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="E-mail" name="email" center/>
+									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Twitter (Optional)" name="twitter" center/>
+								</div>
+
+								<div className="uk-form-row input-label uk-width-1-1 no-margin">
+									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Workplace (Optional)" name="workplace" center/>
+									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Personal Website (Optional)" name="website" center/>
+								</div>
+								<div className="uk-form-row no-margin" style={{
+									paddingLeft: 10,
+									paddingRight: 10
+								}}>
+									<div className="uk-form-row no-margin">
+										<label>Interests</label>
+										<Chips suggestions={data} renderChip={(item) => (
+											<CustomChip>{item}</CustomChip>
+										)} onChange={this.change}/>
 									</div>
-
 									<div className="uk-form-row">
-										<Input className="uk-width-medium-4-10" thin label="E-mail" name="email" center/>
-										<Input className="uk-width-medium-4-10 uk-push-2-10" thin label="Twitter" name="twitter" center/>
+										<label>Shirt size</label>
+										<br></br>
+										<div className="uk-button-dropdown uk-width-1-1- uk-width-medium-5-10 uk-width-large-5-10" data-uk-dropdown="{mode : 'click'}" aria-haspopup="true" aria-expanded="false">
+											<div type="button" className="uk-text-center dropdown-button uk-button uk-width-1-1">{this.state.dropDownText}
+											</div>
+											<div className="uk-dropdown uk-dropdown-bottom" aria-hidden="true" tabIndex="">
+												<ul className="uk-nav uk-nav-dropdown">
+													{dropDownItems}
+												</ul>
+											</div>
+										</div>
 									</div>
-
-									<div className="uk-form-row">
-										<Input className="uk-width-medium-4-10" thin label="Workplace" name="workplace" center/>
-										<Input className="uk-width-medium-4-10 uk-push-2-10" thin label="Personal Website" name="website" center/>
+									<div className="uk-width-1-1 uk-flex uk-flex-center uk-flex-middle">
+										<button className="flat-white-button uk-width-5-10 uk-width-medium-3-10 uk-width-large-3-10 uk-container-center pointer" style={{
+											marginTop: 25
+										}}>Confirm</button>
 									</div>
-
-									<div className="uk-form-row">
-											<label>Interests</label>
-											<Chips onChange={this.getChipValue} suggestions={data}
-											renderChip={(item) => (
-									      <CustomChip>{item.name}</CustomChip>
-									    )}
-											fromSuggestionOnly={true}
-											renderSuggestion={(item, { query }) => (
-								      <div key={item.name}>{item.name}</div>
-								    )}
-								    suggestionsFilter={(opt, val) => (
-								      opt.name.toLowerCase().indexOf(val.toLowerCase()) !== -1
-								    )}
-								    getSuggestionValue={suggestion => suggestion.name}
-										onChange={this.change}
-											/>
-									</div>
-
-									<div className="uk-form-row">
-											<label>Shirt size</label><br></br>
-											<select className="uk-width-medium-4-10">
-												<option value="default" disabled selected>ไซส์ รอบอก(นิ้ว) ความยาว(นิ้ว)</option>
-												<option value="s">S	34 26</option>
-												<option value="m">M 36 27</option>
-												<option value="l">L 38 28</option>
-												<option value="xl">XL 40 29</option>
-												<option value="2xl">2XL 42 30</option>
-												<option value="3xl">3XL 44 31</option>
-												<option value="4xl">4XL 46 32</option>
-												<option value="5xl">5XL 48 32</option>
-												<option value="6xl">6XL 50 33</option>
-											</select>
-									</div>
-
-									<button className="flat-white-button uk-width-medium-4-10 uk-push-3-10" type="button" style={{marginTop: 25}}>Confirm</button>
-
+								</div>
 							</fieldset>
 						</form>
 					</div>

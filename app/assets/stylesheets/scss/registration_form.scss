@@ -2,16 +2,36 @@
   background-image : url(asset-path('gray.svg'));
   background-color: rgba(75,163,171,1);
   background-repeat: repeat;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  height: 100vh;
+  font-weight: 300 !important;
+  .parking-card {
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+    padding-bottom: 60px !important;
+  }
+  h3{
+    color:white;
+  }
 }
 
-#registration_form input {
-    border: solid 2px white;
-    border-radius: 5px;
+#chips-wrapper {
+  background-color: rgba(255,255,255,0.3);
+  input {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    background: transparent;
     font-size: 1.1em;
-    color: white;
-    background-color: rgba(255,255,255,0.3)
+    font-weight: 300 !important;
+    margin: 0px !important;
+    color: white !important;
+  }
+  border: solid 2px white !important;
+  padding: 5px !important;
+  // padding-left: 7px !important;
+  // padding-right: 7px !important;
 }
-
 .input-label {
   display: inline-block !important;
 }
@@ -55,8 +75,14 @@ label {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-height: 735px) {
   .input-label {
     margin-bottom: 5px;
+  }
+  #registration_form {
+    height: 100%;
+    .parking-card {
+      padding: 20px !important;
+    }
   }
 }
