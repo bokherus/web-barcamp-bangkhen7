@@ -38,6 +38,13 @@ class HomeController < ApplicationController
   end
 
   def welcome
-    @user = User.friendly.find(params['id'])
+    @user = User.friendly.find(params['id']).as_json(
+    except: [
+      :created_at,
+      :updated_at,
+      :shirt_size,
+      :code
+      ]
+    )
   end
 end

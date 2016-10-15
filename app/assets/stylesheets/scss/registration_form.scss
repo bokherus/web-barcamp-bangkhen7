@@ -5,9 +5,14 @@
   padding-top: 30px !important;
   padding-bottom: 30px !important;
   height: 100vh;
-
+  font-weight: 300 !important;
   .parking-card {
-    padding: 60px !important;
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+    padding-bottom: 60px !important;
+  }
+  h3{
+    color:white;
   }
 }
 
