@@ -37,9 +37,10 @@ var Service = {
       user.user[object.name] = object.value;
     });
     user.interest = user.user.interest;
+    var token = user.user.authenticity_token;
     $.ajax({
       type: 'POST',
-      url: '/users?authenticity_token=' + user.authenticity_token,
+      url: '/users?authenticity_token=' + token,
       data: user
     }).success(function(success) {
       // console.log("success");

@@ -48,7 +48,7 @@ class Wrapper extends React.Component {
 		e.preventDefault();
 		var data = $('#registration-form').serializeArray();
 		data.push({name: "interest", value: this.state.chips});
-    data.push({name: "shirtSize", value: this.state.shirtSize});
+    data.push({name: "shirt_size", value: this.state.shirtSize});
 		Service.authentication.signup(data);
 	}
 
