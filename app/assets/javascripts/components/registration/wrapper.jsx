@@ -9,14 +9,36 @@ const data = [
 ];
 
 class Wrapper extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      chips: []
+    };
+    this.change = this.change.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+  }
 	onSubmit(e) {
 		e.preventDefault();
-		var data = $('form').serializeArray();
+		var data = $('#registration-form').serializeArray();
+    data.push({name: "interest", value: this.state.chips});
 		Service.authentication.signup(data);
 	}
 
 	change(chips) {
-		console.log(chips);
+    // var chips = [];
+    // var childNodes = $('#chips-wrapper')['0'].childNodes[0];
+    // // console.log(typeof childNodes);
+    // // childNodes = childNodes.slice(0,childNodes.length-1);
+    // for(var c in childNodes) {
+    //   if(c === 'length') { return; }
+    //   console.log(c);
+    //   console.log(childNodes[c]);
+    //   chips.push(childNodes[c].firstChild.innerHTML);
+    // }
+    console.log(chips);
+    this.setState({
+      chips: chips
+    });
 	}
 
 	render() {
@@ -27,7 +49,7 @@ class Wrapper extends React.Component {
 				</div> */}
 				<div className="registration-form uk-container-center">
 					<div className="uk-container-center parking-card uk-width-9-10 uk-width-medium-5-10 uk-width-large-5-10">
-						<form onSubmit={this.onSubmit} className="uk-form">
+						<form id="registration-form" onSubmit={this.onSubmit} className="uk-form">
 							<fieldset>
 								<input name="authenticity_token" type="hidden" value={this.props.token}/>
 									<div className="uk-form-row input-label uk-width-1-1 no-margin">
@@ -71,7 +93,7 @@ class Wrapper extends React.Component {
                       </select>
                   </div>
                   <div className="uk-width-1-1 uk-flex uk-flex-center uk-flex-middle">
-                    <button className="flat-white-button uk-width-5-10 uk-width-medium-3-10 uk-width-large-3-10 uk-container-center" type="button" style={{marginTop: 25}}>Confirm</button>
+                    <button className="flat-white-button uk-width-5-10 uk-width-medium-3-10 uk-width-large-3-10 uk-container-center pointer" style={{marginTop: 25}}>Confirm</button>
                   </div>
                   </div>
 							</fieldset>
