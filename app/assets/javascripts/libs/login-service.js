@@ -29,7 +29,7 @@ var Service = {
       callback(err);
     });
   },
-  signup: function(data, callback) {
+  signup: function(data, callback, token) {
     var user = {
       user: {}
     };
@@ -37,7 +37,7 @@ var Service = {
       user.user[object.name] = object.value;
     });
     user.interest = user.user.interest;
-    var token = user.user.authenticity_token;
+    console.log(user);
     $.ajax({
       type: 'POST',
       url: '/users?authenticity_token=' + token,

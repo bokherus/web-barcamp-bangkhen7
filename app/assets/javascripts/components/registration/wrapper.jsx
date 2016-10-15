@@ -47,7 +47,7 @@ class Wrapper extends React.Component {
 		var data = $('#registration-form').serializeArray();
 		data.push({name: "interest", value: this.state.chips});
     data.push({name: "shirt_size", value: this.state.shirtSize});
-		Service.authentication.signup(data);
+		Service.authentication.signup(data,null,this.props.token);
 	}
 
 	change(chips) {
@@ -83,7 +83,6 @@ class Wrapper extends React.Component {
             </div>
 						<form id="registration-form" onSubmit={this.onSubmit} className="uk-form">
 							<fieldset>
-								<input name="authenticity_token" type="hidden" value={this.props.token}/>
 								<div className="uk-form-row input-label uk-width-1-1 no-margin">
 									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Firstname" name="first_name" center/>
 									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Lastname" name="last_name" center/>
