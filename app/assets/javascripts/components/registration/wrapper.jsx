@@ -114,8 +114,8 @@ class Wrapper extends React.Component {
 										<label>Shirt size</label>
 										<br></br>
 										<div className="uk-button-dropdown uk-width-1-1- uk-width-medium-5-10 uk-width-large-5-10" data-uk-dropdown="{mode : 'click'}" aria-haspopup="true" aria-expanded="false">
-											<button className="uk-text-center dropdown-button uk-button uk-width-1-1">{this.state.dropDownText}
-											</button>
+											<div type="button" className="uk-text-center dropdown-button uk-button uk-width-1-1">{this.state.dropDownText}
+											</div>
 											<div className="uk-dropdown uk-dropdown-bottom" aria-hidden="true" tabIndex="">
 												<ul className="uk-nav uk-nav-dropdown">
 													{dropDownItems}

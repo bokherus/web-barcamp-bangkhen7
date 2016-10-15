@@ -1,7 +1,6 @@
 class Input extends React.Component {
   render() {
     var success = this.props.success || true;
-    console.log(success);
     return (
       <div className={"input-label " + this.props.className} style={this.props.padding ? {paddingLeft: 10, paddingRight:10} : {}}>
         <label className={success ? "" : "error-label"}>{this.props.label}</label>
