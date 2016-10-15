@@ -68,9 +68,9 @@ class Menus extends React.Component {
 						<li>
 							<a className="uk-text-uppercase" href="/participants">Participants</a>
 						</li>
-						<li>
+						{/* <li>
 							<a className="uk-text-uppercase" href="/sessions">Sessions</a>
-						</li>
+						</li> */}
 						<li>
 							<a className="uk-text-uppercase" href="/registration">Register</a>
 						</li>
@@ -84,14 +84,14 @@ class Menus extends React.Component {
 					<div className="uk-offcanvas-bar mobile-menu-canvas-bar" mode="slide">
 						<div className="uk-panel">
 							<li className="uk-margin-bottom uk-margin-top">
-								<a className="scroll uk-text-uppercase bcbk" href="#index-section">bcbk</a>
+								<a className="scroll uk-text-uppercase bcbk" href={this.props.redirect ? "/#index-section" : "#index-section"}>bcbk</a>
 							</li>
               <li className="menu-divider"></li>
 							{/* <li>
 								{loginViewMobile}
 							</li> */}
 							<li>
-								<a href="/registration">Register</a>
+								<a href="/registration" data-turbolinks="false">Register</a>
 							</li>
 							<li>
 								<a className="scroll" href={this.props.redirect ? "/#schedule-section" : "#schedule-section"}>Schedule</a>
@@ -103,14 +103,14 @@ class Menus extends React.Component {
 								<a className="scroll" href={this.props.redirect ? "/#location-section" : "#sponsors-section"}>Sponsors</a>
 							</li>
 							<li>
-								<a href="/resend">Resend Email</a>
+								<a href="/resend" data-turbolinks="false">Resend Email</a>
 							</li>
 							<li>
-								<a href="/participants">Participants</a>
+								<a href="/participants" data-turbolinks="false">Participants</a>
 							</li>
-							<li>
+							{/* <li>
 								<a href="/sessions">Sessions</a>
-							</li>
+							</li> */}
 						</div>
 					</div>
 				</div>
