@@ -1,8 +1,6 @@
 import Chips, {Chip} from 'react-chips';
 import Input from '../input.jsx';
 import CustomChip from './CustomChip';
-
-const data = ["Javascript", "Swift", "Programming"];
 const shirtSize = [
 	{
 		letter: "S",
@@ -106,7 +104,7 @@ class Wrapper extends React.Component {
 								}}>
 									<div className="uk-form-row no-margin">
 										<label>Interests</label>
-										<Chips suggestions={data} renderChip={(item) => (
+										<Chips suggestions={this.props.interests} renderChip={(item) => (
 											<CustomChip>{item}</CustomChip>
 										)} onChange={this.change}/>
 									</div>
