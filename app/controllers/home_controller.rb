@@ -36,4 +36,8 @@ class HomeController < ApplicationController
     user = User.find_by(email: params['email'])
     user&.send_after_signup_email
   end
+
+  def welcome
+    @user = User.friendly.find(params['id'])
+  end
 end
