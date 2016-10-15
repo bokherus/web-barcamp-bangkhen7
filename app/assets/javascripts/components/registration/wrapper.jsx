@@ -1,8 +1,6 @@
 import Chips, {Chip} from 'react-chips';
 import Input from '../input.jsx';
 import CustomChip from './CustomChip';
-
-const data = ["Javascript", "Swift", "Programming"];
 const shirtSize = [
 	{
 		letter: "S",
@@ -93,11 +91,11 @@ class Wrapper extends React.Component {
 
 								<div className="uk-form-row input-label uk-width-1-1 no-margin">
 									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="E-mail" name="email" center/>
-									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Twitter (Optional)" name="twitter" center/>
+									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Twitter (Optional)" placeholder="@bcbk" name="twitter" center/>
 								</div>
 
 								<div className="uk-form-row input-label uk-width-1-1 no-margin">
-									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Workplace (Optional)" name="workplace" center/>
+									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Workplace (Optional)" placeholder="มหาวิทยาลัยเกษตรศาสตร์" name="workplace" center/>
 									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Personal Website (Optional)" name="website" center/>
 								</div>
 								<div className="uk-form-row no-margin" style={{
@@ -106,7 +104,7 @@ class Wrapper extends React.Component {
 								}}>
 									<div className="uk-form-row no-margin">
 										<label>Interests</label>
-										<Chips suggestions={data} renderChip={(item) => (
+										<Chips suggestions={this.props.interests} renderChip={(item) => (
 											<CustomChip>{item}</CustomChip>
 										)} onChange={this.change}/>
 									</div>
