@@ -29,6 +29,11 @@ class HomeController < ApplicationController
 
   def registration
     @interests = Topic.pluck(:name)
+    @user_info = session[:error_user]
+    @error_messages = session[:error_messages]
+    # Reset session
+    session[:error_user] = nil
+    session[:error_messages] = nil
   end
 
   def resend
