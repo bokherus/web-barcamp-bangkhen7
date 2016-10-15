@@ -7,7 +7,7 @@ class Input extends React.Component {
         <input type={this.props.type || "text"}
           name={this.props.name}
           className={"uk-width-1-1" + (this.props.center ? " uk-text-center" : "") + (this.props.thin ? " thin" : "") + (success ? "" : " error-form")}
-          defaultValue={this.props.value || ""}/>
+          defaultValue={this.props.value || ""} placeholder={this.props.placeholder || ""}/>
       </div>
     );
   }

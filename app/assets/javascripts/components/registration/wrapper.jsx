@@ -46,7 +46,7 @@ class Wrapper extends React.Component {
 		e.preventDefault();
 		var data = $('#registration-form').serializeArray();
 		data.push({name: "interest", value: this.state.chips});
-    data.push({name: "shirtSize", value: this.state.shirtSize});
+    data.push({name: "shirt_size", value: this.state.shirtSize});
 		Service.authentication.signup(data);
 	}
 
@@ -91,11 +91,11 @@ class Wrapper extends React.Component {
 
 								<div className="uk-form-row input-label uk-width-1-1 no-margin">
 									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="E-mail" name="email" center/>
-									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Twitter (Optional)" name="twitter" center/>
+									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Twitter (Optional)" placeholder="@bcbk" name="twitter" center/>
 								</div>
 
 								<div className="uk-form-row input-label uk-width-1-1 no-margin">
-									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Workplace (Optional)" name="workplace" center/>
+									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Workplace (Optional)" placeholder="มหาวิทยาลัยเกษตรศาสตร์" name="workplace" center/>
 									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Personal Website (Optional)" name="website" center/>
 								</div>
 								<div className="uk-form-row no-margin" style={{
