@@ -90,7 +90,7 @@ class Wrapper extends React.Component {
 								</div>
 
 								<div className="uk-form-row input-label uk-width-1-1 no-margin">
-									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="E-mail" name="email" center/>
+									<Input padding errorMessage="Email is already taken" success={!this.props.error} className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="E-mail" name="email" center/>
 									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Twitter (Optional)" placeholder="@bcbk" name="twitter" center/>
 								</div>
 

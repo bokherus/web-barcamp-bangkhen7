@@ -84,7 +84,7 @@ class Menus extends React.Component {
 					<div className="uk-offcanvas-bar mobile-menu-canvas-bar" mode="slide">
 						<div className="uk-panel">
 							<li className="uk-margin-bottom uk-margin-top">
-								<a className="scroll uk-text-uppercase bcbk" href="#index-section">bcbk</a>
+								<a className="scroll uk-text-uppercase bcbk" href={this.props.redirect ? "/#index-section" : "#index-section"}>bcbk</a>
 							</li>
               <li className="menu-divider"></li>
 							{/* <li>
