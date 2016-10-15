@@ -68,9 +68,9 @@ class Menus extends React.Component {
 						<li>
 							<a className="uk-text-uppercase" href="/participants">Participants</a>
 						</li>
-						<li>
+						{/* <li>
 							<a className="uk-text-uppercase" href="/sessions">Sessions</a>
-						</li>
+						</li> */}
 						<li>
 							<a className="uk-text-uppercase" href="/registration">Register</a>
 						</li>
@@ -91,7 +91,7 @@ class Menus extends React.Component {
 								{loginViewMobile}
 							</li> */}
 							<li>
-								<a href="/registration">Register</a>
+								<a href="/registration" data-turbolinks="false">Register</a>
 							</li>
 							<li>
 								<a className="scroll" href={this.props.redirect ? "/#schedule-section" : "#schedule-section"}>Schedule</a>
@@ -103,14 +103,14 @@ class Menus extends React.Component {
 								<a className="scroll" href={this.props.redirect ? "/#location-section" : "#sponsors-section"}>Sponsors</a>
 							</li>
 							<li>
-								<a href="/resend">Resend Email</a>
+								<a href="/resend" data-turbolinks="false">Resend Email</a>
 							</li>
 							<li>
-								<a href="/participants">Participants</a>
+								<a href="/participants" data-turbolinks="false">Participants</a>
 							</li>
-							<li>
+							{/* <li>
 								<a href="/sessions">Sessions</a>
-							</li>
+							</li> */}
 						</div>
 					</div>
 				</div>
