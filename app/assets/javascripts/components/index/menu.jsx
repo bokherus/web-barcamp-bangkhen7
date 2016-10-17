@@ -67,7 +67,7 @@ class Menus extends React.Component {
 							<a className="scroll-d uk-text-uppercase bcbk" href={this.props.redirect ? "/#index-section" : "#index-section"}>BCBK</a>
 						</li>
 						<li>
-							<a className="scroll-d uk-text-uppercase" href={this.props.redirect ? "/#schedule-section" : "#schedule-section"}>Schedule</a>
+							<a className="scroll-d uk-text-uppercase" href={this.props.redirect ? "/#schedule-section" : "#schedule-section"}>Timetable</a>
 						</li>
 						<li>
 							<a className="scroll-d uk-text-uppercase" href={this.props.redirect ? "/#location-section" : "#location-section"}>Location</a>
@@ -106,7 +106,7 @@ class Menus extends React.Component {
               <a href="/registration">Register</a>
             </li>
             <li>
-              <a className="scroll" href={this.props.redirect ? "/#schedule-section" : "#schedule-section"}>Schedule</a>
+              <a className="scroll" href={this.props.redirect ? "/#schedule-section" : "#schedule-section"}>Timetable</a>
             </li>
             <li>
               <a className="scroll" href={this.props.redirect ? "/#location-section" : "#location-section"}>Location</a>
