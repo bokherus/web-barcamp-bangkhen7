@@ -1,4 +1,5 @@
-import Chips, {Chip} from 'react-chips';
+import Chips from './chips/Chips.js';
+import Chip from './chips/Chip.js';
 import Input from '../input.jsx';
 import CustomChip from './CustomChip';
 const shirtSize = [
