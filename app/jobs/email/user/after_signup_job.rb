@@ -6,7 +6,7 @@ class Email::User::AfterSignupJob < Email::BaseJob
       code: user.code
     }
     {
-      from: 'sponsor@barcampbangkhen.org',
+      from: 'barcamp@barcampbangkhen.org',
       to: user.email,
       template_id: template_id,
       template_model: template_model.as_json
