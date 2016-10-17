@@ -91,7 +91,9 @@ class Menus extends React.Component {
 							{loginViewDesktop}
 						</li> */}
 					</ul>
-					<a onClick={this.toggleMobileMenu} className="uk-navbar-toggle uk-visible-small" style={{position: "fixed"}}></a>
+					<a onClick={this.toggleMobileMenu} className="navbar-mobile uk-visible-small">
+            <i className="fa fa-bars" aria-hidden="true"></i>
+          </a>
 				</nav>
         <div onClick={this.toggleMobileMenu} id="mobile-menu" className="mobile-menu mobile-menu-hide">
           <div className="uk-panel mobile-menu-panel">
