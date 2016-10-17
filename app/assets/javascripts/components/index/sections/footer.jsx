@@ -18,7 +18,7 @@ class Footer extends React.Component {
         </div>
         <div id="contact-email" className="uk-text-right uk-width-medium-1-4 uk-width-large-1-4 uk-width-small-1-1 uk-margin-top uk-margin-bottom">
           <p className="uk-text-uppercase">contact us</p>
-          <p className="uk-margin-top">info@barcampbangkhen.org</p>
+          <p className="uk-margin-top">barcamp@barcampbangkhen.org</p>
         </div>
       </div>
     );
