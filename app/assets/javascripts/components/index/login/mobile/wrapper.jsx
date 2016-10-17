@@ -18,14 +18,14 @@ class Wrapper extends React.Component {
 		element.removeClass('push-up');
 		element.removeClass('push-down');
 		if (toggle) {
-			UIkit.offcanvas.hide('#offcanvas-1');
+			// UIkit.offcanvas.hide('#offcanvas-1');
 			element.addClass('push-up');
 		} else {
 			element.addClass('push-down');
 		}
 	}
 	componentWillUpdate(nextProps, nextState) {
-		this.toggle(nextProps.toggle);
+		// this.toggle(nextProps.toggle);
 	}
 	close() {
 		this.toggle(false);

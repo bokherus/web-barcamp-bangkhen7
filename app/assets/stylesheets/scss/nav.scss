@@ -46,7 +46,30 @@
   color: white;
 }
 
+.mobile-menu-show {
+  transform: translateX(0);
+}
+
+.mobile-menu-hide {
+  transform: translateX(-100%);
+}
+
+.mobile-menu-panel {
+  padding: 20px;
+  width: 240px;
+  height: 100vh;
+  background: rgba(0,0,0,0.7) !important;
+}
+
 .mobile-menu {
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  width: 100%;
+  z-index: 2000;
+  height: 100vh;
+  transition: 0.3s ease-in;
   a{
     color: white !important;
     font-size: 22px;

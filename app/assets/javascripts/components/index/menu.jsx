@@ -9,7 +9,7 @@ class Menus extends React.Component {
     this.state = vm({}, { type: 'init' });
     this.showLogin = this.showLogin.bind(this);
     this.dispatcher = this.dispatcher.bind(this);
-
+    this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
   }
   dispatcher(action) {
     this.setState(vm(this.state, action));
@@ -22,12 +22,12 @@ class Menus extends React.Component {
         self.scroll(this.hash);
         return false;
       });
+      $('.scroll').click(function(event) {
+        event.preventDefault();
+        self.scroll(this.hash);
+        return false;
+      });
     }
-    // var path = $(location).attr('href');
-    // if(path.indexOf("#") >= 0) {
-    //   var elementName = path.substring(path.indexOf("#"));
-    //   this.scroll(elementName);
-    // }
   }
   scroll(element) {
     $('html,body').animate({
@@ -38,6 +38,19 @@ class Menus extends React.Component {
     this.setState({
       loginToggle: !this.state.loginToggle
     });
+  }
+
+  toggleMobileMenu() {
+    var toggle = !this.state.mobileToggle;
+    this.dispatcher({type: 'toggle_mobile_menu', toggle: !this.state.mobileToggle});
+    var element = $("#mobile-menu");
+    element.removeClass("mobile-menu-hide");
+    element.removeClass("mobile-menu-show");
+    if(toggle) {
+      element.addClass("mobile-menu-show");
+    }else {
+      element.addClass("mobile-menu-hide");
+    }
   }
 	render() {
     var loginViewDesktop = <a className="uk-text-uppercase" onClick={this.showLogin}>Login</a>;
@@ -54,7 +67,7 @@ class Menus extends React.Component {
 							<a className="scroll-d uk-text-uppercase bcbk" href={this.props.redirect ? "/#index-section" : "#index-section"}>BCBK</a>
 						</li>
 						<li>
-							<a className="scroll-d uk-text-uppercase" href={this.props.redirect ? "/#schedule-section" : "#schedule-section"}>Schedule</a>
+							<a className="scroll-d uk-text-uppercase" href={this.props.redirect ? "/#schedule-section" : "#schedule-section"}>Timetable</a>
 						</li>
 						<li>
 							<a className="scroll-d uk-text-uppercase" href={this.props.redirect ? "/#location-section" : "#location-section"}>Location</a>
@@ -78,18 +91,50 @@ class Menus extends React.Component {
 							{loginViewDesktop}
 						</li> */}
 					</ul>
-					<a href="#offcanvas-1" className="uk-navbar-toggle uk-visible-small" style={{position: "fixed"}} data-uk-offcanvas="{mode:'slide'}"></a>
+					<a onClick={this.toggleMobileMenu} className="uk-navbar-toggle uk-visible-small" style={{position: "fixed"}}></a>
 				</nav>
-				<div id="offcanvas-1" className="uk-offcanvas mobile-menu" aria-hidden="true">
+        <div onClick={this.toggleMobileMenu} id="mobile-menu" className="mobile-menu mobile-menu-hide">
+          <div className="uk-panel mobile-menu-panel">
+            <li className="uk-margin-bottom uk-margin-top">
+              <a className="scroll uk-text-uppercase bcbk" href={this.props.redirect ? "/#index-section" : "#index-section"}>bcbk</a>
+            </li>
+            <li className="menu-divider"></li>
+            {/* <li>
+              {loginViewMobile}
+            </li> */}
+            <li>
+              <a href="/registration">Register</a>
+            </li>
+            <li>
+              <a className="scroll" href={this.props.redirect ? "/#schedule-section" : "#schedule-section"}>Timetable</a>
+            </li>
+            <li>
+              <a className="scroll" href={this.props.redirect ? "/#location-section" : "#location-section"}>Location</a>
+            </li>
+            <li>
+              <a className="scroll" href={this.props.redirect ? "/#location-section" : "#sponsors-section"}>Sponsors</a>
+            </li>
+            <li>
+              <a href="/resend">Resend Email</a>
+            </li>
+            <li>
+              <a href="/participants">Participants</a>
+            </li>
+          {/* <li>
+            <a href="/sessions">Sessions</a>
+          </li> */}
+          </div>
+        </div>
+				{/* <div id="offcanvas-1" className="uk-offcanvas mobile-menu" aria-hidden="true">
 					<div className="uk-offcanvas-bar mobile-menu-canvas-bar" mode="slide">
 						<div className="uk-panel">
 							<li className="uk-margin-bottom uk-margin-top">
 								<a className="scroll uk-text-uppercase bcbk" href={this.props.redirect ? "/#index-section" : "#index-section"}>bcbk</a>
 							</li>
               <li className="menu-divider"></li>
-							{/* <li>
+							<li>
 								{loginViewMobile}
-							</li> */}
+							</li>
 							<li>
 								<a href="/registration" data-turbolinks="false">Register</a>
 							</li>
@@ -108,14 +153,14 @@ class Menus extends React.Component {
 							<li>
 								<a href="/participants" data-turbolinks="false">Participants</a>
 							</li>
-							{/* <li>
+							<li>
 								<a href="/sessions">Sessions</a>
-							</li> */}
+							</li>
 						</div>
 					</div>
-				</div>
+				</div> */}
         <LoginDesktop toggle={this.state.loginToggle} token={this.props.token} />
-        <LoginMobile {...this.props} toggle={true} token={this.props.token} />
+        <LoginMobile {...this.props} toggle={this.state.loginToggle} token={this.props.token} />
 			</div>
 
 		);
