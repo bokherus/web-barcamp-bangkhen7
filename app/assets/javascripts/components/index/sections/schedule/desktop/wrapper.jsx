@@ -27,9 +27,9 @@ class Desktop extends React.Component {
 					<h4 className="no-margin">15.20 - 15.45 | 15.50 - 16.15 | 16.20 - 16.45</h4>
 					<h4 className="no-margin thin">More afternoon sessions are picked out. Check it on the website or the schedule board on the 2nd floor. Join any sessions as you wish.</h4>
 				</Row>
-				{/* <Row time="17.00 - 20.00" head="After Party">
+				<Row time="16:45 - 20.00" head="Diner">
 					<h4 className="no-margin thin">A party at the end luntarily arranged by the staff to loosen up after a long day and have some fun!</h4>
-				</Row> */}
+				</Row>
 			</div>
 		);
 	}
