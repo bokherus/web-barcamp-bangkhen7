@@ -28,11 +28,6 @@ class Menus extends React.Component {
         return false;
       });
     }
-    // var path = $(location).attr('href');
-    // if(path.indexOf("#") >= 0) {
-    //   var elementName = path.substring(path.indexOf("#"));
-    //   this.scroll(elementName);
-    // }
   }
   scroll(element) {
     $('html,body').animate({
