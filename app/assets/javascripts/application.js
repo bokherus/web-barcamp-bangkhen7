@@ -27,5 +27,5 @@ Service.email = require('./libs/email-service.js').default;
 $(document).on('turbolinks:load', function () {
 	require('./libs/uikit/js/components/sticky.js');
 	require('./libs/uikit/js/components/parallax.min.js');
-  require('./libs/anchor.js');
+  // require('./libs/anchor.js');
 });
