@@ -25,6 +25,7 @@ class Menus extends React.Component {
       $('.scroll').click(function(event) {
         event.preventDefault();
         self.scroll(this.hash);
+        self.toggleMobileMenu();
         return false;
       });
     }
@@ -51,6 +52,7 @@ class Menus extends React.Component {
     }else {
       element.addClass("mobile-menu-hide");
     }
+    return false;
   }
 	render() {
     var loginViewDesktop = <a className="uk-text-uppercase" onClick={this.showLogin}>Login</a>;
@@ -114,7 +116,7 @@ class Menus extends React.Component {
               <a className="scroll" href={this.props.redirect ? "/#location-section" : "#location-section"}>Location</a>
             </li>
             <li>
-              <a className="scroll" href={this.props.redirect ? "/#location-section" : "#sponsors-section"}>Sponsors</a>
+              <a className="scroll" href={this.props.redirect ? "/#sponsors-section" : "#sponsors-section"}>Sponsors</a>
             </li>
             <li>
               <a href="/resend">Resend Email</a>
@@ -127,40 +129,6 @@ class Menus extends React.Component {
           </li> */}
           </div>
         </div>
-				{/* <div id="offcanvas-1" className="uk-offcanvas mobile-menu" aria-hidden="true">
-					<div className="uk-offcanvas-bar mobile-menu-canvas-bar" mode="slide">
-						<div className="uk-panel">
-							<li className="uk-margin-bottom uk-margin-top">
-								<a className="scroll uk-text-uppercase bcbk" href={this.props.redirect ? "/#index-section" : "#index-section"}>bcbk</a>
-							</li>
-              <li className="menu-divider"></li>
-							<li>
-								{loginViewMobile}
-							</li>
-							<li>
-								<a href="/registration" data-turbolinks="false">Register</a>
-							</li>
-							<li>
-								<a className="scroll" href={this.props.redirect ? "/#schedule-section" : "#schedule-section"}>Schedule</a>
-							</li>
-							<li>
-								<a className="scroll" href={this.props.redirect ? "/#location-section" : "#location-section"}>Location</a>
-							</li>
-							<li>
-								<a className="scroll" href={this.props.redirect ? "/#location-section" : "#sponsors-section"}>Sponsors</a>
-							</li>
-							<li>
-								<a href="/resend" data-turbolinks="false">Resend Email</a>
-							</li>
-							<li>
-								<a href="/participants" data-turbolinks="false">Participants</a>
-							</li>
-							<li>
-								<a href="/sessions">Sessions</a>
-							</li>
-						</div>
-					</div>
-				</div> */}
         <LoginDesktop toggle={this.state.loginToggle} token={this.props.token} />
         <LoginMobile {...this.props} toggle={this.state.loginToggle} token={this.props.token} />
 			</div>
