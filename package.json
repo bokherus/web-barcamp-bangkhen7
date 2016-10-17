@@ -12,6 +12,7 @@
     "js-cookie": "^2.1.2",
     "radium": "^0.18.1",
     "react": "^15.3.0",
+    "react-autosuggest": "^6.1.0",
     "react-burger-menu": "^1.10.4",
     "react-chips": "^0.2.1",
     "react-dom": "^15.3.0",
