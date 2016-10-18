@@ -53,7 +53,9 @@ class Wrapper extends React.Component {
       return false;
     }
 		var data = $('#registration-form').serializeArray();
-		data.push({name: "interest", value: this.state.chips});
+    var chipsInputElement = $("#chips-wrapper input")[0];
+    var value = chipsInputElement.value;
+		data.push({name: "interest", value: (value === '' ? this.state.chips : [...this.state.chips, value])});
     data.push({name: "shirt_size", value: this.state.shirtSize});
 		Service.authentication.signup(data,null,this.props.token);
 	}
