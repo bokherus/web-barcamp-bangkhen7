@@ -2,9 +2,7 @@
   background-image : url(asset-path('gray.svg'));
   background-color: rgba(75,163,171,1);
   background-repeat: repeat;
-  padding-top: 30px !important;
-  padding-bottom: 30px !important;
-  height: 100vh;
+  min-height: 100vh;
   font-weight: 300 !important;
   .parking-card {
     padding-left: 60px !important;
@@ -92,7 +90,8 @@ label {
     margin-bottom: 5px;
   }
   #registration_form {
-    height: 100%;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
     .parking-card {
       padding: 20px !important;
     }
