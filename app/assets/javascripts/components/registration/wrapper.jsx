@@ -67,13 +67,15 @@ class Wrapper extends React.Component {
       dropDownText: item,
       shirtSize: item
     });
+    var element = $('#uk-dropdown-open');
+    element.removeClass('uk-open');
   }
 	render() {
     var self = this;
 		var dropDownText = "ไซส์ รอบอก(นิ้ว) ความยาว(นิ้ว)";
     var dropDownItems = _.map(shirtSize, function(shirt,i) {
-      return (<li key={i} className="uk-dropdown-close" onClick={self.onDropdownSelected.bind(self, shirt.letter)}>
-                <a className="uk-dropdown-close" href="#" data-turbolinks="false">
+      return (<li key={i} onClick={self.onDropdownSelected.bind(self, shirt.letter)}>
+                <a>
                   <span>{shirt.letter}</span>
                   <span className="pull-right" style={{paddingRight: 15}}>{shirt.number}</span>
                 </a>
@@ -119,7 +121,7 @@ class Wrapper extends React.Component {
 									<div className="uk-form-row input-label shirt-size-dropdown-wrapper">
 										<label className={this.state.shirtError === "" ? "" : "error-label"}>{"Shirt size" + this.state.shirtError}</label>
 										<br></br>
-										<div className="uk-button-dropdown uk-width-1-1- uk-width-medium-5-10 uk-width-large-5-10" data-uk-dropdown="{delay: 100}" aria-haspopup="true" aria-expanded="false">
+										<div id="uk-dropdown-open" className="uk-button-dropdown uk-width-1-1- uk-width-medium-5-10 uk-width-large-5-10" data-uk-dropdown="{delay: 100}" aria-expanded="false">
 											<div type="button" className="uk-text-center dropdown-button uk-button uk-width-1-1">{this.state.dropDownText}
 											</div>
 											<div className="uk-dropdown uk-dropdown-bottom" aria-hidden="true" tabIndex="">
