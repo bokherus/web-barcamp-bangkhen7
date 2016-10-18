@@ -14,7 +14,7 @@ class Mobile extends React.Component {
           <Row margin-top time="13.00 - 14.55" desc="Afternoon Sessions" />
           <Row margin-top time="15.00 - 15.20" desc="Break" />
           <Row margin-top time="15.20 - 16.45" desc="Back to Afternoon Sessions" />
-          <Row margin-top time="16.45 - 20.00" desc="Diner" />
+          <Row margin-top time="16.45 - 20.00" desc="Dinner" />
 				</div>
 			</div>
 		);

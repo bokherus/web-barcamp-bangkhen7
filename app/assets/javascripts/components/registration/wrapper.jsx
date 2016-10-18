@@ -73,7 +73,7 @@ class Wrapper extends React.Component {
 		var dropDownText = "ไซส์ รอบอก(นิ้ว) ความยาว(นิ้ว)";
     var dropDownItems = _.map(shirtSize, function(shirt,i) {
       return (<li key={i} className="uk-dropdown-close" onClick={self.onDropdownSelected.bind(self, shirt.letter)}>
-                <a>
+                <a className="uk-dropdown-close">
                   <span>{shirt.letter}</span>
                   <span className="pull-right" style={{paddingRight: 15}}>{shirt.number}</span>
                 </a>

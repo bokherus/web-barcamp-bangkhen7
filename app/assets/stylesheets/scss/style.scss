@@ -4,6 +4,7 @@ html {
     width: 100%;
     padding: 0;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
 }
 .section {
     width: 100%;
@@ -113,11 +114,11 @@ textarea:hover {
     -webkit-appearance: none;
 }
 .push-up {
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
     bottom: 0 !important;
 }
 .push-down {
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
     bottom: -9999px !important;
 }
 .pull-top {
@@ -194,4 +195,18 @@ textarea:hover {
     border: solid 2px white !important;
     background-color: rgba(255,255,255,0.3) !important;
     color: white !important;
+}
+
+.blur {
+  z-index: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.blur-true {
+  $blur: 6px;
+  -webkit-filter: blur($blur);
+  -moz-filter: blur($blur);
+  -o-filter: blur($blur);
+  -ms-filter: blur($blur);
+  filter: blur($blur);
 }

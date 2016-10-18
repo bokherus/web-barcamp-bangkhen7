@@ -29,12 +29,12 @@
   .table-body-row {
     // cursor: pointer;
     border-bottom: solid 1px white;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
     background-color: rgba(121, 126, 126, 0.5);
   }
-  .table-body-row:hover {
-    background-color: rgba(255,255,255,0.1);
-  }
+  // .table-body-row:hover {
+  //   background-color: rgba(255,255,255,0.1);
+  // }
   .mobile-body-row {
     padding-top : 10px !important;
     padding-bottom: 10px !important;

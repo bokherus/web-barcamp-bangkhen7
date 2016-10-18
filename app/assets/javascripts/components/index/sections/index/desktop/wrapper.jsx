@@ -1,7 +1,7 @@
 class Desktop extends React.Component {
 	render() {
 		return (
-			<div className="uk-width-1-1 event-info uk-flex uk-flex-center" data-uk-parallax={ $(window).width() > 768 ? "{bgp: '250'}" : ""} >
+			<div className="uk-width-1-1 event-info uk-flex uk-flex-center" >
 				<div className="event-info-wrapper uk-width-1-1 uk-flex uk-flex-center uk-margin-bottom">
 					<div className="uk-width-medium-1-4 uk-width-large-1-4 uk-width-small-1-1 uk-flex uk-flex-center uk-flex-middle uk-margin-bottom uk-container-center">
 						<div className="uk-width-1-6 uk-flex uk-flex-center">
