@@ -18,6 +18,7 @@ class Desktop extends React.Component {
 						</div>
 						<div className="index-info-text uk-margin-left uk-width-3-10 uk-width-medium-5-6 uk-width-large-3-6">
 							<h3 className="no-margin">IUP Building (17)</h3>
+							<h3 className="no-margin uk-hidden-medium uk-hidden-large">Faculty of Engineering</h3>
 							<h3 className="no-margin">Kasetsart University</h3>
 						</div>
 					</div>

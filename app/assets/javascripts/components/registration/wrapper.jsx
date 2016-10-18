@@ -53,10 +53,16 @@ class Wrapper extends React.Component {
       return false;
     }
 		var data = $('#registration-form').serializeArray();
-		data.push({name: "interest", value: this.state.chips});
+    var chipsInputElement = $("#chips-wrapper input")[0];
+    var value = chipsInputElement.value;
+		data.push({name: "interest", value: (value === '' ? this.state.chips : [...this.state.chips, value])});
     data.push({name: "shirt_size", value: this.state.shirtSize});
 		Service.authentication.signup(data,null,this.props.token);
 	}
+
+  componentDidMount() {
+    $("#chips-wrapper input")[0].placeholder = "Press Enter to add multiple interests"
+  }
 
 	change(chips) {
 		this.setState({chips: chips});
@@ -83,9 +89,6 @@ class Wrapper extends React.Component {
     });
 		return (
 			<div id="registration_form" className="uk-flex uk-flex-middle">
-				{/* <div className="participants-banner uk-width-1-1 uk-flex uk-flex-center uk-flex-middle">
-					<h1 className="uk-text-uppercase">Registration</h1>
-				</div> */}
 				<div className="registration-form uk-container-center">
 					<div className="uk-container-center parking-card uk-width-9-10 uk-width-medium-5-10 uk-width-large-5-10">
             <h3 className="uk-text-center">Registration</h3>
@@ -105,7 +108,7 @@ class Wrapper extends React.Component {
 								</div>
 
 								<div className="uk-form-row input-label uk-width-1-1 no-margin">
-									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Workplace (Optional)" placeholder="มหาวิทยาลัยเกษตรศาสตร์" name="workplace" center/>
+									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Workplace (Optional)" placeholder="Kasetsart" name="workplace" center/>
 									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Personal Website (Optional)" name="website" center/>
 								</div>
 								<div className="uk-form-row no-margin" style={{
@@ -130,6 +133,8 @@ class Wrapper extends React.Component {
 												</ul>
 											</div>
 										</div>
+                    <br/>
+                    <label>*Shirt sizes subject to availability</label>
 									</div>
 									<div className="uk-width-1-1 uk-flex uk-flex-center uk-flex-middle">
 										<button className="flat-white-button uk-width-5-10 uk-width-medium-3-10 uk-width-large-3-10 uk-container-center pointer" style={{
