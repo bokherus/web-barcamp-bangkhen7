@@ -12,7 +12,7 @@
 @media (min-width: 768px) {
   .uk-navbar {
     background: rgba(0,0,0,0.3) !important;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
     border-radius: 0px !important;
   }
 }
@@ -27,7 +27,7 @@
     a,h2{
       color: white !important;
       text-shadow: initial !important;
-      transition: 0.3s;
+      transition: 0.3s ease-in-out;
     }
     a:focus, h2:focus{
       background: rgba(0,0,0,0) !important;
@@ -72,7 +72,7 @@
   width: 100%;
   z-index: 2000;
   height: 100vh;
-  transition: 0.3s ease-in;
+  transition: 0.5s ease-in-out;
   a{
     color: white !important;
     font-size: 22px;
