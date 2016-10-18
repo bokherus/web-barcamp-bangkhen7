@@ -45,12 +45,15 @@ class Menus extends React.Component {
     var toggle = !this.state.mobileToggle;
     this.dispatcher({type: 'toggle_mobile_menu', toggle: !this.state.mobileToggle});
     var element = $("#mobile-menu");
+    var blurElement = $('.blur');
     element.removeClass("mobile-menu-hide");
     element.removeClass("mobile-menu-show");
     if(toggle) {
       element.addClass("mobile-menu-show");
+      blurElement.addClass('blur-true');
     }else {
       element.addClass("mobile-menu-hide");
+      blurElement.removeClass('blur-true');
     }
     return false;
   }
@@ -62,7 +65,7 @@ class Menus extends React.Component {
       loginViewMobile = <a>{this.props.user.email}</a>;
     }
 		return (
-			<div style={{position: "relative"}}>
+			<div className="menu">
 				<nav className="uk-navbar flex flex-center-x">
 					<ul className="uk-navbar-nav uk-hidden-small uk-flex uk-flex-center uk-flex-middle navbar uk-hidden-small">
 						<li>

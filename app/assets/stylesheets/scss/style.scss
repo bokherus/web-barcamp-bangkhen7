@@ -195,3 +195,17 @@ textarea:hover {
     background-color: rgba(255,255,255,0.3) !important;
     color: white !important;
 }
+
+.blur {
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.blur-true {
+  $blur: 6px;
+  -webkit-filter: blur($blur);
+  -moz-filter: blur($blur);
+  -o-filter: blur($blur);
+  -ms-filter: blur($blur);
+  filter: blur($blur);
+}
