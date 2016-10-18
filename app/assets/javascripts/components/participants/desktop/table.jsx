@@ -15,12 +15,13 @@ class Table extends React.Component {
           {
             this.props.items.map(function(object, i ) {
               var interest = getInterestPlaceHolder(_.map(object.topics,'name'));
+              var validUrl = (((object.website).toLowerCase().indexOf('http://') >= 0) ? "" : "http://") + object.website;
               return (
                 <tr className="table-body-row" key={i}>
                   <td>{object.first_name + " " + object.last_name}</td>
                   <td>{object.twitter || "-"}</td>
                   <td>{interest || "-"}</td>
-                  <td><a href={"http://" + object.website} target="_blank" style={{color: "white"}}>{object.website || "-"}</a></td>
+                  <td><a href={validUrl} target="_blank" style={{color: "white"}}>{object.website || "-"}</a></td>
                 </tr>
               );
             })
