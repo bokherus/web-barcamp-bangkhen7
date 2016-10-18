@@ -37,7 +37,6 @@ var Service = {
       user.user[object.name] = object.value;
     });
     user.interest = user.user.interest;
-    console.log(user);
     $.ajax({
       type: 'POST',
       url: '/users?authenticity_token=' + token,
