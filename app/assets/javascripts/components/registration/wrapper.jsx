@@ -85,9 +85,6 @@ class Wrapper extends React.Component {
     });
 		return (
 			<div id="registration_form" className="uk-flex uk-flex-middle">
-				{/* <div className="participants-banner uk-width-1-1 uk-flex uk-flex-center uk-flex-middle">
-					<h1 className="uk-text-uppercase">Registration</h1>
-				</div> */}
 				<div className="registration-form uk-container-center">
 					<div className="uk-container-center parking-card uk-width-9-10 uk-width-medium-5-10 uk-width-large-5-10">
             <h3 className="uk-text-center">Registration</h3>

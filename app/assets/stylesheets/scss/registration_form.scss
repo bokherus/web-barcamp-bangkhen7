@@ -17,6 +17,10 @@
   .shirt-size-dropdown-wrapper {
     display: inherit !important;
   }
+
+  input::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.5);
+  }
 }
 
 
@@ -31,6 +35,9 @@
     font-weight: 300 !important;
     margin: 0px !important;
     color: white !important;
+  }
+  input::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.5);
   }
   border: solid 2px white !important;
   padding: 5px !important;
