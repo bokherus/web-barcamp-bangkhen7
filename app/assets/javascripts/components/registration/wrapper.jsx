@@ -121,7 +121,7 @@ class Wrapper extends React.Component {
 									<div className="uk-form-row input-label shirt-size-dropdown-wrapper">
 										<label className={this.state.shirtError === "" ? "" : "error-label"}>{"Shirt size" + this.state.shirtError}</label>
 										<br></br>
-										<div id="uk-dropdown-open" className="uk-button-dropdown uk-width-1-1- uk-width-medium-5-10 uk-width-large-5-10" data-uk-dropdown="{delay: 100}" aria-expanded="false">
+										<div id="uk-dropdown-open" className="uk-button-dropdown uk-width-1-1- uk-width-medium-5-10 uk-width-large-5-10" data-uk-dropdown="{mode: 'click'}" aria-expanded="false">
 											<div type="button" className="uk-text-center dropdown-button uk-button uk-width-1-1">{this.state.dropDownText}
 											</div>
 											<div className="uk-dropdown uk-dropdown-bottom" aria-hidden="true" tabIndex="">
