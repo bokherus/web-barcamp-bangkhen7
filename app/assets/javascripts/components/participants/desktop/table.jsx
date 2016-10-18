@@ -18,9 +18,9 @@ class Table extends React.Component {
               return (
                 <tr className="table-body-row" key={i}>
                   <td>{object.first_name + " " + object.last_name}</td>
-                  <td>{object.twitter}</td>
-                  <td>{interest}</td>
-                  <td><a href={"http://" + object.website} target="_blank" style={{color: "white"}}>{object.website}</a></td>
+                  <td>{object.twitter || "-"}</td>
+                  <td>{interest || "-"}</td>
+                  <td><a href={"http://" + object.website} target="_blank" style={{color: "white"}}>{object.website || "-"}</a></td>
                 </tr>
               );
             })
@@ -38,6 +38,6 @@ var getInterestPlaceHolder = function(interest) {
   // else {
   //   return firstTwo[0] + ", " + firstTwo[1] + ",...";
   // }
-  return interest.toString();
+  return _.replace(interest.toString(), /,/g, ', ');
 };
 export default connect()(Table);
