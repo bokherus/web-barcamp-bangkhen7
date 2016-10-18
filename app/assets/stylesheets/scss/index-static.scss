@@ -63,3 +63,31 @@
     width: 55% !important;
   }
 }
+
+.registration-button-wrapper {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 30px;
+  color: #444;
+  // background: rgba(255, 255, 255, 0.5);
+  transition: 0.4s ease-in-out;
+  display: table !important;
+  border: solid 2px rgba(45, 174, 190, 1);
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  .regis-text {
+    transition: 0.4s ease-in-out;
+    color :rgba(45, 174, 190, 1) !important;
+    font-size: 0.7em !important;
+    text-decoration: none;
+  }
+}
+
+.registration-button-wrapper:hover {
+  background: rgba(45, 174, 190, 1);
+  .regis-text {
+    color : white !important;
+  }
+}
