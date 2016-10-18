@@ -18,16 +18,15 @@
 //= require react
 //= require react_ujs
 //= require components
-require('./libs/uikit/js/uikit.min.js');
 require('./libs/gmaps.js');
 window.Service = {};
 Service.authentication = require('./libs/login-service.js').default;
 Service.email = require('./libs/email-service.js').default;
 /* load js after the page has been loaded by turbolinks */
 $(document).on('turbolinks:load', function () {
+  require('./libs/uikit/js/uikit.min.js');
 	require('./libs/uikit/js/components/sticky.js');
 	require('./libs/uikit/js/components/parallax.min.js');
-
   var scroll = function(element) {
     $('html,body').animate({
       scrollTop: $(element).position().top
