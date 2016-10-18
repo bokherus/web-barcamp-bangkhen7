@@ -60,6 +60,10 @@ class Wrapper extends React.Component {
 		Service.authentication.signup(data,null,this.props.token);
 	}
 
+  componentDidMount() {
+    $("#chips-wrapper input")[0].placeholder = "Press Enter to add multiple interests"
+  }
+
 	change(chips) {
 		this.setState({chips: chips});
 	}
@@ -104,7 +108,7 @@ class Wrapper extends React.Component {
 								</div>
 
 								<div className="uk-form-row input-label uk-width-1-1 no-margin">
-									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Workplace (Optional)" placeholder="มหาวิทยาลัยเกษตรศาสตร์" name="workplace" center/>
+									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Workplace (Optional)" placeholder="Kasetsart" name="workplace" center/>
 									<Input padding className="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-2 uk-margin-bottom" thin label="Personal Website (Optional)" name="website" center/>
 								</div>
 								<div className="uk-form-row no-margin" style={{
@@ -129,6 +133,8 @@ class Wrapper extends React.Component {
 												</ul>
 											</div>
 										</div>
+                    <br/>
+                    <label>*Shirt sizes subject to availability</label>
 									</div>
 									<div className="uk-width-1-1 uk-flex uk-flex-center uk-flex-middle">
 										<button className="flat-white-button uk-width-5-10 uk-width-medium-3-10 uk-width-large-3-10 uk-container-center pointer" style={{
