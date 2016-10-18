@@ -8,6 +8,7 @@ class Section extends React.Component {
       lat: 13.846426,
       lng: 100.5692306
     });
+    map.setOptions({draggable: true, zoomControl: true, scrollwheel: false, disableDoubleClickZoom: true});
     var locations = [
       {
         lat: 13.846387,
