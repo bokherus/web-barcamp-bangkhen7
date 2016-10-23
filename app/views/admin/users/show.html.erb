@@ -1,0 +1,42 @@
+<h1>Edit User</h1>
+
+<%= form_for @user, url: {action: :update, method: :put} do |f| %>
+
+  <label>First name</label>
+  <div class="input-group">
+    <%= f.text_field :first_name, class: 'form-control' %>
+  </div>
+  <br>
+
+  <label>Last name</label>
+  <div class="input-group">
+    <%= f.text_field :last_name, class: 'form-control' %>
+  </div>
+  <br>
+
+  <label>Shirt size</label>
+  <div class="input-group">
+    <%= f.text_field :shirt_size, class: 'form-control' %>
+  </div>
+  <br>
+
+  <label>Twitter</label>
+  <div class="input-group">
+    <%= f.text_field :twitter, class: 'form-control' %>
+  </div>
+  <br>
+
+  <label>Workplace</label>
+  <div class="input-group">
+    <%= f.text_field :workplace, class: 'form-control' %>
+  </div>
+  <br>
+
+  <label>Website</label>
+  <div class="input-group">
+    <%= f.text_field :website, class: 'form-control' %>
+  </div>
+  <br>
+
+  <%= f.submit "Save", class: 'btn btn-primary' %>
+<% end %>

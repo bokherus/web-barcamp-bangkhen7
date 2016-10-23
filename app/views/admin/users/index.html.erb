@@ -1,0 +1,13 @@
+<h2>Users</h2>
+<table class="table table-bordered">
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th></th>
+  </tr>
+  <% @users.each do |user| %>
+  <td><%= user.id %></td>
+  <td><%= user.full_name %></td>
+  <td><%= link_to "edit", admin_user_path(user) %></td>
+  <% end %>
+</table>
