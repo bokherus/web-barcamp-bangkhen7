@@ -1,0 +1,33 @@
+
+
+<div class="row">
+  <div class="col-md-10">
+    <h2>Sessions</h2>
+  </div>
+  <div class="col-md-2">
+    <%= link_to "New", "/admin/sessions/new", class: "btn btn-primary pull-right" %>
+  </div>
+</div>
+
+<br>
+
+<table class="table table-bordered table-hover">
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Speaker</th>
+    <th>Location</th>
+    <th>Start time</th>
+    <th>End time</th>
+  </tr>
+  <% @sessions.each do |session| %>
+  <tr>
+    <td><%= session.id %></td>
+    <td><%= session.name %></td>
+    <td><%= session.speaker %></td>
+    <td><%= session.location %></td>
+    <td><%= session.start_time.strftime("%R") %></td>
+    <td><%= session.end_time.strftime("%R") %></td>
+  </tr>
+  <% end %>
+</table>

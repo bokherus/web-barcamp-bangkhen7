@@ -1,0 +1,25 @@
+<h2>New session</h2>
+<br>
+
+<%= form_for @session, html: {class: 'form-horizontal'} do |f|%>
+
+<div class="form-group">
+  <div class="col-sm-2 control-label">
+    <label>Name</label>
+  </div>
+  <div class="col-sm-8">
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-2 control-label">
+    <label>Speaker</label>
+  </div>
+  <div class="col-sm-8">
+    <%= f.text_field :speaker, class: 'form-control' %>
+  </div>
+</div>
+
+
+<% end %>
