@@ -29,6 +29,10 @@ class HomeController < ApplicationController
 
   def registration
     @interests = Topic.pluck(:name)
+    @user_info = session[:error_user]
+    @error_messages = session[:error_messages]
+    session[:error_user] = nil
+    session[:error_messages] = nil
   end
 
   def resend
@@ -39,5 +43,16 @@ class HomeController < ApplicationController
 
   def sessions
     @sessions = Session.all.as_json(except: [:id, :created_at, :updated_at])
+  end
+
+  def welcome
+    @user = User.friendly.find(params['id']).as_json(
+    except: [
+      :created_at,
+      :updated_at,
+      :shirt_size,
+      :code
+      ]
+    )
   end
 end

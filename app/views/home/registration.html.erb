@@ -1,4 +1,6 @@
 <div>
   <%= react_component('Menu', redirect: true, token: form_authenticity_token, user: @user, logo: image_url('logo_white.svg')) %>
-  <%= react_component('Registration',token: form_authenticity_token) %>
+  <div class="blur">
+    <%= react_component('Registration',token: form_authenticity_token, dash: image_url('dash.svg'), interests: @interests, error: @user_info != nil) %>
+  </div>
 </div>

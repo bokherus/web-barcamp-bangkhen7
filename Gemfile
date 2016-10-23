@@ -21,6 +21,7 @@ gem 'delayed_job_active_record'
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
+gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -30,14 +31,19 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# send transactional emails
 gem 'postmark', '~> 1.7', '>= 1.7.1'
+# create pretty URL’s and work with human-friendly strings
+gem 'friendly_id', '~> 5.1.0'
+
 # Use devise for authentication
 gem 'devise'
 # browserify-rails for allow rails to use npm
 gem "browserify-rails"
 gem 'react-rails'
 gem 'rake', :group => :test
-
+gem 'font-awesome-sass', '~> 4.6.2'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -59,4 +65,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-lodash'
+end
+
+group :production do
+  gem 'unicorn'
 end

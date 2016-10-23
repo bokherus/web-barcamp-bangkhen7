@@ -2406,5 +2406,6 @@ if (!Array.prototype.indexOf) {
 }
 
 window.GMaps = GMaps;
+console.log();
 return GMaps;
 }));

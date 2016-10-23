@@ -12,7 +12,7 @@
 @media (min-width: 768px) {
   .uk-navbar {
     background: rgba(0,0,0,0.3) !important;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
     border-radius: 0px !important;
   }
 }
@@ -27,7 +27,7 @@
     a,h2{
       color: white !important;
       text-shadow: initial !important;
-      transition: 0.3s;
+      transition: 0.3s ease-in-out;
     }
     a:focus, h2:focus{
       background: rgba(0,0,0,0) !important;
@@ -46,7 +46,33 @@
   color: white;
 }
 
+.mobile-menu-show {
+  transform: translateX(0);
+}
+
+.mobile-menu-hide {
+  transform: translateX(-100%);
+}
+
+.mobile-menu-panel {
+  padding: 20px;
+  width: 240px;
+  height: 100vh;
+  background: rgba(0,0,0,0.7) !important;
+  a{
+    display: flex;
+  }
+}
+
 .mobile-menu {
+  position: fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  width: 100%;
+  z-index: 2000;
+  height: 100vh;
+  transition: 0.5s ease-in-out;
   a{
     color: white !important;
     font-size: 22px;
@@ -79,4 +105,19 @@
   top: 0;
   left: 0;
   background: rgba(0,0,0,0.3);
+}
+
+.menu {
+  position: relative;
+  z-index: 5;
+}
+
+.navbar-mobile {
+  font-size: 25px;
+  color: white;
+  position: fixed;
+  height: 30px;
+  width: 30px;
+  top: 15px;
+  left: 15px;
 }

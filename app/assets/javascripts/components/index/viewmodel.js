@@ -3,11 +3,16 @@ var vm = function(state, action) {
     case 'init':
       return {
         user: null,
-        loginToggle: false
+        loginToggle: false,
+        mobileToggle: false
       };
     case 'update_user':
       return _.merge(state, {
         user: action.data.user
+      });
+    case 'toggle_mobile_menu':
+      return _.merge(state ,{
+        mobileToggle: action.toggle
       });
     default:
       return state;

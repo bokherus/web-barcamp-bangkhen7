@@ -15,7 +15,6 @@ class FreePark extends React.Component {
               </ul>
               <h3>(G) Jakbandhu Building Parking</h3>
               <ul>
-                  <li>Price: 10THB/hr</li>
                   <li>Location: Behind Jakbandhu Building</li>
                   <li>Capacity: 150</li>
               </ul>

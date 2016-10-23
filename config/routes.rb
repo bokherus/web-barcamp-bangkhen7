@@ -3,11 +3,15 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "home#index"
   get 'participants', to: "home#participants"
-  get 'profile', to: 'profile#index'
+  # get 'profile', to: 'profile#index'
   get 'registration', to: 'home#registration'
   get 'resend', to: 'home#resend'
   post 'resend', to: 'home#resend'
   get 'dev', to: 'dev#index'
+
   get 'sessions', to: 'home#sessions'
+
+  get 'welcome/:id', to: 'home#welcome', as: 'welcome'
+
   match ":url" => "home#comingsoon", :via => [:get], :constraints => { :url => /.*/ }, to: redirect('/comingsoon')
 end

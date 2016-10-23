@@ -1,8 +1,8 @@
 <div>
   <%= react_component('Menu', redirect: false, token: form_authenticity_token, user: @user, logo: image_url('logo_white.svg')) %>
-  <div>
+  <div class="blur">
     <%= react_component('Index', color: "#bdc3c7",
-      logo: image_url('logo.png'),
+      logo: image_url('logo-dark.svg'),
       schedule: image_url('schedule.png'),
       location: image_url('location.png'),
       twitter: image_url('twitter.png'),

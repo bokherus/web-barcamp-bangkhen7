@@ -1,210 +1,212 @@
-html, body {
-  // font-family: 'Roboto' !important;
-  width: 100%;
-  padding: 0;
-  margin: 0;
+body,
+html {
+    // font-family: 'Roboto' !important;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
 }
-
 .section {
-  width: 100%;
+    width: 100%;
 }
-
 .menu-links-wrapper a {
-  display: block;
+    display: block;
 }
-
 .flex {
-  display: flex;
+    display: flex;
 }
-
 .flex-center-y {
-  align-items: center;
+    align-items: center;
 }
-
 .flex-center-x {
-  justify-content: center;
+    justify-content: center;
 }
-
 .flex-center {
-  @extend .flex-center-y;
-  @extend .flex-center-x;
+    @extend .flex-center-y;
+    @extend .flex-center-x;
 }
-
 .text {
-  font-size: 40px;
+    font-size: 40px;
 }
-
 .header {
-  color: white;
+    color: white;
 }
-
 .text-center {
-  text-align: center;
-}
-
-.uk-grid {
-  margin: 0px !important;
-  padding: 0px !important;
-  * {
-    margin: 0px !important;
-    padding: 0px !important;
-  }
-}
-
-.no-margin {
-  margin: 0px;
-}
-
-.thin {
-  font-weight: 300 !important;
-}
-
-@media(max-width: 768px) {
-  .page-header {
     text-align: center;
-  }
 }
-
+.uk-grid {
+    margin: 0 !important;
+    padding: 0 !important;
+    * {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+.no-margin {
+    margin: 0 !important;
+}
+.thin {
+    font-weight: 300 !important;
+}
+@media(max-width: 768px) {
+    .page-header {
+        text-align: center;
+    }
+}
 ::-webkit-scrollbar {
     display: none;
 }
-
-.full-width{
-  width: 100%;
+.full-width {
+    width: 100%;
 }
-
 .full-height {
-  height: 100vh;
+    height: 100vh;
 }
-
 .square-button {
-  padding: 10px;
-  background-color: rgba(75, 185, 199, 0.5);
-  border: solid 2px rgb(49, 122, 132);
-  h3 {
-    margin:0px;
-    color: rgb(49, 122, 132);
-  }
+    padding: 10px;
+    background-color: rgba(75, 185, 199, 0.5);
+    border: solid 2px rgb(49, 122, 132);
+    h3 {
+        margin: 0;
+        color: rgb(49, 122, 132);
+    }
 }
-
 .square-button:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
-
 .bb-input {
-  font-size: 20px;
-  color: white;
-  border: solid 3px white;
-  background: #797e7e;
-  padding-top: 5px;
-  padding-bottom: 5px;
+    font-size: 20px;
+    color: white;
+    border: solid 3px white;
+    background: #797e7e;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
-
 .bb-button {
-  font-size: 15px;
-  color: white;
-  border: solid 2px white;
-  background: rgba(0,0,0,0);
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-}
-
-.bb-button:hover {
-  cursor: pointer;
-  color: #444;
-  background: white;
-  h6 {
-    color: #444 !important;
-  }
-}
-
-textarea:hover,
-input:hover,
-textarea:active,
-input:active,
-textarea:focus,
-input:focus,
-button:focus,
-button:active,
-button:hover,
-label:focus,
-.btn:active,
-.btn.active
-{
-    outline:0px !important;
-    -webkit-appearance:none;
-}
-
-.push-up {
-  transition: 0.5s;
-  bottom: 0 !important;
-}
-
-.push-down {
-  transition: 0.5s;
-  bottom: -9999px !important;
-}
-
-.pull-top {
-  position: absolute;
-  top: 0;
-}
-
-.pull-left {
-  position: absolute;
-  left:0;
-}
-
-.pull-bottom {
-  position: absolute;
-  bottom: 0;
-}
-
-.flat-white-button {
-  font-size: 1.1em;
-  border-radius: 5px;
-  border: solid 0px white;
-  background-color: white;
-  padding: 10px;
-  color: #444;
-}
-
-.flat-button-big {
-  font-size: 24px;
-  padding: 5px;
-}
-
-.input-form {
-  color: white;
-  border: solid 1px white !important;
-  background: rgba(255,255,255,0.3) !important;
-}
-
-.full-width-flex {
-  flex-grow: 100;
-}
-
-.pointer {
-  cursor: pointer;
-}
-.input-label{
-  label {
+    font-size: 15px;
     color: white;
-  }
-  .error-label {
-    color: #D45968;
-  }
-  .error-form {
-    border-color: #D45968;
-  }
-
-  input {
-    display: block;
     border: solid 2px white;
-    border-radius: 5px;
-    padding: 7px;
+    background: rgba(0,0,0,0);
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+.bb-button:hover {
+    cursor: pointer;
+    color: #444;
+    background: white;
+    h6 {
+        color: #444 !important;
+    }
+}
+.btn.active,
+.btn:active,
+button:active,
+button:focus,
+button:hover,
+input:active,
+input:focus,
+input:hover,
+label:focus,
+textarea:active,
+textarea:focus,
+textarea:hover {
+    outline: 0 !important;
+    -webkit-appearance: none;
+}
+.push-up {
+    transition: 0.5s ease-in-out;
+    bottom: 0 !important;
+}
+.push-down {
+    transition: 0.5s ease-in-out;
+    bottom: -9999px !important;
+}
+.pull-top {
+    position: absolute;
+    top: 0;
+}
+.pull-left {
+    position: absolute;
+    left: 0;
+}
+.pull-bottom {
+    position: absolute;
+    bottom: 0;
+}
+.pull-right {
+    position: absolute;
+    right: 0;
+}
+.pull-left {
+    position: absolute;
+    left: 0;
+}
+.flat-white-button {
     font-size: 1.1em;
+    border-radius: 5px;
+    border: solid 0 white;
+    background-color: white;
+    padding: 10px;
+    color: #444 !important;
+    text-decoration: none !important;
+    :hover {
+        text-decoration: none !important;
+        color: #444 !important;
+    }
+}
+.flat-button-big {
+    font-size: 24px;
+    padding: 5px;
+}
+.input-form {
     color: white;
-    background-color: rgba(255,255,255,0.3)
-  }
+    border: solid 1px white !important;
+    background: rgba(255,255,255,0.3) !important;
+}
+.full-width-flex {
+    flex-grow: 100;
+}
+.pointer {
+    cursor: pointer;
+}
+.input-label {
+    label {
+        color: white !important;
+    }
+    .error-label {
+        color: #D45968 !important;
+    }
+    .error-form {
+        border-color: #D45968 !important;
+    }
+    input {
+        display: block !important;
+        border: solid 2px white !important;
+        border-radius: 5px !important;
+        padding: 7px !important;
+        font-size: 1.1em !important;
+        color: white !important;
+        background-color: rgba(255,255,255,0.3) !important;
+    }
+
+}
+.dropdown-button {
+    border-radius: 5px !important;
+    border: solid 2px white !important;
+    background-color: rgba(255,255,255,0.3) !important;
+    color: white !important;
+}
+
+.blur {
+  z-index: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.blur-true {
+  $blur: 6px;
+  -webkit-filter: blur($blur);
+  -moz-filter: blur($blur);
+  -o-filter: blur($blur);
+  -ms-filter: blur($blur);
+  filter: blur($blur);
 }

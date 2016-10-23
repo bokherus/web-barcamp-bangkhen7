@@ -1,7 +1,7 @@
 var map = new GMaps({
   div: '#gmaps',
   lat: 13.846426,
-  lng: 100.5692306
+  lng: 100.5692306,
 });
 
 var locations = [

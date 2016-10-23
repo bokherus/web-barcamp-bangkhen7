@@ -12,7 +12,7 @@ module WebBarcampBangkhen7
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.browserify_rails.use_browserifyinc = true
-    config.browserify_rails.commandline_options = "-t [ babelify --presets [ es2015 react ] ] --extension='.jsx' --extension='.js.jsx' --c"
+    config.browserify_rails.commandline_options = "-t [ babelify --presets [ es2015 react stage-0 ] ] --extension='.jsx' --extension='.js.jsx' --c"
     config.active_job.queue_adapter = :delayed_job
   end
 end

@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: web-barcamp-bangkhen7_production
-  username: web-barcamp-bangkhen7
-  password: <%= ENV['WEB-BARCAMP-BANGKHEN7_DATABASE_PASSWORD'] %>
+  pool: 5
+  database: barcamp_production
+  username: rails
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>

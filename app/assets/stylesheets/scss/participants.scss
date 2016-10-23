@@ -6,7 +6,14 @@
 }
 
 #participants {
+  table {
+    table-layout: fixed;
+  }
+  td {
+    overflow-wrap: break-word;
+  }
   background-image: url(asset-path('diamond-head.svg'));
+  background-repeat: no-repeat;
   p,h1,h2,h3,h4,h5,h6 {
     color: white;
   }
@@ -20,14 +27,14 @@
     background-color: #797e7e;
   }
   .table-body-row {
-    cursor: pointer;
+    // cursor: pointer;
     border-bottom: solid 1px white;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
     background-color: rgba(121, 126, 126, 0.5);
   }
-  .table-body-row:hover {
-    background-color: rgba(255,255,255,0.1);
-  }
+  // .table-body-row:hover {
+  //   background-color: rgba(255,255,255,0.1);
+  // }
   .mobile-body-row {
     padding-top : 10px !important;
     padding-bottom: 10px !important;
@@ -36,5 +43,16 @@
 
 .black-wrapper {
   background-color: rgba(0,0,0,0.6);
-  height: 100vh;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .black-wrapper {
+    min-height: 100vh;
+    padding-bottom: 15px;
+  }
+}
+
+.participants-tabel {
+  padding: 10px 0px 10px 0px !important;
 }

@@ -8,6 +8,7 @@ class Section extends React.Component {
       lat: 13.846426,
       lng: 100.5692306
     });
+    map.setOptions({draggable: true, zoomControl: true, scrollwheel: false, disableDoubleClickZoom: true});
     var locations = [
       {
         lat: 13.846387,
@@ -59,7 +60,9 @@ class Section extends React.Component {
 			<div className="section flex" id="location-section">
 				<div className="uk-width-8-10 uk-container-center">
 					<PageHeader header="location">
-						IUP International Building 17
+						Building 17 (IUP)
+            <br/>
+            Faculty of Engineering
 						<br/>
 						Kasetsart University
 					</PageHeader>

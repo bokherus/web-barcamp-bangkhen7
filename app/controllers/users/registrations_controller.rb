@@ -18,8 +18,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
     # Create or assign interests
     interested_topics = []
-    params['interest'].each do |topic|
-      interested_topics << Topic.find_or_initialize_by(name: topic.humanize)
+    if params['interest'].present?
+      params['interest'].each do |topic|
+        interested_topics << Topic.find_or_initialize_by(name: topic.humanize)
+      end
     end
     resource.topics << interested_topics
 
@@ -28,7 +30,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
     if resource.persisted?
       if resource.active_for_authentication?
         set_flash_message! :notice, :signed_up
-        sign_up(resource_name, resource)
+        # sign_up(resource_name, resource)
+        resource.send_after_signup_email
         respond_with resource, location: after_sign_up_path_for(resource)
       else
         set_flash_message! :notice, :signed_up_but_#{resource.inactive_message}"
@@ -38,7 +41,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
     else
       clean_up_passwords resource
       set_minimum_password_length
-      respond_with resource
+      if resource.errors.messages.present?
+        session[:error_user] = resource
+        session[:error_messages] = resource.errors.messages
+      end
+      redirect_to registration_path
+      # respond_with resource
     end
   end
 
@@ -96,7 +104,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # The path used after sign up.
   def after_sign_up_path_for(resource)
-    participants_path
+    welcome_path(resource)
   end
 
   # The path used after sign up for inactive accounts.

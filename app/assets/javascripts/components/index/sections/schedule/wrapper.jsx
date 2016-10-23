@@ -6,7 +6,7 @@ class Section extends React.Component {
 		return (
 			<div id="schedule-section">
 				<div className="uk-width-8-10 uk-container-center">
-					<PageHeader header="SCHEDULE">
+					<PageHeader header="TIMETABLE">
 						13 November 2016
 					</PageHeader>
 					<Desktop/>

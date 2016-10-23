@@ -13,7 +13,8 @@ class Users::SessionsController < Devise::SessionsController
 
         if resource&.valid_password?(params[:password])
             sign_in :user, resource
-            return respond_with resource, location: after_sign_in_path_for(resource)
+            return redirect_to root_path
+            # return respond_with resource, location: after_sign_in_path_for(resource)
         end
         return render :json => {:success => false, :error => "Wrong email or password"}
         # redirect_to root_path

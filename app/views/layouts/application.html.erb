@@ -2,11 +2,13 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="<%= image_url('barcamp-fb-preview.png')%>" />
     <title>BarCamp Bangkhen 2016</title>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?key=AIzaSyC1FcQP7QwH5W_mjVghIV7Lh06Ll9Ridqw'></script>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= favicon_link_tag '/favicon.ico' %>
   </head>
 
   <body>
