@@ -18,7 +18,11 @@ Rails.application.routes.draw do
   get 'resend', to: 'home#resend'
   post 'resend', to: 'home#resend'
   get 'dev', to: 'dev#index'
+
+  get 'sessions', to: 'home#sessions'
+
   get 'welcome/:id', to: 'home#welcome', as: 'welcome'
+
   match ":url" => "home#comingsoon", :via => [:get], :constraints => { :url => /.*/ }, to: redirect('/comingsoon')
 
 end

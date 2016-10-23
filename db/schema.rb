@@ -66,6 +66,16 @@ ActiveRecord::Schema.define(version: 20161023024959) do
     t.index ["user_id"], name: "index_interests_on_user_id", using: :btree
   end
 
+  create_table "sessions", force: :cascade do |t|
+    t.string   "name"
+    t.string   "speaker"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.string   "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "topics", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
