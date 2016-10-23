@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   # Admins
-  devise_for :admins
+  devise_for :admins, :controllers => {sessions: 'admins/sessions'}
   namespace :admin do
     resources :users, only: [:index, :show, :update]
     get 'overview', to: 'overview#index'
