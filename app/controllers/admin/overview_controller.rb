@@ -2,6 +2,7 @@ class Admin::OverviewController < Admin::BaseController
   def index
     @num_users = User.all.count
     @shirt_size = shirt_size
+    @trending_topics = trending_topics
   end
 end
 
@@ -18,4 +19,11 @@ def shirt_size
     '5XL' => User.where(shirt_size: '5XL').count,
     '6XL' => User.where(shirt_size: '6XL').count
   }
+end
+
+def trending_topics
+  Topic.joins(:users)
+    .group("topics.id")
+    .order("count(users.id) desc")
+    .limit(3)
 end
