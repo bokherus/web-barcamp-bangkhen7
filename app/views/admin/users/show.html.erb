@@ -1,6 +1,11 @@
+
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, class: "alert alert-success" %>
+<% end %>
+
 <h1>Edit User</h1>
 
-<%= form_for @user, url: {action: :update, method: :put} do |f| %>
+<%= form_for @user, url: {action: :update} do |f| %>
 
   <label>First name</label>
   <div class="input-group">
