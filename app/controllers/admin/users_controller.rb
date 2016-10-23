@@ -10,7 +10,7 @@ class Admin::UsersController < Admin::BaseController
   def update
     @user = User.friendly.find(params[:id])
     if @user.update(user_params)
-      redirect_to admin_user_path(@user.id), alert: 'User updated'
+      redirect_to admin_user_path(@user.id), alert: 'User update successful'
     else
       flash[:alert] = @user.errors.full_messages
       render :show

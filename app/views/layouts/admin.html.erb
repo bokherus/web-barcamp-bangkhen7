@@ -33,6 +33,9 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
+              <p class="navbar-text">Signed in as: <%= current_admin.email %></p>
+            </li>
+            <li>
               <%= link_to "Logout", destroy_admin_session_path, method: :delete %>
             </li>
           </ul>
