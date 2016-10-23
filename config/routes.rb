@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   devise_for :admins
   namespace :admin do
     resources :users, only: [:index, :show, :update]
-    root to: 'users#index'
+    get 'overview', to: 'overview#index'
+    root to: 'overview#index'
   end
 
   # Users
