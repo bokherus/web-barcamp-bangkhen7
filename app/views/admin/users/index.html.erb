@@ -1,0 +1,16 @@
+<h2>Users</h2>
+<br>
+<table class="table table-bordered table-hover">
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+  <% @users.each do |user| %>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= link_to user.full_name, admin_user_path(user) %></td>
+    <td><%= user.email %></td>
+  </tr>
+  <% end %>
+</table>

@@ -1,0 +1,83 @@
+<% flash.each do |key, value| %>
+<div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
+
+<h2>Edit User</h2>
+<br>
+
+<%= form_for @user, url: {action: :update}, html: {class: 'form-horizontal'} do |f| %>
+
+<div class="form-group">
+  <div class="col-sm-2 control-label">
+    <label>First name</label>
+  </div>
+  <div class="col-sm-8">
+    <%= f.text_field :first_name, class: 'form-control' %>
+  </div>
+</div>
+<br>
+
+<div class="form-group">
+  <div class="col-sm-2 control-label">
+    <label>Last name</label>
+  </div>
+  <div class="col-sm-8">
+    <%= f.text_field :last_name, class: 'form-control' %>
+  </div>
+</div>
+<br>
+
+<div class="form-group">
+  <div class="col-sm-2 control-label">
+    <label>Email</label>
+  </div>
+  <div class="col-sm-8">
+    <%= f.text_field :email, class: 'form-control' %>
+  </div>
+</div>
+<br>
+
+<div class="form-group">
+  <div class="col-sm-2 control-label">
+    <label>Shirt size</label>
+  </div>
+  <div class="col-sm-8">
+    <%= f.text_field :shirt_size, class: 'form-control' %>
+  </div>
+</div>
+<br>
+
+<div class="form-group">
+  <div class="col-sm-2 control-label">
+    <label>Twitter</label>
+  </div>
+  <div class="col-sm-8">
+    <%= f.text_field :twitter, class: 'form-control' %>
+  </div>
+</div>
+<br>
+
+<div class="form-group">
+  <div class="col-sm-2 control-label">
+    <label>Workplace</label>
+  </div>
+  <div class="col-sm-8">
+    <%= f.text_field :workplace, class: 'form-control' %>
+  </div>
+</div>
+<br>
+
+<div class="form-group">
+  <div class="col-sm-2 control-label">
+    <label>Website</label>
+  </div>
+  <div class="col-sm-8">
+    <%= f.text_field :website, class: 'form-control' %>
+  </div>
+</div>
+<br>
+<div class="text-center">
+  <%= f.submit "Save", class: 'btn btn-primary', style: 'width: 25%;' %>
+</div>
+
+<% end %>

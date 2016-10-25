@@ -41,6 +41,10 @@ class HomeController < ApplicationController
     user&.send_after_signup_email
   end
 
+  def sessions
+    @sessions = Session.all.as_json(except: [:id, :created_at, :updated_at])
+  end
+
   def welcome
     @user = User.friendly.find(params['id']).as_json(
     except: [
