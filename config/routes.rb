@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :admins, :controllers => {sessions: 'admins/sessions'}
   namespace :admin do
     resources :users, only: [:index, :show, :update]
-    resources :sessions
+    resources :sessions, except: [:show]
     get 'overview', to: 'overview#index'
     root to: 'overview#index'
   end

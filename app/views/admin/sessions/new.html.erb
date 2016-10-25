@@ -1,7 +1,11 @@
-<h2>New session</h2>
+<% flash.each do |key, value| %>
+<div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
+
+<h2>New Session</h2>
 <br>
 
-<%= form_for @session, html: {class: 'form-horizontal'} do |f|%>
+<%= form_for @session, url: {action: :create}, html: {class: 'form-horizontal'} do |f| %>
 
 <div class="form-group">
   <div class="col-sm-2 control-label">
@@ -11,6 +15,7 @@
     <%= f.text_field :name, class: 'form-control' %>
   </div>
 </div>
+<br>
 
 <div class="form-group">
   <div class="col-sm-2 control-label">
@@ -20,6 +25,40 @@
     <%= f.text_field :speaker, class: 'form-control' %>
   </div>
 </div>
+<br>
 
+<div class="form-group">
+  <div class="col-sm-2 control-label">
+    <label>Start time</label>
+  </div>
+  <div class="col-sm-8">
+    <%= time_select("session", "start_time", { minute_step: 15 }) %>
+  </div>
+</div>
+<br>
+
+<div class="form-group">
+  <div class="col-sm-2 control-label">
+    <label>End time</label>
+  </div>
+  <div class="col-sm-8">
+    <%= time_select("session", "end_time", { minute_step: 15 }) %>
+  </div>
+</div>
+<br>
+
+<div class="form-group">
+  <div class="col-sm-2 control-label">
+    <label>Location</label>
+  </div>
+  <div class="col-sm-8">
+    <%= f.text_field :location, class: 'form-control' %>
+  </div>
+</div>
+<br>
+
+<div class="text-center">
+  <%= f.submit "Save", class: 'btn btn-primary', style: 'width: 25%;' %>
+</div>
 
 <% end %>
