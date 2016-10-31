@@ -10,7 +10,7 @@ class HomeController < ApplicationController
   end
 
   def participants
-      @participants = User.all.as_json(
+      @participants = User.all.order(:id).as_json(
       include: {
          topics: { only: :name }
       },
