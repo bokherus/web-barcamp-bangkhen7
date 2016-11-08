@@ -24,7 +24,7 @@ class Wrapper extends React.Component {
           <div>
             Morning
           </div>
-          <DesktopTable sessions={this.props.sessions} />
+          <DesktopTable sessions={this.state.sessions} />
         </div>
       </div>
     );
