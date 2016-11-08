@@ -210,3 +210,9 @@ textarea:hover {
   -ms-filter: blur($blur);
   filter: blur($blur);
 }
+
+.text-center-table {
+  th {
+    text-align: center !important;
+  }
+}
