@@ -1,6 +1,5 @@
 class SessionTableDesktop extends React.Component {
 	render() {
-    console.log(this.props.sessions);
 		return (
 			<table className="uk-table text-center-table">
 				<thead className="uk-text-uppercase">

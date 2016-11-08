@@ -1,4 +1,7 @@
 #sessions {
+  h1,h2,h3,h4,h5 {
+    color: white;
+  }
   table {
     table-layout: fixed;
   }
@@ -12,4 +15,12 @@
   .room {
     background: #ebebeb;
   }
+}
+
+.time-header{
+  background: #4bb9c7;
+}
+
+.time-header-secondary {
+  background: #d16b4c;
 }

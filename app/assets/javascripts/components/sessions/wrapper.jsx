@@ -1,4 +1,5 @@
 import DesktopTable from './desktop/desktop-table.jsx';
+import TimeHeader from './time-header.jsx';
 import vm from './viewmodel';
 class Wrapper extends React.Component {
   constructor(props) {
@@ -21,10 +22,8 @@ class Wrapper extends React.Component {
           <div>
             Favorite
           </div>
-          <div>
-            Morning
-          </div>
-          <DesktopTable sessions={this.state.sessions} />
+          <TimeHeader text="Morning" primary={true}/>
+          <DesktopTable sessions={this.state.morningSessions} />
         </div>
       </div>
     );
