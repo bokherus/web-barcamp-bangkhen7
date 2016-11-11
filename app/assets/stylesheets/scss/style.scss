@@ -239,3 +239,7 @@ textarea:hover {
   @extend .padding-left;
   @extend .padding-right;
 }
+
+.relative {
+  position: relative;
+}

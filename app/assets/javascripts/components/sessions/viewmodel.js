@@ -6,6 +6,11 @@ let vm = (state, action) => {
   switch(action.type) {
     case 'init':
       state = {
+        toggle: {
+          'morning-table': true,
+          'afternoon-table': true,
+          'afterbreak-table': true
+        },
         morningSessions: dataFormatter(morningTime, $.extend(true, {}, action.data)),
         afternoonSessions: dataFormatter(afternoonTime, $.extend(true, {}, action.data)),
         afterbreakSessions: dataFormatter(afterBreakTime, $.extend(true, {}, action.data))
@@ -21,13 +26,13 @@ let dataFormatter = (times,sessions) => {
   let validatedData = _.map(sessions, (session) => {
     let startTime      = moment(session.start_time).utcOffset('+0000').format('HH:mm');
     let endTime        = moment(session.end_time).utcOffset('+0000').format('HH:mm');
-    session.start_time = startTime;
-    session.end_time   = endTime;
+    session.start_time_str = startTime;
+    session.end_time_str   = endTime;
     return session;
   });
   _.map(times, (time) => {
     let eachTime = _.filter(validatedData, (data) => {
-      return data.start_time === time.start && data.end_time === time.end;
+      return data.start_time_str === time.start && data.end_time_str === time.end;
     });
     eachTime.sort((a, b) => {
       return parseInt(a.location) - parseInt(b.location);
@@ -37,4 +42,14 @@ let dataFormatter = (times,sessions) => {
   console.log(returnSessions);
   return returnSessions;
 };
+
+let isLive = (session) => {
+  let now = moment();
+  let startTime = moment(session.start_time_str, 'HH:mm');
+  let endTime = moment(session.end_time_str, 'HH:mm');
+  // startTime.isBefore(now) && now.isBefore(endTime)
+  return true;
+};
+
+vm.isLive = isLive;
 export default vm;

@@ -3,9 +3,6 @@
   background-color: white;
   background-repeat: repeat;
   min-height: 100vh;
-  h2,h3,h5 {
-    color: white;
-  }
   table {
     table-layout: fixed;
   }
@@ -21,6 +18,11 @@
   .room {
     background: #ebebeb;
   }
+  .divider {
+    height: 1px;
+    background: rgba(0,0,0,0.3);
+    width: 100%;
+  }
 }
 
 #sessions-wrapper {
@@ -33,4 +35,15 @@
 
 .time-header-secondary {
   background: #d16b4c;
+}
+
+.live {
+  display: flex;
+  .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background: #F44336;
+  }
+  color: #F44336;
 }

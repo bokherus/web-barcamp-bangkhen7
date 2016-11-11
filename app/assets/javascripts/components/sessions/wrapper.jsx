@@ -1,4 +1,5 @@
 import DesktopTable from './desktop/desktop-table.jsx';
+import MobileList from './mobile/mobile-list.jsx';
 import TimeHeader from './time-header.jsx';
 import vm from './viewmodel';
 class Wrapper extends React.Component {
@@ -12,21 +13,35 @@ class Wrapper extends React.Component {
   dispatcher(action) {
     this.setState(vm(this.state, action));
   }
+  toggleTable(element) {
+    console.log(element);
+    let newState = {};
+    newState[element] = !this.state.toggle[element];
+    this.setState(_.merge(this.state.toggle, newState));
+  }
   render() {
+    console.log(this.state);
     return (
       <div id="sessions" className="uk-width-1-1">
         <div className="banner uk-width-1-1 uk-flex uk-flex-center uk-flex-middle">
           <h1 className="uk-text-uppercase">Sessions</h1>
         </div>
         <div id="sessions-wrapper" className="uk-width-9-10 uk-flex uk-flex-center uk-flex-column uk-container-center uk-margin-top padding-all">
-          <TimeHeader text="Morning" primary={true}/>
-          <DesktopTable sessions={this.state.morningSessions} />
-
-          <TimeHeader text="Afternoon" primary={true}/>
-          <DesktopTable sessions={this.state.afternoonSessions} />
-
-          <TimeHeader text="Break" primary={false}/>
-          <DesktopTable sessions={this.state.afterbreakSessions} />
+          <div className="uk-margin-top">
+            <TimeHeader text="Morning" primary={true} onClick={this.toggleTable.bind(this,"morning-table")}/>
+            <DesktopTable isLive={vm.isLive} show={this.state.toggle['morning-table']} sessions={this.state.morningSessions} />
+            <MobileList show={this.state.toggle['morning-table']} sessions={this.state.morningSessions} />
+          </div>
+          <div className="uk-margin-top">
+            <TimeHeader text="Afternoon" primary={true} onClick={this.toggleTable.bind(this,"afternoon-table")}/>
+            <DesktopTable isLive={vm.isLive} show={this.state.toggle['afternoon-table']} sessions={this.state.afternoonSessions} />
+            <MobileList show={this.state.toggle['afternoon-table']} sessions={this.state.afternoonSessions} />
+          </div>
+          <div className="uk-margin-top">
+            <TimeHeader text="Break" primary={false} onClick={this.toggleTable.bind(this,"afterbreak-table")}/>
+            <DesktopTable isLive={vm.isLive} show={this.state.toggle['afterbreak-table']} sessions={this.state.afterbreakSessions} />
+            <MobileList show={this.state.toggle['afterbreak-table']} sessions={this.state.afterbreakSessions} />
+          </div>
         </div>
       </div>
     );

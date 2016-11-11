@@ -1,7 +1,9 @@
+import Live from '../live-now.jsx';
 class SessionTableDesktop extends React.Component {
 	render() {
+    let display = (this.props.show) ? "table" : "none";
 		return (
-			<table className="uk-table text-center-table">
+			<table className="uk-table text-center-table uk-hidden-small" style={{display: display}}>
 				<thead className="uk-text-uppercase">
 					<tr>
 						<th>
@@ -34,17 +36,21 @@ class SessionTableDesktop extends React.Component {
                 <tr key={i}>
                   <td className="room">
                     <div>
-                      <p className="no-margin">{session[0].start_time}</p>
-                      <p className="no-margin">{session[0].end_time}</p>
+                      <p className="no-margin">{session[0].start_time_str}</p>
+                      <p className="no-margin">{session[0].end_time_str}</p>
                     </div>
                   </td>
                   {
                     _.map(session, (item, j) => {
+                      let liveView = this.props.isLive(item) ? <Live /> : "";
                       return (
                         <td key={j}>
                           <p className="no-margin">{item.name}</p>
                           <p className="no-margin" style={{fontSize: "0.8em"}}>
                             <span>by</span> {item.speaker}</p>
+                          <div className="uk-flex uk-flex-center">
+                            {liveView}
+                          </div>
                         </td>
                       );
                     })
