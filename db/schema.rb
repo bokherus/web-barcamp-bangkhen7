@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161025080321) do
+ActiveRecord::Schema.define(version: 20161111041336) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,8 +72,8 @@ ActiveRecord::Schema.define(version: 20161025080321) do
     t.string   "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.time     "start_time"
-    t.time     "end_time"
+    t.datetime "start_time"
+    t.datetime "end_time"
   end
 
   create_table "topics", force: :cascade do |t|
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(version: 20161025080321) do
     t.string   "workplace"
     t.string   "code"
     t.string   "slug"
+    t.index ["code"], name: "index_users_on_code", using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
