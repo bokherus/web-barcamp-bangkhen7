@@ -6,15 +6,16 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :show, :update]
     resources :sessions, except: [:show]
     get 'overview', to: 'overview#index'
+    get 'registration', to: 'registration#index'
     root to: 'overview#index'
   end
 
   # Users
   devise_for :users, :controllers => {sessions: 'users/sessions', registrations: 'users/registrations'}
 
-  root to: "home#index"
+  root to: 'home#index'
 
-  get 'participants', to: "home#participants"
+  get 'participants', to: 'home#participants'
   get 'registration', to: 'home#registration'
   get 'resend', to: 'home#resend'
   post 'resend', to: 'home#resend'
@@ -24,6 +25,6 @@ Rails.application.routes.draw do
 
   get 'welcome/:id', to: 'home#welcome', as: 'welcome'
 
-  match ":url" => "home#comingsoon", :via => [:get], :constraints => { :url => /.*/ }, to: redirect('/comingsoon')
+  match ":url" => 'home#comingsoon', :via => [:get], :constraints => { :url => /.*/ }, to: redirect('/comingsoon')
 
 end
