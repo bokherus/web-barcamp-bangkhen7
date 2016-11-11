@@ -1,5 +1,9 @@
 #sessions {
-  h2,h3,h4,h5 {
+  background-image : url(asset-path('gray2.svg'));
+  background-color: white;
+  background-repeat: repeat;
+  min-height: 100vh;
+  h2,h3,h5 {
     color: white;
   }
   table {
@@ -7,6 +11,8 @@
   }
   td {
     overflow-wrap: break-word;
+    border-bottom: solid 1px rgba(0,0,0,0.2);
+    border-right: solid 1px rgba(0,0,0,0.2);
   }
   thead {
     color: white;
@@ -15,6 +21,10 @@
   .room {
     background: #ebebeb;
   }
+}
+
+#sessions-wrapper {
+  background: rgba(255,255,255,0.7);
 }
 
 .time-header{

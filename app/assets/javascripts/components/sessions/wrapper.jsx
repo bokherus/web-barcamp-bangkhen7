@@ -18,12 +18,15 @@ class Wrapper extends React.Component {
         <div className="banner uk-width-1-1 uk-flex uk-flex-center uk-flex-middle">
           <h1 className="uk-text-uppercase">Sessions</h1>
         </div>
-        <div className="uk-width-9-10 uk-flex uk-flex-center uk-flex-column uk-container-center">
-          <div>
-            Favorite
-          </div>
+        <div id="sessions-wrapper" className="uk-width-9-10 uk-flex uk-flex-center uk-flex-column uk-container-center uk-margin-top padding-all">
           <TimeHeader text="Morning" primary={true}/>
           <DesktopTable sessions={this.state.morningSessions} />
+
+          <TimeHeader text="Afternoon" primary={true}/>
+          <DesktopTable sessions={this.state.afternoonSessions} />
+
+          <TimeHeader text="Break" primary={false}/>
+          <DesktopTable sessions={this.state.afterbreakSessions} />
         </div>
       </div>
     );

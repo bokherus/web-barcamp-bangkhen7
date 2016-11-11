@@ -43,7 +43,7 @@ class SessionTableDesktop extends React.Component {
                       return (
                         <td key={j}>
                           <p className="no-margin">{item.name}</p>
-                          <p className="no-margin">
+                          <p className="no-margin" style={{fontSize: "0.8em"}}>
                             <span>by</span> {item.speaker}</p>
                         </td>
                       );
