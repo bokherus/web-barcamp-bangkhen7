@@ -32,6 +32,7 @@ class SessionTableDesktop extends React.Component {
         <tbody>
           {
             _.map(this.props.sessions, (session,i) => {
+              if(session.length === 0){ return <tr key={i}></tr>; }
               return (
                 <tr key={i}>
                   <td className="room">
