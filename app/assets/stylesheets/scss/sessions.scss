@@ -1,0 +1,49 @@
+#sessions {
+  background-image : url(asset-path('gray2.svg'));
+  background-color: white;
+  background-repeat: repeat;
+  min-height: 100vh;
+  table {
+    table-layout: fixed;
+  }
+  td {
+    overflow-wrap: break-word;
+    border-bottom: solid 1px rgba(0,0,0,0.2);
+    border-right: solid 1px rgba(0,0,0,0.2);
+  }
+  thead {
+    color: white;
+    background: #727272;
+  }
+  .room {
+    background: #ebebeb;
+  }
+  .divider {
+    height: 1px;
+    background: rgba(0,0,0,0.3);
+    width: 100%;
+  }
+}
+
+#sessions-wrapper {
+  background: rgba(255,255,255,0.7);
+}
+
+.time-header{
+  background: #4bb9c7;
+}
+
+.time-header-secondary {
+  background: #d16b4c;
+}
+
+.live {
+  display: flex;
+  .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background: #F44336;
+  }
+  color: #F44336;
+}

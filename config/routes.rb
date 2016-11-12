@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :sessions, except: [:show]
     get 'overview', to: 'overview#index'
     get 'registration', to: 'registration#index'
+    post 'registration', to: 'registration#checkin'
     root to: 'overview#index'
   end
 
@@ -21,7 +22,7 @@ Rails.application.routes.draw do
   post 'resend', to: 'home#resend'
   get 'dev', to: 'dev#index'
 
-  get 'sessions', to: 'home#sessions'
+  # get 'sessions', to: 'home#sessions'
 
   get 'welcome/:id', to: 'home#welcome', as: 'welcome'
 

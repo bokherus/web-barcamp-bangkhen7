@@ -112,6 +112,9 @@ class Menus extends React.Component {
             {/* <li>
               <a href="/registration">Register</a>
             </li> */}
+            {/* <li>
+              <a href="/sessions">Sessions</a>
+            </li> */}
             <li>
               <a className="scroll" href={this.props.redirect ? "/#schedule-section" : "#schedule-section"}>Timetable</a>
             </li>
@@ -127,9 +130,6 @@ class Menus extends React.Component {
             <li>
               <a href="/participants">Participants</a>
             </li>
-          {/* <li>
-            <a href="/sessions">Sessions</a>
-          </li> */}
           </div>
         </div>
         <LoginDesktop toggle={this.state.loginToggle} token={this.props.token} />

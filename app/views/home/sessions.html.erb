@@ -1,0 +1,6 @@
+<div>
+  <%= react_component('Menu', redirect: true, token: form_authenticity_token, user: @user, logo: image_url('logo_white.svg')) %>
+  <div class="blur">
+    <%= react_component('Sessions', sessions: @sessions, arrowDownImg: image_url('arrow-down.svg')) %>
+  </div>
+</div>

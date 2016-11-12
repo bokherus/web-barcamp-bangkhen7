@@ -210,3 +210,36 @@ textarea:hover {
   -ms-filter: blur($blur);
   filter: blur($blur);
 }
+
+.text-center-table {
+  th, td {
+    text-align: center !important;
+  }
+}
+
+.padding-top {
+  padding-top: 15px;
+}
+
+.padding-bottom {
+  padding-bottom: 15px;
+}
+
+.padding-left {
+  padding-left: 15px;
+}
+
+.padding-right {
+  padding-right: 15px;
+}
+
+.padding-all {
+  @extend .padding-top;
+  @extend .padding-bottom;
+  @extend .padding-left;
+  @extend .padding-right;
+}
+
+.relative {
+  position: relative;
+}

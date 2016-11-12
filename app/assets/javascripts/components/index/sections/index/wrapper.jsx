@@ -7,8 +7,8 @@ class Section extends React.Component {
 					marginTop: 100
 				}} className="uk-width-5-10 uk-width-medium-3-10 uk-width-large-3-10 uk-container-center logo-wrapper">
 					<img src={this.props.logo}/>
-          {/* <a href="/registration" className="regis-text pointer uk-container-center registration-button-wrapper">
-            Register
+          {/* <a href="/sessions" className="regis-text pointer uk-container-center registration-button-wrapper">
+            Sessions
           </a> */}
 				</div>
 				<Desktop {...this.props}/>
