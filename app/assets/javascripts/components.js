@@ -16,3 +16,4 @@ global.Resend = require('./components/resend/wrapper.jsx');
 global.Input = require('./components/input.jsx');
 global.Thankyou = require('./components/thankyou/wrapper.jsx');
 global.Walkin = require('./components/walkin-registration/wrapper.jsx');
+global.Sessions = require('./components/sessions/wrapper.jsx');

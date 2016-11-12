@@ -38,7 +38,7 @@ class A extends React.Component {
 	render() {
 		return (
 			<div id="participants">
-				<div className="participants-banner uk-width-1-1 uk-flex uk-flex-center uk-flex-middle">
+				<div className="banner uk-width-1-1 uk-flex uk-flex-center uk-flex-middle">
 					<h1 className="uk-text-uppercase">participants</h1>
 				</div>
 				<div className="uk-width-1-1 black-wrapper">
