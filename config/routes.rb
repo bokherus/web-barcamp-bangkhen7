@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :sessions, except: [:show]
     get 'overview', to: 'overview#index'
     get 'registration', to: 'registration#index'
+    post 'registration', to: 'registration#checkin'
     root to: 'overview#index'
   end
 

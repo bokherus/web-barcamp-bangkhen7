@@ -16,5 +16,8 @@ class Admin::RegistrationController < Admin::BaseController
 
   def checkin
     @user = User.find_by(code: params[:code])
+    if @user
+      UserCheckin.create(user: @user)
+    end
   end
 end

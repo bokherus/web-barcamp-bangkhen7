@@ -3,6 +3,7 @@ class Admin::OverviewController < Admin::BaseController
     @num_users = User.all.count
     @shirt_size = shirt_size
     @trending_topics = trending_topics
+    @num_arrived = UserCheckin.all.count
   end
 end
 
