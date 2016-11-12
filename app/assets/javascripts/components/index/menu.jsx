@@ -86,9 +86,9 @@ class Menus extends React.Component {
 						<li>
 							<a className="uk-text-uppercase" href="/participants">Participants</a>
 						</li>
-						<li>
+						{/* <li>
 							<a className="uk-text-uppercase" href="/sessions">Sessions</a>
-						</li>
+						</li> */}
 						{/* <li>
 							<a className="uk-text-uppercase" href="/registration">Register</a>
 						</li> */}
@@ -112,9 +112,9 @@ class Menus extends React.Component {
             {/* <li>
               <a href="/registration">Register</a>
             </li> */}
-            <li>
+            {/* <li>
               <a href="/sessions">Sessions</a>
-            </li>
+            </li> */}
             <li>
               <a className="scroll" href={this.props.redirect ? "/#schedule-section" : "#schedule-section"}>Timetable</a>
             </li>
