@@ -1,4 +1,4 @@
-class Admin::RegistrationController < ApplicationController
+class Admin::RegistrationController < Admin::BaseController
   before_action :authenticate_admin!
 
   def index
