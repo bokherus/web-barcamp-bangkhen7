@@ -10,6 +10,7 @@ class Wrapper extends React.Component {
       selectedUser: null
     };
     this.onClick = this.onClick.bind(this);
+    this.clear = this.clear.bind(this);
   }
   onChange(e) {
     let code = e.target.value;
@@ -33,14 +34,23 @@ class Wrapper extends React.Component {
     }, () => {
     });
   }
+  clear() {
+    this.setState({
+      showSuggestion: false,
+      code: '',
+      suggestion: [],
+      selectedUser: null
+    });
+    $('#code-field').val('');
+  }
   render() {
     return (
       <div style={{display: 'inline-block', width: '100%'}}>
-        <input onChange={this.onChange.bind(this)} className="form-control" placeholder="Code"/>
+        <input id="code-field" onChange={this.onChange.bind(this)} className="form-control" placeholder="Code"/>
         <Suggestion onItemClick={this.onClick} open={this.state.showSuggestion} code={this.state.code}  suggestion={this.state.suggestion}/>
         <div style={{display: 'flex', justifyContent: 'center'}}>
-          <div className="col-sm-6 col-md-6 col-lg-6">
-            <UserInfo user={this.state.selectedUser} />
+          <div className="col-sm-5 col-md-5 col-lg-5">
+            <UserInfo clearAction={this.clear} user={this.state.selectedUser} />
           </div>
         </div>
       </div>
