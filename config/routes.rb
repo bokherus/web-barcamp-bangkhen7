@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   post 'resend', to: 'home#resend'
   get 'dev', to: 'dev#index'
 
-  # get 'sessions', to: 'home#sessions'
+  get 'sessions', to: 'home#sessions'
 
   get 'welcome/:id', to: 'home#welcome', as: 'welcome'
 
