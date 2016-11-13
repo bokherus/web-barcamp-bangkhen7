@@ -1,5 +1,5 @@
 const moment = require('moment');
-let morningTime = [{start: '10:40', end: '11:05'}, {start: '11:10', end: '11:35'}, {start: '11:40', end: '12:05'} ];
+let morningTime = [{start: '10:45', end: '11:10'}, {start: '11:15', end: '11:40'}, {start: '11:45', end: '12:10'} ];
 let afternoonTime = [{start: '13:00', end: '13:25'}, {start: '13:30', end: '13:55'}, {start: '14:00', end: '14:25'}, {start: '14:30', end: '14:55'} ];
 let afterBreakTime = [{start: '15:20', end: '15:45'}, {start: '15:50', end: '16:15'}, {start: '16:20', end: '16:45'}];
 let vm = (state, action) => {

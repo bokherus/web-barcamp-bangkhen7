@@ -30,7 +30,7 @@ class Wrapper extends React.Component {
             <DesktopTable isLive={vm.isLive} show={this.state.toggle['morning-table']} sessions={this.state.morningSessions} />
             <MobileList isLive={vm.isLive} show={this.state.toggle['morning-table']} sessions={this.state.morningSessions} />
           </div>
-          {/* <div className="uk-margin-top">
+          <div className="uk-margin-top">
             <TimeHeader {...this.props}  text="Afternoon" primary={true} onClick={this.toggleTable.bind(this,"afternoon-table")}/>
             <DesktopTable isLive={vm.isLive} show={this.state.toggle['afternoon-table']} sessions={this.state.afternoonSessions} />
             <MobileList isLive={vm.isLive} show={this.state.toggle['afternoon-table']} sessions={this.state.afternoonSessions} />
@@ -39,7 +39,7 @@ class Wrapper extends React.Component {
             <TimeHeader {...this.props}  text="Break" primary={false} onClick={this.toggleTable.bind(this,"afterbreak-table")}/>
             <DesktopTable isLive={vm.isLive} show={this.state.toggle['afterbreak-table']} sessions={this.state.afterbreakSessions} />
             <MobileList isLive={vm.isLive} show={this.state.toggle['afterbreak-table']} sessions={this.state.afterbreakSessions} />
-          </div> */}
+          </div>
         </div>
       </div>
     );
