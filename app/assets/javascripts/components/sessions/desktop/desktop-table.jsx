@@ -42,15 +42,20 @@ class SessionTableDesktop extends React.Component {
                   </td>
                   {
                     _.map(session, (item, j) => {
-                      let liveView = this.props.isLive(item) ? <Live /> : "";
+                      let liveView;
+                      if(this.props.isLive(item)) {
+                        liveView = (
+                          <div className="uk-flex uk-flex-center" style={{marginBottom: 7}}>
+                            <Live />
+                          </div>
+                        );
+                      }
                       return (
                         <td key={j}>
+                          {liveView}
                           <p className="no-margin">{item.name}</p>
                           <p className="no-margin" style={{fontSize: "0.8em"}}>
                             <span>by</span> {item.speaker}</p>
-                          <div className="uk-flex uk-flex-center">
-                            {liveView}
-                          </div>
                         </td>
                       );
                     })

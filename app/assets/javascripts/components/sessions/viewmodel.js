@@ -24,8 +24,8 @@ let vm = (state, action) => {
 let dataFormatter = (times,sessions) => {
   let returnSessions = [];
   let validatedData = _.map(sessions, (session) => {
-    let startTime      = moment(session.start_time).utcOffset('+0000').format('HH:mm');
-    let endTime        = moment(session.end_time).utcOffset('+0000').format('HH:mm');
+    let startTime      = moment(session.start_time).utc().format('HH:mm');
+    let endTime        = moment(session.end_time).utc().format('HH:mm');
     session.start_time_str = startTime;
     session.end_time_str   = endTime;
     return session;
@@ -39,16 +39,14 @@ let dataFormatter = (times,sessions) => {
     });
     returnSessions.push(eachTime);
   });
-  console.log(returnSessions);
   return returnSessions;
 };
 
 let isLive = (session) => {
-  let now = moment();
-  let startTime = moment(session.start_time_str, 'HH:mm');
-  let endTime = moment(session.end_time_str, 'HH:mm');
-  // startTime.isBefore(now) && now.isBefore(endTime)
-  return true;
+  let now = new Date().getTime() + (60*60*7*1000);
+  let startTime = new Date(session.start_time).getTime();
+  let endTime = new Date(session.end_time).getTime();
+  return startTime < now && now < endTime;
 };
 
 vm.isLive = isLive;
