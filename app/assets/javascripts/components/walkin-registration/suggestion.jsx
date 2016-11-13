@@ -6,7 +6,7 @@ class Suggestion extends React.Component {
           {
             _.map(this.props.suggestion, (item, i) => {
               return (
-                <li key={i} className="list-group-item" onClick={this.props.onItemClick.bind(this,item)}>
+                <li key={i} className="list-group-item" onClick={this.props.onItemClick.bind(this,item)} style={{cursor: 'pointer'}}>
                   {
                     item.first_name
                   }
