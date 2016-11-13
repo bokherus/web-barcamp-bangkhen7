@@ -14,55 +14,81 @@ class Section extends React.Component {
 					}}>Department of Computer Engineering</h2>
           <div className="flex flex-center uk-grid uk-width-1-1">
             <div className="flex flex-center uk-width-medium-1-4 uk-width-large-1-4 uk-width-small-1-1 uk-margin-top uk-margin-left uk-margin-right">
-              <img src={this.props.platinum1}/>
+              <a href="https://www.glazziq.com" target="_blank">
+                <img src={this.props.platinum1}/>
+              </a>
             </div>
             <div className="flex flex-center uk-width-medium-1-4 uk-width-large-1-4 uk-width-small-1-1 uk-margin-top uk-margin-left uk-margin-right">
-              <img src={this.props.platinum2}/>
+              <a href="https://www.lnwshop.com" target="_blank">
+                <img src={this.props.platinum2}/>
+              </a>
             </div>
           </div>
           <div className="flex flex-center uk-grid uk-width-1-1">
             <div className="flex flex-center uk-width-medium-1-4 uk-width-large-1-4 uk-width-small-1-1 uk-margin-top uk-margin-left uk-margin-right">
-              <img src={this.props.platinum3}/>
+              <a href="http://www.mfec.co.th" target="_blank">
+                <img src={this.props.platinum3}/>
+              </a>
             </div>
             <div className="flex flex-center uk-width-medium-1-4 uk-width-large-1-4 uk-width-small-1-1 uk-margin-top uk-margin-left uk-margin-right">
-              <img src={this.props.platinum4}/>
+              <a href="https://www.wongnai.com" target="_blank">
+                <img src={this.props.platinum4}/>
+              </a>
             </div>
           </div>
 					<div className="flex flex-center uk-grid uk-width-1-1 uk-margin-top">
 						<div className="flex flex-center uk-width-6-10 uk-width-medium-1-5 uk-width-large-1-5 uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
-							<img src={this.props.gold1}/>
+              <a href="http://oozou.com" target="_blank">
+                <img src={this.props.gold1}/>
+              </a>
 						</div>
             <div className="flex flex-center uk-width-6-10 uk-width-medium-1-5 uk-width-large-1-5 uk-margin-top uk-margin-bottom uk-margin-left uk-margin-right">
-							<img src={this.props.gold2}/>
+              <a href="https://taskworld.com" target="_blank">
+                <img src={this.props.gold2}/>
+              </a>
 						</div>
 					</div>
 					<div className="flex flex-center uk-grid uk-width-1-1">
 						<div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-2-5 uk-margin-top uk-margin-left uk-margin-right">
-							<img src={this.props.silver1}/>
+              <a href="https://www.blognone.com" target="_blank">
+                <img src={this.props.silver1}/>
+              </a>
 						</div>
 						<div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-2-5 uk-margin-top uk-margin-left uk-margin-right">
-							<img src={this.props.silver2}/>
+              <a href="http://www.mangozero.com" target="_blank">
+                <img src={this.props.silver2}/>
+              </a>
 						</div>
 					</div>
           <div className="flex flex-center uk-grid uk-width-1-1">
             <div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-2-5 uk-margin-top uk-margin-left uk-margin-right">
-              <img src={this.props.silver3}/>
+              <a href="http://www.prontotools.io" target="_blank">
+                <img src={this.props.silver3}/>
+              </a>
             </div>
             <div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-2-5 uk-margin-top uk-margin-left uk-margin-right">
-							<img src={this.props.silver4}/>
+              <a href="http://pantip.com" target="_blank">
+                <img src={this.props.silver4}/>
+              </a>
 						</div>
           </div>
 					<div className="flex flex-center uk-grid uk-width-1-1">
 						<div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-2-5 uk-margin-top uk-margin-left uk-margin-right">
-							<img src={this.props.silver5}/>
+              <a href="http://www.sellsuki.co.th" target="_blank">
+                <img src={this.props.silver5}/>
+              </a>
 						</div>
 						<div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-2-5 uk-margin-top uk-margin-left uk-margin-right">
-							<img src={this.props.silver6}/>
+              <a href="http://sprint3r.com" target="_blank">
+                <img src={this.props.silver6}/>
+              </a>
 						</div>
 					</div>
           <div className="flex flex-center uk-grid uk-width-1-1">
 						<div className="flex flex-center uk-width-medium-1-6 uk-width-large-1-6 uk-width-2-5 uk-margin-top uk-margin-left uk-margin-right">
-							<img src={this.props.silver7}/>
+              <a href="https://www.getlinks.co" target="_blank">
+                <img src={this.props.silver7}/>
+              </a>
 						</div>
 					</div>
 				</div>
