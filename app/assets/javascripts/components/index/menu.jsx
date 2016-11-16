@@ -80,9 +80,9 @@ class Menus extends React.Component {
 						<li>
 							<a className="scroll-d uk-text-uppercase" href={this.props.redirect ? "/#sponsors-section" : "#sponsors-section"}>Sponsors</a>
 						</li>
-						<li>
+						{/* <li>
 							<a className="uk-text-uppercase" href="/resend">Resend Email</a>
-						</li>
+						</li> */}
 						<li>
 							<a className="uk-text-uppercase" href="/participants">Participants</a>
 						</li>
@@ -124,9 +124,9 @@ class Menus extends React.Component {
             <li>
               <a className="scroll" href={this.props.redirect ? "/#sponsors-section" : "#sponsors-section"}>Sponsors</a>
             </li>
-            <li>
+            {/* <li>
               <a href="/resend">Resend Email</a>
-            </li>
+            </li> */}
             <li>
               <a href="/participants">Participants</a>
             </li>

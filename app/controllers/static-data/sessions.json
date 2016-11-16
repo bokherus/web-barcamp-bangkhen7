@@ -1,0 +1,361 @@
+[{
+	"name": "ฝึกงานที่ญี่ปุ่นง่ายนิดเดียว (ที่เหลือยาก)",
+	"speaker": "@nunimadao",
+	"location": "17303",
+	"start_time": "2016-11-13T10:45:00.000Z",
+	"end_time": "2016-11-13T11:10:00.000Z"
+}, {
+	"name": "What I've learned after spending 1MB for Facebook Ads",
+	"speaker": "@Lifez",
+	"location": "17302",
+	"start_time": "2016-11-13T10:45:00.000Z",
+	"end_time": "2016-11-13T11:10:00.000Z"
+}, {
+	"name": "ทฤษฎีความสนุกตามธรรมชาติใน game design (The theory of Natural funality for Basic game design)",
+	"speaker": "Sorapol S. (Newbie)",
+	"location": "17304",
+	"start_time": "2016-11-13T10:45:00.000Z",
+	"end_time": "2016-11-13T11:10:00.000Z"
+}, {
+	"name": "ครั้งแรกในชีวิต เกมที่ทำมากับมือโดนก๊อป! (ยันไส้ติ่ง) แต่ยังอ่อนหัดนักเลยมาแขวะให้ฟัง (แถมความรู้ game design vs game polish)",
+	"speaker": "@5argon",
+	"location": "17201",
+	"start_time": "2016-11-13T10:45:00.000Z",
+	"end_time": "2016-11-13T11:10:00.000Z"
+}, {
+	"name": "เบื้องหลังวงการ blogger thai และข้อแนะนำถ้าสนใจอยากเป็น blogger",
+	"speaker": "@khajochi และ @i_Nokkaew",
+	"location": "17402",
+	"start_time": "2016-11-13T10:45:00.000Z",
+	"end_time": "2016-11-13T11:10:00.000Z"
+}, {
+	"name": "Functional Programming with Javascript",
+	"speaker": "Dan Itsara (แดน)",
+	"location": "17401",
+	"start_time": "2016-11-13T10:45:00.000Z",
+	"end_time": "2016-11-13T11:10:00.000Z"
+}, {
+	"name": "The joy of kubernetes (Docker Orchestration) #kubernetes",
+	"speaker": "Wongnai",
+	"location": "17201",
+	"start_time": "2016-11-13T11:15:00.000Z",
+	"end_time": "2016-11-13T11:40:00.000Z"
+}, {
+	"name": "Practical Maintainability ทำให้โค้ดดูแลง่าย \"จริง\" ",
+	"speaker": "Chris @ Taskworld",
+	"location": "17401",
+	"start_time": "2016-11-13T11:15:00.000Z",
+	"end_time": "2016-11-13T11:40:00.000Z"
+}, {
+	"name": "Overwatch",
+	"speaker": "@LatteFrappe",
+	"location": "17304",
+	"start_time": "2016-11-13T11:15:00.000Z",
+	"end_time": "2016-11-13T11:40:00.000Z"
+}, {
+	"name": "Careers for developers -> what technologies are companies looking for and which are emerging? (ENGLISH)",
+	"speaker": "Shane Torr (CEO @ Gummy bear recruitment company)",
+	"location": "17302",
+	"start_time": "2016-11-13T11:45:00.000Z",
+	"end_time": "2016-11-13T12:10:00.000Z"
+}, {
+	"name": "Philosophy of Artificial Intelligence",
+	"speaker": "@justmota",
+	"location": "17402",
+	"start_time": "2016-11-13T11:15:00.000Z",
+	"end_time": "2016-11-13T11:40:00.000Z"
+}, {
+	"name": "สร้าง Microservices กับ Docker Swarm",
+	"speaker": "Kan(Pronto)",
+	"location": "17302",
+	"start_time": "2016-11-13T11:15:00.000Z",
+	"end_time": "2016-11-13T11:40:00.000Z"
+}, {
+	"name": "How to มีแฟนก่อนเรียนจบ",
+	"speaker": "@ds41744",
+	"location": "17402",
+	"start_time": "2016-11-13T11:45:00.000Z",
+	"end_time": "2016-11-13T12:10:00.000Z"
+}, {
+	"name": "SpaceX สุดยอดประดิษฐกรรมของ Elon Musk",
+	"speaker": "@Nutnon",
+	"location": "17401",
+	"start_time": "2016-11-13T11:45:00.000Z",
+	"end_time": "2016-11-13T12:10:00.000Z"
+}, {
+	"name": "เรียนรู้อะไรมาบ้างกับการสร้าง Chatbot (The new era of Internet)",
+	"speaker": "Wongnai (Chatbot Team)",
+	"location": "17303",
+	"start_time": "2016-11-13T11:45:00.000Z",
+	"end_time": "2016-11-13T12:10:00.000Z"
+}, {
+	"name": "Styling React App with styled-components",
+	"speaker": "Cal",
+	"location": "17201",
+	"start_time": "2016-11-13T11:45:00.000Z",
+	"end_time": "2016-11-13T12:10:00.000Z"
+}, {
+	"name": "ทลายกำแพงเพื่อรากหญ้า",
+	"speaker": "Vee",
+	"location": "17304",
+	"start_time": "2016-11-13T11:45:00.000Z",
+	"end_time": "2016-11-13T12:10:00.000Z"
+}, {
+	"name": "อวศาสนา หรือหนทางใหม่ในการนับถือศาสนา ?",
+	"speaker": " พาราณสี ศิษย์มีครู",
+	"location": "17303",
+	"start_time": "2016-11-13T11:15:00.000Z",
+	"end_time": "2016-11-13T11:40:00.000Z"
+}, {
+	"name": "What comes next for the web?",
+	"speaker": "@mikelopster @witoh",
+	"location": "17201",
+	"start_time": "2016-11-13T13:00:00.000Z",
+	"end_time": "2016-11-13T13:25:00.000Z"
+}, {
+	"name": "T.E.A.M.",
+	"speaker": "Khun Panya Pornkajornkitkul (Director)",
+	"location": "17201",
+	"start_time": "2016-11-13T14:00:00.000Z",
+	"end_time": "2016-11-13T14:25:00.000Z"
+}, {
+	"name": "จักรวาลคู่ขนานในชีวิตจริง (สาเหตุที่ 20 ปี โคนันไม่โตสักที)",
+	"speaker": "@thanyakij",
+	"location": "17201",
+	"start_time": "2016-11-13T13:30:00.000Z",
+	"end_time": "2016-11-13T13:55:00.000Z"
+}, {
+	"name": "วิธีเลือกเครื่องเล่นเพลง(DAP : Digital Audio Player)",
+	"speaker": "Chickic",
+	"location": "17401",
+	"start_time": "2016-11-13T13:00:00.000Z",
+	"end_time": "2016-11-13T13:25:00.000Z"
+}, {
+	"name": "บุกป่าฝ่าดง if",
+	"speaker": "Somkiat.cc",
+	"location": "17304",
+	"start_time": "2016-11-13T13:00:00.000Z",
+	"end_time": "2016-11-13T13:25:00.000Z"
+}, {
+	"name": "เรียนพาสาง่ายนิดเดียว",
+	"speaker": "@onhz",
+	"location": "17401",
+	"start_time": "2016-11-13T14:00:00.000Z",
+	"end_time": "2016-11-13T14:25:00.000Z"
+}, {
+	"name": "มวยปล้ำ Ver.เวลาจำกัด",
+	"speaker": "@TAweZome",
+	"location": "17303",
+	"start_time": "2016-11-13T13:00:00.000Z",
+	"end_time": "2016-11-13T13:25:00.000Z"
+}, {
+	"name": "[SPOIL] บ่น Kimi no nawa your name <บันเทิงๆ กับ your name>",
+	"speaker": "Taki - kang",
+	"location": "17201",
+	"start_time": "2016-11-13T14:30:00.000Z",
+	"end_time": "2016-11-13T14:55:00.000Z"
+}, {
+	"name": "Doalar 101",
+	"speaker": "Somkait.cc",
+	"location": "17401",
+	"start_time": "2016-11-13T14:30:00.000Z",
+	"end_time": "2016-11-13T14:55:00.000Z"
+}, {
+	"name": "เมื่อหมอหมาอยากรักษาทามาก็อตจิ",
+	"speaker": "@Kengome",
+	"location": "17302",
+	"start_time": "2016-11-13T13:00:00.000Z",
+	"end_time": "2016-11-13T13:25:00.000Z"
+}, {
+	"name": "HI-Res Audio คุณรู้จักดีพอแล้วหรือยัง ",
+	"speaker": "@AT1987",
+	"location": "17402",
+	"start_time": "2016-11-13T13:00:00.000Z",
+	"end_time": "2016-11-13T13:25:00.000Z"
+}, {
+	"name": " ฟุตบอลไทย VV ออกไปแล้วไงต่อ",
+	"speaker": "toom2236",
+	"location": "17303",
+	"start_time": "2016-11-13T13:30:00.000Z",
+	"end_time": "2016-11-13T13:55:00.000Z"
+}, {
+	"name": "เล่าประสบการณ์ตามพ่อไปทำงานจักรกลการเกษตรไทย ไม่ได้มีแต่ kubota",
+	"speaker": "@charvin98",
+	"location": "17302",
+	"start_time": "2016-11-13T13:30:00.000Z",
+	"end_time": "2016-11-13T13:55:00.000Z"
+}, {
+	"name": "NO COMMENTS เลิกcomments เเล้วเขียนโค๊ดซะที",
+	"speaker": "@mr_tawan",
+	"location": "17303",
+	"start_time": "2016-11-13T14:00:00.000Z",
+	"end_time": "2016-11-13T14:25:00.000Z"
+}, {
+	"name": "ปีนเขาครั้งแรกที่ Kinabalu",
+	"speaker": "@FEIZV",
+	"location": "17302",
+	"start_time": "2016-11-13T14:00:00.000Z",
+	"end_time": "2016-11-13T14:25:00.000Z"
+}, {
+	"name": "ภาษา LISP",
+	"speaker": "Vee",
+	"location": "17304",
+	"start_time": "2016-11-13T14:00:00.000Z",
+	"end_time": "2016-11-13T14:25:00.000Z"
+}, {
+	"name": "เรียนรู้วิธีเรียน",
+	"speaker": "@ZugarZeeker",
+	"location": "17402",
+	"start_time": "2016-11-13T14:30:00.000Z",
+	"end_time": "2016-11-13T14:55:00.000Z"
+}, {
+	"name": "How to Angular 2",
+	"speaker": "@Sarunint",
+	"location": "17304",
+	"start_time": "2016-11-13T14:30:00.000Z",
+	"end_time": "2016-11-13T14:55:00.000Z"
+}, {
+	"name": "Evolutionary of Dev Culture",
+	"speaker": "@tanapoln",
+	"location": "17303",
+	"start_time": "2016-11-13T14:30:00.000Z",
+	"end_time": "2016-11-13T14:55:00.000Z"
+}, {
+	"name": "เป็นพนักงาน หรือ เปิด Startup ดีหว่า?",
+	"speaker": "โท Levelup Plus",
+	"location": "17402",
+	"start_time": "2016-11-13T14:30:00.000Z",
+	"end_time": "2016-11-13T14:55:00.000Z"
+}, {
+	"name": "DRY Workflow using Docker and Gitlab CI",
+	"speaker": "Off (Glazziq)",
+	"location": "17401",
+	"start_time": "2016-11-13T13:30:00.000Z",
+	"end_time": "2016-11-13T13:55:00.000Z"
+}, {
+	"name": "เส้นทางรถเมล์ (ใหม่มั้ง?)",
+	"speaker": "wissarut106",
+	"location": "17304",
+	"start_time": "2016-11-13T13:30:00.000Z",
+	"end_time": "2016-11-13T13:55:00.000Z"
+}, {
+	"name": "พูดคุยกับ CEO ของ LnwShop (ไม่ใช่การบรรยายแต่เป็นการ ถาม-ตอบ )",
+	"speaker": "by @Tonac119",
+	"location": "17402",
+	"start_time": "2016-11-13T13:30:00.000Z",
+	"end_time": "2016-11-13T13:55:00.000Z"
+}, {
+	"name": "Audio Mastering for Online Distribution การเตรียมเสียงสำหรับโพสต์ online เช่นลง Youtube, Soundcloud ฯลฯ",
+	"speaker": "@kijjaz",
+	"location": "17402",
+	"start_time": "2016-11-13T14:00:00.000Z",
+	"end_time": "2016-11-13T14:25:00.000Z"
+}, {
+	"name": "Location Intelligence - wifi data and big data",
+	"speaker": "Khum Pimsiri Ponsap(Data Scientist)",
+	"location": "17201",
+	"start_time": "2016-11-13T15:20:00.000Z",
+	"end_time": "2016-11-13T15:45:00.000Z"
+}, {
+	"name": "Security Discussion",
+	"speaker": "M@YK!N",
+	"location": "17201",
+	"start_time": "2016-11-13T15:50:00.000Z",
+	"end_time": "2016-11-13T16:15:00.000Z"
+}, {
+	"name": "พุทธจักรวาลวิทยาในโลกจริง(ไหนว่าพุทธเป็นอเทวนิยม)",
+	"speaker": "@thanyaki",
+	"location": "17402",
+	"start_time": "2016-11-13T15:20:00.000Z",
+	"end_time": "2016-11-13T15:45:00.000Z"
+}, {
+	"name": "ทดลองสร้างงาน \"ศิลปะ\" ด้วยแรงบันดาลใจจาก #เล่าปจก.แสดงงานที่JAPAN \"AI\"",
+	"speaker": "@phoneee และ KD",
+	"location": "17401",
+	"start_time": "2016-11-13T15:20:00.000Z",
+	"end_time": "2016-11-13T15:45:00.000Z"
+}, {
+	"name": "ZOMBIE  VIRUS ใกล้ตัวกว่าที่คิด!",
+	"speaker": "@munzy21",
+	"location": "17201",
+	"start_time": "2016-11-13T16:20:00.000Z",
+	"end_time": "2016-11-13T16:45:00.000Z"
+}, {
+	"name": "ใช้ password manager",
+	"speaker": "@awkwin",
+	"location": "17401",
+	"start_time": "2016-11-13T16:20:00.000Z",
+	"end_time": "2016-11-13T16:45:00.000Z"
+}, {
+	"name": "Monolith vs. Microservices จากประสบการณ์",
+	"speaker": "น้า Kan (Pronto tools)",
+	"location": "17303",
+	"start_time": "2016-11-13T15:20:00.000Z",
+	"end_time": "2016-11-13T15:45:00.000Z"
+}, {
+	"name": "โรคซึ้มเศร้าอะไรยังไงจากประสบการณ์",
+	"speaker": "@Natkung2",
+	"location": "17304",
+	"start_time": "2016-11-13T15:50:00.000Z",
+	"end_time": "2016-11-13T16:15:00.000Z"
+}, {
+	"name": "Quizclash Tournament (เล่นกับคนข้างๆ)",
+	"speaker": "Chattiwa",
+	"location": "17302",
+	"start_time": "2016-11-13T15:50:00.000Z",
+	"end_time": "2016-11-13T16:15:00.000Z"
+}, {
+	"name": "Coding defines Monitoring Dev. ห็ช่วย monitor ได้นะ",
+	"speaker": "Dear Opsta",
+	"location": "17401",
+	"start_time": "2016-11-13T15:50:00.000Z",
+	"end_time": "2016-11-13T16:15:00.000Z"
+}, {
+	"name": "Kimi No NaWa(2)",
+	"speaker": "CCC.",
+	"location": "17303",
+	"start_time": "2016-11-13T15:50:00.000Z",
+	"end_time": "2016-11-13T16:15:00.000Z"
+}, {
+	"name": "Cos-dress คือ ? ชายจะเป็นไหม ?",
+	"speaker": "Booknight",
+	"location": "17304",
+	"start_time": "2016-11-13T15:20:00.000Z",
+	"end_time": "2016-11-13T15:45:00.000Z"
+}, {
+	"name": "Vulkan API : กราฟฟิค API สำหรับคนซาดิสม์",
+	"speaker": "@ ekbumye",
+	"location": "17303",
+	"start_time": "2016-11-13T16:20:00.000Z",
+	"end_time": "2016-11-13T16:45:00.000Z"
+}, {
+	"name": "AMA Microservices",
+	"speaker": "@tanapoln",
+	"location": "17304",
+	"start_time": "2016-11-13T16:20:00.000Z",
+	"end_time": "2016-11-13T16:45:00.000Z"
+}, {
+	"name": "ไปญี่ปุ่นครั้งแรก + Trick + การผ่านตม. ถาม + ตอบ",
+	"speaker": "Grandy",
+	"location": "17302",
+	"start_time": "2016-11-13T16:20:00.000Z",
+	"end_time": "2016-11-13T16:45:00.000Z"
+}, {
+	"name": "Introduction to Open Stack",
+	"speaker": "Dear Opsta",
+	"location": "17402",
+	"start_time": "2016-11-13T16:20:00.000Z",
+	"end_time": "2016-11-13T16:45:00.000Z"
+}, {
+	"name": "Contributing to Open Source",
+	"speaker": "@Kanitkornk",
+	"location": "17402",
+	"start_time": "2016-11-13T15:50:00.000Z",
+	"end_time": "2016-11-13T16:15:00.000Z"
+}, {
+	"name": "Rust Lang",
+	"speaker": "@awkwin",
+	"location": "17302",
+	"start_time": "2016-11-13T15:20:00.000Z",
+	"end_time": "2016-11-13T15:45:00.000Z"
+}]
