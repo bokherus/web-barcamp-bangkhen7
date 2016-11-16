@@ -10,7 +10,9 @@ class HomeController < ApplicationController
   end
 
   def participants
-      @participants = User.all.order(:id).as_json(
+      require 'json'
+      file = File.read('app/controllers/static-data/participants.json')
+      @participants = JSON.parse(file).as_json(
       include: {
          topics: { only: :name }
       },
@@ -21,6 +23,17 @@ class HomeController < ApplicationController
         :code
         ]
       )
+      # @participants = User.all.order(:id).as_json(
+      # include: {
+      #    topics: { only: :name }
+      # },
+      # except: [
+      #   :created_at,
+      #   :updated_at,
+      #   :shirt_size,
+      #   :code
+      #   ]
+      # )
   end
 
   def users
@@ -42,7 +55,9 @@ class HomeController < ApplicationController
   end
 
   def sessions
-    @sessions = Session.all.as_json(except: [:id, :created_at, :updated_at])
+    require 'json'
+    file = File.read('app/controllers/static-data/sessions.json')
+    @sessions = JSON.parse(file).as_json(except: [:id, :created_at, :updated_at])
   end
 
   def welcome
